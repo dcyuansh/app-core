@@ -218,6 +218,29 @@
         </dependency>
     </dependencies>
 
+    <!--github config begin-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>github</id>
+            <name>yuandechunsh@163.com</name>
+            <url>https://maven.pkg.github.com/yuandechun/app-core</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>yuandechunsh@163.com</name>
+            <url>https://maven.pkg.github.com/yuandechun/app-core</url>
+        </repository>
+    </distributionManagement>
+    <!--github config end-->
 
     <build>
         <plugins>

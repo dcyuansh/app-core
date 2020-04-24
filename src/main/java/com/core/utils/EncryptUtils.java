@@ -1,11 +1,12 @@
 package com.core.utils;
 
 import com.core.enums.EncodeTypeEnum;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
-import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
+import java.util.Base64;
+import java.util.Base64.Decoder;
+import java.util.Base64.Encoder;
+
 
 /**
  * @author dechun.yuan
@@ -45,24 +46,24 @@ public class EncryptUtils {
         return hexValue.toString();
     }
 
+
     /***
      * base64 encode
      * @param str
      * @return
      */
     public static String encodeByBase64(String str, String encodeType) {
-        if (str == null) {
-            return null;
-        }
-        String res = "";
-        BASE64Encoder base64Encoder = new BASE64Encoder();
+        if (str == null) return null;
+        Encoder encoder = Base64.getEncoder();
+        byte[] bt = null;
         try {
-            res = base64Encoder.encode(str.getBytes(encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType));
-        } catch (UnsupportedEncodingException e) {
+            bt = str.getBytes(encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return res;
+        return encoder.encodeToString(bt);
     }
+
 
     /***
      * base64 decode
@@ -70,15 +71,15 @@ public class EncryptUtils {
      * @return
      */
     public static String decodeByBase64(String str, String encodeType) {
-        if (str == null) {
-            return null;
-        }
-        BASE64Decoder decoder = new BASE64Decoder();
+        if (str == null) return null;
+        Decoder decoder = Base64.getDecoder();
+        byte[] asBytes = decoder.decode(str);
+        String decodeStr = null;
         try {
-            byte[] b = decoder.decodeBuffer(str);
-            return new String(b, encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType);
+            decodeStr = new String(asBytes, encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType);
         } catch (Exception e) {
-            return null;
+            e.printStackTrace();
         }
+        return decodeStr;
     }
 }

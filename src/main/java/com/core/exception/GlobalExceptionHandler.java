@@ -14,15 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.zip.DataFormatException;
 
 
-/**
- * @author dechun.yuan
- */
-
-
-/**
+/***
  * 全局异常捕获处理
  */
-
 @ControllerAdvice
 public class GlobalExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);

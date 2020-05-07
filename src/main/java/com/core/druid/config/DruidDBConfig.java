@@ -28,6 +28,9 @@ public class DruidDBConfig {
 
     private Logger logger = LoggerFactory.getLogger(DruidDBConfig.class);
 
+    @Value("${spring.datasource.driver-class-name}")
+    private String driverClassName;
+
     @Value("${spring.datasource.url}")
     private String dbUrl;
 
@@ -36,9 +39,6 @@ public class DruidDBConfig {
 
     @Value("${spring.datasource.password}")
     private String password;
-
-    @Value("${spring.datasource.driver-class-name}")
-    private String driverClassName;
 
     @Value("${spring.datasource.initialSize}")
     private int initialSize;
@@ -82,14 +82,23 @@ public class DruidDBConfig {
     @Value("{spring.datasource.connectionProperties}")
     private String connectionProperties;
 
+
+    /*
+    @Bean(name = "dataSource") // 声明其为Bean实例
+    @Primary // 在同样的DataSource中，首先使用被标注的DataSource
+    @ConfigurationProperties(prefix = "spring.datasource.druid.master")
+    public DataSource dataSource() {
+        return DruidDataSourceBuilder.create().build();
+    }
+    */
     @Bean(name = "dataSource") // 声明其为Bean实例
     @Primary // 在同样的DataSource中，首先使用被标注的DataSource
     public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
+        datasource.setDriverClassName(driverClassName);
         datasource.setUrl(dbUrl);
         datasource.setUsername(username);
         datasource.setPassword(EncryptUtils.decodeByBase64(password, null));
-        datasource.setDriverClassName(driverClassName);
         // configuration
         datasource.setInitialSize(initialSize);
         datasource.setMinIdle(minIdle);

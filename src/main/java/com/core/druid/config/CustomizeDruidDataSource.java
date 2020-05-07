@@ -1,3 +1,4 @@
+/*
 package com.core.druid.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -8,10 +9,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+*/
 /**
  * @author dechun.yuan
  * @version 1.0
- */
+ *//*
 
 public class CustomizeDruidDataSource extends DruidDataSource {
 
@@ -88,3 +90,4 @@ public class CustomizeDruidDataSource extends DruidDataSource {
     }
 }
 
+*/

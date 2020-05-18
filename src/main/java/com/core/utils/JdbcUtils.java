@@ -21,6 +21,12 @@ public class JdbcUtils {
             conn = DriverManager.getConnection(dbURL, dbname, dbpassword);
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return conn;
     }

@@ -26,61 +26,68 @@ import java.sql.SQLException;
 @Configuration
 public class DruidDBConfig {
 
-    private Logger logger = LoggerFactory.getLogger(DruidDBConfig.class);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Value("${spring.datasource.driver-class-name}")
+
+    @Value("${spring.datasource.druid.driver-class-name}")
     private String driverClassName;
 
-    @Value("${spring.datasource.url}")
+    @Value("${spring.datasource.druid.url}")
     private String dbUrl;
 
-    @Value("${spring.datasource.username}")
+    @Value("${spring.datasource.druid.username}")
     private String username;
 
-    @Value("${spring.datasource.password}")
+    @Value("${spring.datasource.druid.password}")
     private String password;
 
-    @Value("${spring.datasource.initialSize}")
+    @Value("${spring.datasource.druid.name}")
+    private String name;
+
+    @Value("${spring.datasource.druid.initial-size}")
     private int initialSize;
 
-    @Value("${spring.datasource.minIdle}")
+    @Value("${spring.datasource.druid.min-idle}")
     private int minIdle;
 
-    @Value("${spring.datasource.maxActive}")
+    @Value("${spring.datasource.druid.max-active}")
     private int maxActive;
 
-    @Value("${spring.datasource.maxWait}")
+    @Value("${spring.datasource.druid.max-wait}")
     private int maxWait;
 
-    @Value("${spring.datasource.timeBetweenEvictionRunsMillis}")
+    @Value("${spring.datasource.druid.time-between-eviction-runs-millis}")
     private int timeBetweenEvictionRunsMillis;
 
-    @Value("${spring.datasource.minEvictableIdleTimeMillis}")
+    @Value("${spring.datasource.druid.min-evictable-idle-time-millis}")
     private int minEvictableIdleTimeMillis;
 
-    @Value("${spring.datasource.validationQuery}")
+    @Value("${spring.datasource.druid.validation-query}")
     private String validationQuery;
 
-    @Value("${spring.datasource.testWhileIdle}")
+    @Value("${spring.datasource.druid.test-while-idle}")
     private boolean testWhileIdle;
 
-    @Value("${spring.datasource.testOnBorrow}")
+    @Value("${spring.datasource.druid.test-on-borrow}")
     private boolean testOnBorrow;
 
-    @Value("${spring.datasource.testOnReturn}")
+    @Value("${spring.datasource.druid.test-on-return}")
     private boolean testOnReturn;
 
-    @Value("${spring.datasource.poolPreparedStatements}")
+    @Value("${spring.datasource.druid.pool-prepared-statements}")
     private boolean poolPreparedStatements;
 
-    @Value("${spring.datasource.maxPoolPreparedStatementPerConnectionSize}")
+    @Value("${spring.datasource.druid.max-pool-prepared-statement-per-connection-size}")
     private int maxPoolPreparedStatementPerConnectionSize;
 
-    @Value("${spring.datasource.filters}")
+    @Value("${spring.datasource.druid.filters}")
     private String filters;
 
-    @Value("{spring.datasource.connectionProperties}")
+    @Value("${spring.datasource.druid.connection-properties}")
     private String connectionProperties;
+
+    @Value("${spring.datasource.druid.use-global-data-source-stat}")
+    private boolean useGlobalDataSourceStat;
 
 
     /*
@@ -91,15 +98,18 @@ public class DruidDBConfig {
         return DruidDataSourceBuilder.create().build();
     }
     */
+
     @Bean(name = "dataSource") // 声明其为Bean实例
     @Primary // 在同样的DataSource中，首先使用被标注的DataSource
     public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
+        // db configuration
         datasource.setDriverClassName(driverClassName);
         datasource.setUrl(dbUrl);
         datasource.setUsername(username);
         datasource.setPassword(EncryptUtils.decodeByBase64(password, null));
-        // configuration
+        // druid configuration
+        datasource.setName(name);
         datasource.setInitialSize(initialSize);
         datasource.setMinIdle(minIdle);
         datasource.setMaxActive(maxActive);
@@ -118,8 +128,10 @@ public class DruidDBConfig {
             logger.error("druid configuration initialization filter", e);
         }
         datasource.setConnectionProperties(connectionProperties);
+        datasource.setUseGlobalDataSourceStat(useGlobalDataSourceStat);
         return datasource;
     }
+
 
     @Bean(name = "sqlSessionFactory")
     @Primary
@@ -131,11 +143,13 @@ public class DruidDBConfig {
         return bean.getObject();
     }
 
+
     @Bean(name = "transactionManager")
     @Primary
     public DataSourceTransactionManager transactionManager(@Qualifier("dataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
+
 
     @Bean(name = "sqlSessionTemplate")
     @Primary

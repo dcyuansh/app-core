@@ -18,12 +18,10 @@ public class HttpsConfig {
 
 
     */
-/**
-     * spring boot 2.0
+/***
      *
      * @return
      *//*
-
 
     @Bean
     public TomcatServletWebServerFactory servletContainer() {
@@ -42,6 +40,13 @@ public class HttpsConfig {
         return tomcat;
     }
 
+
+    */
+/***
+     *
+     * @return
+     *//*
+
     @Bean
     public Connector httpConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
@@ -55,5 +60,6 @@ public class HttpsConfig {
         return connector;
     }
 }
+
 
 */

@@ -60,7 +60,6 @@
         <if test="lastValue != null and lastValue != ''">
             , last_value = last_value +span
         </if>
-        where type = #{type}
-        and code = #{code}
+        where id = #{id}
     </update>
 </mapper>

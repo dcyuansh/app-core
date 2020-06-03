@@ -42,24 +42,28 @@ CREATE TABLE dbo.comm_mail_template
 	)
 GO
 
-IF OBJECT_ID ('dbo.comm_number') IS NOT NULL
-	DROP TABLE dbo.comm_number
+IF OBJECT_ID ('dbo.comm_reference') IS NOT NULL
+	DROP TABLE dbo.comm_reference
 GO
 
-CREATE TABLE dbo.comm_number
+CREATE TABLE dbo.comm_reference
 	(
 	id          INT IDENTITY NOT NULL,
-	number_type NVARCHAR (50) NOT NULL,
-	last_value  INT NOT NULL,
-	span        INT DEFAULT ((1)) NOT NULL,
+	type        VARCHAR (90) NULL,
+	code        VARCHAR (200) NULL,
+	language_id VARCHAR (20) NULL,
+	category_cd VARCHAR (150) NULL,
+	code_desc   NVARCHAR (500) NULL,
+	last_value  INT NULL,
+	span        INT CONSTRAINT DF__comm_refer__span__02BD4848 DEFAULT ((1)) NULL,
 	remarks     VARCHAR (500) NULL,
-	timestamp   DATETIME DEFAULT (getdate()) NOT NULL,
-	PRIMARY KEY (id)
+	timestamp   DATETIME CONSTRAINT DF__comm_refe__times__03B16C81 DEFAULT (getdate()) NOT NULL,
+	CONSTRAINT PK__comm_ref__3213E83F852DBD7D PRIMARY KEY (id)
 	)
 GO
 
-CREATE INDEX index_nunmer_type
-	ON dbo.comm_number (number_type)
+CREATE UNIQUE INDEX indx_reference_constraint
+	ON dbo.comm_reference (code, type, language_id)
 GO
 
 IF OBJECT_ID ('dbo.comm_sys_user') IS NOT NULL
@@ -99,16 +103,17 @@ CREATE TABLE dbo.comm_task
 	task_type        VARCHAR (50) NULL,
 	task_subject     VARCHAR (200) NULL,
 	task_content     TEXT NULL,
-	system_name      VARCHAR (50) NULL,
+	system_name      VARCHAR (100) NULL,
 	estimated_effort DECIMAL (12, 2) NULL,
 	actual_effort    DECIMAL (12, 2) NULL,
 	assignee         VARCHAR (100) NULL,
+	severity         INT NULL,
 	status           VARCHAR (20) NULL,
 	attached_id      VARCHAR (20) NULL,
 	remarks          VARCHAR (500) NULL,
 	submission_date  DATE CONSTRAINT DF__comm_task__submi__55EAA1D1 DEFAULT (getdate()) NOT NULL,
 	timestamp        DATETIME CONSTRAINT DF__comm_task__times__56DEC60A DEFAULT (getdate()) NOT NULL,
-	PRIMARY KEY (id),
+	CONSTRAINT PK__comm_tas__3213E83F448605B4 PRIMARY KEY (id),
 	CONSTRAINT task_no UNIQUE (task_no)
 	)
 GO
@@ -231,6 +236,4 @@ CREATE TABLE dbo.wf_step_def
 	PRIMARY KEY NONCLUSTERED (step_code)
 	)
 GO
-
-
 

@@ -14,7 +14,9 @@ public interface CommReferenceRepository {
 
     void saveCommReference(DataModel saveModel);
 
-    List<DataModel> queryCommReference(DataModel queryModel);
+    DataModel queryCommReference(DataModel queryModel);
+
+    List<DataModel> queryCommReferenceList(DataModel queryModel);
 
     void updateCommReferenceLastValue(DataModel updateModel);
 }

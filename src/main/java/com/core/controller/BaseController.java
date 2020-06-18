@@ -1,8 +1,8 @@
 package com.core.controller;
 
 import com.core.data.model.DataModel;
-import com.core.enums.StatusEnum;
 import com.core.enums.ResultEnum;
+import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -2,7 +2,6 @@
 package com.core.druid.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.core.utils.EncryptUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -107,7 +106,7 @@ public class DruidDBConfig {
         datasource.setDriverClassName(driverClassName);
         datasource.setUrl(dbUrl);
         datasource.setUsername(username);
-        datasource.setPassword(EncryptUtils.decodeByBase64(password, null));
+        datasource.setPassword(password);
         // druid configuration
         datasource.setName(name);
         datasource.setInitialSize(initialSize);
@@ -138,7 +137,8 @@ public class DruidDBConfig {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/**/*.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/sqlserver/*.xml"));
+        //bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/mysql/*.xml"));
         bean.setTypeAliasesPackage("com.core.data.model");
         return bean.getObject();
     }
@@ -153,7 +153,7 @@ public class DruidDBConfig {
 
     @Bean(name = "sqlSessionTemplate")
     @Primary
-    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
+    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 }

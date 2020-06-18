@@ -48,22 +48,37 @@ GO
 
 CREATE TABLE dbo.comm_reference
 	(
-	id          INT IDENTITY NOT NULL,
-	type        VARCHAR (90) NULL,
-	code        VARCHAR (200) NULL,
-	language_id VARCHAR (20) NULL,
-	category_cd VARCHAR (150) NULL,
-	code_desc   NVARCHAR (500) NULL,
-	last_value  INT NULL,
-	span        INT CONSTRAINT DF__comm_refer__span__02BD4848 DEFAULT ((1)) NULL,
-	remarks     VARCHAR (500) NULL,
-	timestamp   DATETIME CONSTRAINT DF__comm_refe__times__03B16C81 DEFAULT (getdate()) NOT NULL,
+	id            INT IDENTITY NOT NULL,
+	type          VARCHAR (90) NULL,
+	code          VARCHAR (200) NULL,
+	language_id   VARCHAR (20) NULL,
+	category_cd   VARCHAR (150) NULL,
+	code_desc     NVARCHAR (500) NULL,
+	current_value INT NULL,
+	span          INT CONSTRAINT DF__comm_refer__span__02BD4848 DEFAULT ((1)) NULL,
+	remarks       VARCHAR (500) NULL,
+	timestamp     DATETIME CONSTRAINT DF__comm_refe__times__03B16C81 DEFAULT (getdate()) NOT NULL,
 	CONSTRAINT PK__comm_ref__3213E83F852DBD7D PRIMARY KEY (id)
 	)
 GO
 
-CREATE UNIQUE INDEX indx_reference_constraint
-	ON dbo.comm_reference (code, type, language_id)
+CREATE INDEX indx_comm_reference
+	ON dbo.comm_reference (code, type)
+GO
+
+IF OBJECT_ID ('dbo.comm_sys_role') IS NOT NULL
+	DROP TABLE dbo.comm_sys_role
+GO
+
+CREATE TABLE dbo.comm_sys_role
+	(
+	id        INT IDENTITY NOT NULL,
+	role_code VARCHAR (150) NOT NULL,
+	role_name VARCHAR (200) NULL,
+	role_desc VARCHAR (500) NULL,
+	timestamp DATETIME DEFAULT (getdate()) NOT NULL,
+	PRIMARY KEY (id)
+	)
 GO
 
 IF OBJECT_ID ('dbo.comm_sys_user') IS NOT NULL
@@ -106,15 +121,42 @@ CREATE TABLE dbo.comm_task
 	system_name      VARCHAR (100) NULL,
 	estimated_effort DECIMAL (12, 2) NULL,
 	actual_effort    DECIMAL (12, 2) NULL,
-	assignee         VARCHAR (100) NULL,
-	severity         INT NULL,
+	created_by       VARCHAR (150) NULL,
+	assignee         VARCHAR (150) NULL,
+	severity         VARCHAR (20) NULL,
 	status           VARCHAR (20) NULL,
 	attached_id      VARCHAR (20) NULL,
 	remarks          VARCHAR (500) NULL,
-	submission_date  DATE CONSTRAINT DF__comm_task__submi__55EAA1D1 DEFAULT (getdate()) NOT NULL,
-	timestamp        DATETIME CONSTRAINT DF__comm_task__times__56DEC60A DEFAULT (getdate()) NOT NULL,
-	CONSTRAINT PK__comm_tas__3213E83F448605B4 PRIMARY KEY (id),
+	submission_date  DATE DEFAULT (getdate()) NOT NULL,
+	timestamp        DATETIME DEFAULT (getdate()) NOT NULL,
+	PRIMARY KEY (id),
 	CONSTRAINT task_no UNIQUE (task_no)
+	)
+GO
+
+IF OBJECT_ID ('dbo.comm_task_his') IS NOT NULL
+	DROP TABLE dbo.comm_task_his
+GO
+
+CREATE TABLE dbo.comm_task_his
+	(
+	id               INT IDENTITY NOT NULL,
+	task_no          VARCHAR (50) NOT NULL,
+	task_type        VARCHAR (50) NULL,
+	task_subject     VARCHAR (200) NULL,
+	task_content     TEXT NULL,
+	system_name      VARCHAR (100) NULL,
+	estimated_effort DECIMAL (12, 2) NULL,
+	actual_effort    DECIMAL (12, 2) NULL,
+	created_by       VARCHAR (150) NULL,
+	assignee         VARCHAR (150) NULL,
+	severity         VARCHAR (20) NULL,
+	status           VARCHAR (20) NULL,
+	attached_id      VARCHAR (20) NULL,
+	remarks          VARCHAR (500) NULL,
+	submission_date  DATE DEFAULT (getdate()) NOT NULL,
+	timestamp        DATETIME DEFAULT (getdate()) NOT NULL,
+	PRIMARY KEY (id)
 	)
 GO
 

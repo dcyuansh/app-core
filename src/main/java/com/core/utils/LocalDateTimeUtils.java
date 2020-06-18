@@ -1,6 +1,5 @@
 package com.core.utils;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -14,7 +13,6 @@ import java.util.Date;
 public class LocalDateTimeUtils {
 
     public static final String LOCAL_DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
-    public static final String LOCAL_DATE_FORMAT = "yyyy-MM-dd";
 
 
     /***
@@ -36,28 +34,6 @@ public class LocalDateTimeUtils {
      */
     public static LocalDateTime formatTime(String time, String pattern) {
         return LocalDateTime.parse(time, DateTimeFormatter.ofPattern(pattern == null ? LOCAL_DATE_TIME_FORMAT : pattern));
-    }
-
-
-    /***
-     * 获取指定时间的指定格式,默认格式(yyyy-MM-dd)
-     * @param time
-     * @param pattern
-     * @return
-     */
-    public static String formatDate(LocalDate time, String pattern) {
-        return time.format(DateTimeFormatter.ofPattern(pattern == null ? LOCAL_DATE_FORMAT : pattern));
-    }
-
-
-    /***
-     *将string转换为指定格式的日期,默认格式(yyyy-MM-dd)
-     * @param time
-     * @param pattern
-     * @return
-     */
-    public static LocalDate formatDate(String time, String pattern) {
-        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern == null ? LOCAL_DATE_FORMAT : pattern));
     }
 
 

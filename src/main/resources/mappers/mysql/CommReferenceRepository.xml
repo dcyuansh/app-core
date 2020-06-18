@@ -27,7 +27,7 @@
     </insert>
 
     <select id="queryCommReference" parameterType="Map" resultType="DataModel">
-        select top 1 * from comm_reference where 1 = 1
+        select * from comm_reference where 1 = 1
         <if test="type != null and type != ''">
             and type = #{type}
         </if>
@@ -52,6 +52,7 @@
         <if test="remarks != null and remarks != ''">
             and remarks = #{remarks}
         </if>
+        limit 1
     </select>
 
     <select id="queryCommReferenceList" parameterType="Map" resultType="DataModel">

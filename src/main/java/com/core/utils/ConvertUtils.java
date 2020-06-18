@@ -95,7 +95,7 @@ public class ConvertUtils {
                     if (obj instanceof LocalDate) {
                         objResult = (LocalDate) obj;
                     } else {
-                        objResult = LocalDateTimeUtils.formatDate(obj.toString(), null);
+                        objResult = LocalDateUtils.formatDate(obj.toString(), null);
                     }
                     break;
                 case LOCALDATETIME:

@@ -9,7 +9,7 @@ public class MessageStorageManager {
 
     private static MessageStorageManager c_instance;
 
-    private static final String SETUP_FOR_REQUEST_INDICATOR = "nets.setup.for.request";
+    private static final String SETUP_FOR_REQUEST_INDICATOR = "setup.for.request";
 
     private final Map storagePerThreadMap = new Hashtable();
 

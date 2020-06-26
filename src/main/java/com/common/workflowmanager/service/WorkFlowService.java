@@ -31,7 +31,7 @@ public interface WorkFlowService {
      * @param queryModel
      * @return
      */
-    List<DataModel> findAllWorkFlowProc(DataModel queryModel);
+    List<DataModel> findWorkFlowProcList(DataModel queryModel);
 
 
     /***

@@ -28,7 +28,7 @@
         select * from comm_sys_user where user_name = #{userName}
     </select>
 
-    <select id="findAllUser" parameterType="Map" resultType="DataModel">
+    <select id="findUserList" parameterType="Map" resultType="DataModel">
         select * from comm_sys_user where 1=1
         <if test="userName != null and userName != ''">
             and user_name = #{userName}

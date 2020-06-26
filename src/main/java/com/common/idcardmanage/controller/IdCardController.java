@@ -27,7 +27,7 @@ public class IdCardController extends BaseController {
 
 
     /****
-     * save idCard
+     * save comm_id_card
      * @param request
      * @param requestMap
      * @return

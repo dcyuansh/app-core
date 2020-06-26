@@ -58,8 +58,8 @@ public class WorkFlowServiceImpl implements WorkFlowService {
      * @return
      */
     @Override
-    public List<DataModel> findAllWorkFlowProc(DataModel queryModel) {
-        return workFlowRepository.findAllWorkFlowProc(queryModel);
+    public List<DataModel> findWorkFlowProcList(DataModel queryModel) {
+        return workFlowRepository.findWorkFlowProcList(queryModel);
     }
 
 

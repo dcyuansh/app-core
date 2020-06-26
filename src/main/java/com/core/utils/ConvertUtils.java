@@ -58,7 +58,7 @@ public class ConvertUtils {
                     break;
                 case LONG:
                     if (obj instanceof Long) {
-                        objResult = (Long) ((Long) obj).longValue();
+                        objResult = ((Long) obj).longValue();
                     } else {
                         objResult = Long.parseLong(obj.toString());
                     }

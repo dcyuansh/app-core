@@ -69,8 +69,8 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public List<DataModel> findAllUser(DataModel queryModel) {
-        return userRepository.findAllUser(queryModel);
+    public List<DataModel> findUserList(DataModel queryModel) {
+        return userRepository.findUserList(queryModel);
     }
 
 

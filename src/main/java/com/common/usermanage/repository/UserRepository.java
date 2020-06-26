@@ -13,7 +13,7 @@ public interface UserRepository {
 
     DataModel findUser(DataModel queryModel);
 
-    List<DataModel> findAllUser(DataModel queryModel);
+    List<DataModel> findUserList(DataModel queryModel);
 
     void deleteUser(DataModel deleteModel);
 

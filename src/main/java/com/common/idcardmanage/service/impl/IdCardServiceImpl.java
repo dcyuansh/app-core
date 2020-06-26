@@ -36,8 +36,8 @@ public class IdCardServiceImpl implements IdCardService {
      * @return
      */
     @Override
-    public DataModel findIdCard(DataModel queryModel) {
-        return idCardRepository.findIdCard(queryModel);
+    public DataModel queryIdCard(DataModel queryModel) {
+        return idCardRepository.queryIdCard(queryModel);
     }
 
     /***
@@ -46,8 +46,8 @@ public class IdCardServiceImpl implements IdCardService {
      * @return
      */
     @Override
-    public List<DataModel> findAllIdCard(DataModel queryModel) {
-        return idCardRepository.findAllIdCard(queryModel);
+    public List<DataModel> queryIdCardList(DataModel queryModel) {
+        return idCardRepository.queryIdCardList(queryModel);
     }
 
     /***

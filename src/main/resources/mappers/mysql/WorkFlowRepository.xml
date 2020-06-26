@@ -39,7 +39,7 @@
         SELECT * FROM FROM wf_proc WHERE proc_id = #{procId}
     </select>
 
-    <select id="findAllWorkFlowProc" parameterType="Map" resultType="DataModel">
+    <select id="findWorkFlowProcList" parameterType="Map" resultType="DataModel">
         SELECT * FROM FROM wf_proc where 1=1
         <if test="procId != null and procId != ''">
             and proc_id = #{procId}

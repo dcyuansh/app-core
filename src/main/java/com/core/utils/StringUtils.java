@@ -25,11 +25,11 @@ public class StringUtils {
      */
     public static String formatFieldName(String columnName) {
         String resultColumnName;
-        if (columnName == null) {
-            resultColumnName = "";
-        } else {
+        if (StringUtils.isNotBlank(columnName)) {
             //去掉下划线，转为驼峰命名法
             resultColumnName = underlineToCamel(columnName.trim());
+        } else {
+            resultColumnName = "";
         }
         return resultColumnName;
     }
@@ -45,7 +45,7 @@ public class StringUtils {
         Object resultObject = value;
         if (value instanceof String) {
             String strValue = (String) value;
-            if (strValue == null || "".equals(strValue)) {
+            if (StringUtils.isBlank(strValue)) {
                 resultObject = null;
             } else {
                 //这里可以根据string格式，将string转换为对应的object
@@ -61,7 +61,7 @@ public class StringUtils {
      * @return
      */
     public static String underlineToCamel(String param) {
-        if (param == null || "".equals(param.trim())) {
+        if (StringUtils.isBlank(param)) {
             return "";
         }
         int len = param.length();

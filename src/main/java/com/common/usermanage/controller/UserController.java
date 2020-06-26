@@ -81,11 +81,11 @@ public class UserController extends BaseController {
      */
     @RequestMapping(method = RequestMethod.POST, value = "/query/all")
     @ResponseBody
-    public Map<String, Object> findAllUser(HttpServletRequest request, @RequestBody Map<String, Object> requestMap) {
+    public Map<String, Object> findUserList(HttpServletRequest request, @RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
         try {
             DataModel queryModel = this.getInputData(requestMap);
-            List<DataModel> userModel = userService.findAllUser(queryModel);
+            List<DataModel> userModel = userService.findUserList(queryModel);
             this.handleSuccess(userModel, resultModel);
         } catch (ValidationException ve) {
             this.handleValidationExcpetion(ve, resultModel);

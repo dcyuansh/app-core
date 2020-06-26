@@ -57,18 +57,6 @@ public class DataModel implements Map, Serializable {
         return fieldMap.get(name);
     }
 
-    public boolean hasField(String name) {
-        return fieldMap.containsKey(name);
-    }
-
-    public boolean hasFieldValue(String name) {
-        return hasField(name) && getFieldValue(name) != null;
-    }
-
-    public void removeField(String name) {
-        fieldMap.remove(name);
-    }
-
     public String getStringValue(String name) {
         return (String) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.STRING);
     }
@@ -83,6 +71,18 @@ public class DataModel implements Map, Serializable {
 
     public LocalDate getLocalDateValue(String name) {
         return (LocalDate) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.LOCALDATE);
+    }
+
+    public boolean hasField(String name) {
+        return fieldMap.containsKey(name);
+    }
+
+    public boolean hasFieldValue(String name) {
+        return hasField(name) && getFieldValue(name) != null;
+    }
+
+    public void removeField(String name) {
+        fieldMap.remove(name);
     }
 
     @Override

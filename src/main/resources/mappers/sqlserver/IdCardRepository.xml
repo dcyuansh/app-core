@@ -28,11 +28,11 @@
         )
     </insert>
 
-    <select id="findIdCard" parameterType="Map" resultType="DataModel">
+    <select id="queryIdCard" parameterType="Map" resultType="DataModel">
         select * from comm_id_card where id_card = #{idCard}
     </select>
 
-    <select id="findAllIdCard" parameterType="Map" resultType="DataModel">
+    <select id="queryIdCardList" parameterType="Map" resultType="DataModel">
         select * from comm_id_card where 1=1
         <if test="idCard != null and idCard != ''">
             and id_card = #{idCard}

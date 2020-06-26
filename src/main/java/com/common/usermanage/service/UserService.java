@@ -10,7 +10,7 @@ public interface UserService {
 
     DataModel findUser(DataModel queryModel);
 
-    List<DataModel> findAllUser(DataModel queryModel);
+    List<DataModel> findUserList(DataModel queryModel);
 
     void updateUser(DataModel updateModel);
 

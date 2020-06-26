@@ -10,9 +10,9 @@ public interface IdCardRepository {
 
     void saveIdCard(DataModel saveModel);
 
-    DataModel findIdCard(DataModel queryModel);
+    DataModel queryIdCard(DataModel queryModel);
 
-    List<DataModel> findAllIdCard(DataModel queryModel);
+    List<DataModel> queryIdCardList(DataModel queryModel);
 
     void deleteIdCard(DataModel deleteModel);
 

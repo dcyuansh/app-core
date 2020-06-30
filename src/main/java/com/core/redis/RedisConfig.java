@@ -1,4 +1,3 @@
-/*
 
 package com.core.redis;
 
@@ -21,24 +20,33 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 
 
-*/
-/***
+/**
  * Redis缓存配置类
- *//*
-
-
+ */
 @Configuration
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
+
     @Value("${spring.redis.host}")
     private String host;
     @Value("${spring.redis.port}")
     private int port;
+    @Value("${spring.redis.password}")
+    private String password;
+    @Value("${spring.redis.jedis.pool.max-active}")
+    private int maxActive;
+    @Value("${spring.redis.jedis.pool.max-wait}")
+    private String maxWait;
+    @Value("${spring.redis.jedis.pool.max-idle}")
+    private int maxIdle;
+    @Value("${spring.redis.jedis.pool.min-idle}")
+    private int minIdle;
     @Value("${spring.redis.timeout}")
     private String timeout;
 
+
     //自定义缓存key生成策略
-    @Bean
+    @Bean(name = "keyGenerator")
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {
             public Object generate(Object target, java.lang.reflect.Method method, Object... params) {
@@ -55,7 +63,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 
 
     //缓存管理器 spring boot 2.x
-    @Bean
+    @Bean(name = "cacheManager")
     public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
         RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
                 .entryTtl(Duration.ofHours(1)); // 设置缓存有效期一小时
@@ -85,4 +93,3 @@ public class RedisConfig extends CachingConfigurerSupport {
     }
 }
 
-*/

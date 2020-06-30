@@ -164,7 +164,6 @@
         </dependency>
 
         <!--redis-->
-        <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -173,7 +172,6 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
-        -->
 
         <!-- fastjson -->
         <dependency>

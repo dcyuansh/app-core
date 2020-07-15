@@ -54,8 +54,6 @@ CREATE TABLE dbo.comm_reference
 	language_id   VARCHAR (20) NULL,
 	category_cd   VARCHAR (150) NULL,
 	code_desc     NVARCHAR (500) NULL,
-	current_value INT NULL,
-	span          INT CONSTRAINT DF__comm_refer__span__02BD4848 DEFAULT ((1)) NULL,
 	remarks       VARCHAR (500) NULL,
 	timestamp     DATETIME CONSTRAINT DF__comm_refe__times__03B16C81 DEFAULT (getdate()) NOT NULL,
 	CONSTRAINT PK__comm_ref__3213E83F852DBD7D PRIMARY KEY (id)
@@ -278,4 +276,24 @@ CREATE TABLE dbo.wf_step_def
 	PRIMARY KEY NONCLUSTERED (step_code)
 	)
 GO
+
+IF OBJECT_ID ('dbo.comm_number_generate') IS NOT NULL
+	DROP TABLE dbo.comm_number_generate
+GO
+
+CREATE TABLE dbo.comm_number_generate
+	(
+	id            INT IDENTITY NOT NULL,
+	number_name   VARCHAR (200) DEFAULT (NULL) NULL,
+	current_value INT DEFAULT (NULL) NULL,
+	span          INT DEFAULT ('1') NOT NULL,
+	number_desc   VARCHAR (500) NULL,
+	timestamp     DATETIME DEFAULT (getdate()) NOT NULL
+	)
+GO
+
+CREATE UNIQUE INDEX indx_number_name
+	ON dbo.comm_number_generate (number_name)
+GO
+
 

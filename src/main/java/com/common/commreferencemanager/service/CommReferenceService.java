@@ -15,8 +15,4 @@ public interface CommReferenceService {
     DataModel queryCommReference(DataModel queryModel);
 
     List<DataModel> queryCommReferenceList(DataModel queryModel);
-
-    void updateCommReferenceLastValue(DataModel updateModel);
-
-    int generateNumber(DataModel generateModel);
 }

@@ -10,8 +10,6 @@
             language_id,
             category_cd,
             code_desc,
-            current_value,
-            span,
             remarks
         )
         values (
@@ -20,75 +18,18 @@
             #{languageId},
             #{categoryCd},
             #{codeDesc},
-            #{currentValue},
-            #{span},
             #{remarks}
         )
     </insert>
 
     <select id="queryCommReference" parameterType="Map" resultType="DataModel">
-        select * from comm_reference where 1 = 1
-        <if test="type != null and type != ''">
-            and type = #{type}
-        </if>
-        <if test="code != null and code != ''">
-            and code = #{code}
-        </if>
-        <if test="languageId != null and languageId != ''">
-            and language_id = #{languageId}
-        </if>
-        <if test="categoryCd != null and categoryCd != ''">
-            and category_cd = #{categoryCd}
-        </if>
-        <if test="codeDesc != null and codeDesc != ''">
-            and code_desc = #{codeDesc}
-        </if>
-        <if test="currentValue != null">
-            and current_value = #{currentValue}
-        </if>
-        <if test="span != null">
-            and span = #{span}
-        </if>
-        <if test="remarks != null and remarks != ''">
-            and remarks = #{remarks}
-        </if>
-        limit 1
+        select * from comm_reference where id = #{id}
     </select>
 
     <select id="queryCommReferenceList" parameterType="Map" resultType="DataModel">
-        select * from comm_reference where 1 = 1
-        <if test="type != null and type != ''">
-            and type = #{type}
-        </if>
-        <if test="code != null and code != ''">
-            and code = #{code}
-        </if>
+        select * from comm_reference where type = #{type} and code = #{code}
         <if test="languageId != null and languageId != ''">
             and language_id = #{languageId}
         </if>
-        <if test="categoryCd != null and categoryCd != ''">
-            and category_cd = #{categoryCd}
-        </if>
-        <if test="codeDesc != null and codeDesc != ''">
-            and code_desc = #{codeDesc}
-        </if>
-        <if test="currentValue != null">
-            and current_value = #{currentValue}
-        </if>
-        <if test="span != null">
-            and span = #{span}
-        </if>
-        <if test="remarks != null and remarks != ''">
-            and remarks = #{remarks}
-        </if>
     </select>
-
-    <update id="updateCommReferencecurrentValue" parameterType="Map">
-        update comm_reference
-        set timestamp = #{timestamp}
-        <if test="currentValue != null and currentValue != ''">
-            , current_value = current_value +span
-        </if>
-        where id = #{id}
-    </update>
 </mapper>

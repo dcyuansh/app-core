@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2020-06-18 10:42:20
+Date: 2020-07-13 12:23:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,6 +57,21 @@ CREATE TABLE `comm_mail_template` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Table structure for comm_number_generate
+-- ----------------------------
+DROP TABLE IF EXISTS `comm_number_generate`;
+CREATE TABLE `comm_number_generate` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `number_name` varchar(200) DEFAULT NULL,
+  `current_value` int(11) DEFAULT NULL,
+  `span` int(11) DEFAULT '1',
+  `number_desc` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `indx_number_generate` (`number_name`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 -- Table structure for comm_reference
 -- ----------------------------
 DROP TABLE IF EXISTS `comm_reference`;
@@ -65,10 +80,8 @@ CREATE TABLE `comm_reference` (
   `type` varchar(90) DEFAULT NULL,
   `code` varchar(200) DEFAULT NULL,
   `language_id` varchar(20) DEFAULT NULL,
-  `category_cd` varchar(150) DEFAULT NULL,
+  `category_cd` varchar(200) DEFAULT NULL,
   `code_desc` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `current_value` int(11) DEFAULT NULL,
-  `span` int(11) DEFAULT '1',
   `remarks` varchar(500) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -137,7 +150,7 @@ CREATE TABLE `comm_task` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_task_no` (`task_no`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for comm_task_his
@@ -161,7 +174,7 @@ CREATE TABLE `comm_task_his` (
   `submission_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for comm_timesheet

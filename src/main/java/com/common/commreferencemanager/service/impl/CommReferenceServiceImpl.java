@@ -8,7 +8,6 @@ import com.core.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -24,36 +23,6 @@ public class CommReferenceServiceImpl implements CommReferenceService {
 
 
     /***
-     * generate number
-     * @return
-     */
-    @Override
-    public int generateNumber(DataModel generateModel) {
-        this.validateSaveOrUpdateCommNumber(generateModel);
-        int generateNumber = 1;
-        DataModel queryModel = this.queryCommReference(generateModel);
-        if (queryModel != null) {
-            generateNumber = queryModel.getIntegerValue("currentValue") + queryModel.getIntegerValue("span");
-            queryModel.setFieldValue("timestamp", LocalDateTime.now());
-            this.updateCommReferenceLastValue(queryModel);
-        } else {
-            if (!generateModel.containsKey("currentValue")) {
-                generateModel.setFieldValue("currentValue", 1);
-            }
-            if (!generateModel.containsKey("span")) {
-                generateModel.setFieldValue("span", 1);
-            }
-            generateModel.setFieldValue("language_id", "");
-            generateModel.setFieldValue("category_cd", "");
-            generateModel.setFieldValue("code_desc", "");
-            generateModel.setFieldValue("remarks", "ticket no自增长序号");
-            this.saveCommReference(generateModel);
-        }
-        return generateNumber;
-    }
-
-
-    /***
      * save comm_reference info
      * @param saveModel
      */
@@ -64,8 +33,9 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     }
 
 
-    /***
-     * query one comm_reference row info
+    /**
+     * query comm_reference
+     *
      * @param queryModel
      * @return
      */
@@ -75,26 +45,14 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     }
 
 
-    /**
-     * query comm_reference list info
-     *
+    /***
+     * query comm_reference list
      * @param queryModel
      * @return
      */
     @Override
     public List<DataModel> queryCommReferenceList(DataModel queryModel) {
         return commReferenceRepository.queryCommReferenceList(queryModel);
-    }
-
-
-    /***
-     * update comm number info
-     * @param updateModel
-     */
-    @Override
-    public void updateCommReferenceLastValue(DataModel updateModel) {
-        this.validateSaveOrUpdateCommNumber(updateModel);
-        commReferenceRepository.updateCommReferenceLastValue(updateModel);
     }
 
 

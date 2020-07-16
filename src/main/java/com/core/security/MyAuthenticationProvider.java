@@ -25,18 +25,19 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication auth) throws AuthenticationException {
-        String userName = auth.getName();
-        String password = (String) auth.getCredentials();
+        //Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String principal = (String) auth.getPrincipal();
+        String credentials = (String) auth.getCredentials();
         List<SimpleGrantedAuthority> roles = new ArrayList<>();
-        UserDetailsImpl userDetails = userDetailsService.loadUserByUsername(userName);
+        UserDetailsImpl userDetails = userDetailsService.loadUserByUsername(principal);
         if (userDetails == null) {
             logger.error("user name is not right！");
             throw new UsernameNotFoundException("user name is not right！");
         } else {
-            roles.add(new SimpleGrantedAuthority("ADMIN"));
+            roles.add(new SimpleGrantedAuthority("admin"));
         }
         // 构建返回的用户登录成功的token
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userName, password, roles);
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(principal, credentials, roles);
         token.setDetails(userDetails);
         return token;
     }

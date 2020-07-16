@@ -48,11 +48,9 @@ public class UserServiceImpl implements UserService {
         DataModel userModel = userRepository.findUser(queryModel);
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         if (userModel != null && bCryptPasswordEncoder.matches(queryModel.getStringValue("password"), userModel.getStringValue("password"))) {
-            String subject = "System Authorization";
             Map<String, Object> claims = new HashMap<>();
             claims.put("userName", userModel.getStringValue("userName"));
-            long expireTime = 0;
-            String token = JWTTokenUtils.sign(subject, claims, expireTime);
+            String token = JWTTokenUtils.sign(null, claims, 0);
             userModel.setFieldValue("token", token);
             MessageManager.getInstance().addSuccessMessage("sys.user.query.success");
         } else {

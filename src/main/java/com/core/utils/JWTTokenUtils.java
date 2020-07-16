@@ -23,6 +23,8 @@ public class JWTTokenUtils {
     private static String TOKEN_SECRET = "System Token";
     //签发者
     private static String ISSUER = "System Administrator";
+    //主题
+    private static String SUBJECT = "System Authorization";
 
 
     /***
@@ -34,9 +36,9 @@ public class JWTTokenUtils {
      */
     public static String sign(String subject, Map<String, Object> claims, long expireTime) {
         //json claim参数
-        claims.forEach((key, val) -> {
-            claims.put(key, JSON.toJSONString(val));
-        });
+        claims.forEach((key, val) ->
+                claims.put(key, JSON.toJSONString(val))
+        );
 
         //过期时间
         long nowMillis = System.currentTimeMillis();
@@ -45,7 +47,7 @@ public class JWTTokenUtils {
         return Jwts.builder()
                 .setId(UUIDUtils.getUUID())
                 .setIssuer(ISSUER) //签发者信息
-                .setSubject(subject) //主题说明
+                .setSubject(StringUtils.isBlank(subject) ? SUBJECT : subject) //主题说明
                 .addClaims(claims) //claim信息
                 .setIssuedAt(now)  //签发时间
                 .setExpiration(expireDate) //过期时间戳
@@ -80,7 +82,7 @@ public class JWTTokenUtils {
         Claims claims = null;
         try {
             claims = Jwts.parser()
-                    .setSigningKey(DatatypeConverter.parseBase64Binary(StringUtils.isEmpty(token_secret) == true ? TOKEN_SECRET : token_secret))
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(StringUtils.isBlank(token_secret) ? TOKEN_SECRET : token_secret))
                     .parseClaimsJws(token).getBody();
         } catch (Exception e) {
             e.printStackTrace();

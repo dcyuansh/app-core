@@ -32,7 +32,7 @@ public class ConvertUtils {
                     if (obj instanceof Byte) {
                         objResult = (Byte) obj;
                     } else {
-                        objResult = obj.toString().getBytes();
+                        objResult = NumberUtils.toByte(obj.toString());
                     }
                     break;
                 case CHAR:
@@ -46,42 +46,42 @@ public class ConvertUtils {
                     if (obj instanceof Short) {
                         objResult = (Short) obj;
                     } else {
-                        objResult = Short.parseShort(obj.toString());
+                        objResult = NumberUtils.toShort(obj.toString());
                     }
                     break;
                 case INTEGER:
                     if (obj instanceof Integer) {
                         objResult = ((Integer) obj).intValue();
                     } else {
-                        objResult = Integer.parseInt(obj.toString());
+                        objResult = NumberUtils.toInt(obj.toString());
                     }
                     break;
                 case LONG:
                     if (obj instanceof Long) {
                         objResult = ((Long) obj).longValue();
                     } else {
-                        objResult = Long.parseLong(obj.toString());
+                        objResult = NumberUtils.toLong(obj.toString());
                     }
                     break;
                 case FLOAT:
                     if (obj instanceof Float) {
                         objResult = ((Float) obj).floatValue();
                     } else {
-                        objResult = Float.parseFloat(obj.toString());
+                        objResult = NumberUtils.toFloat(obj.toString());
                     }
                     break;
                 case DOUBLE:
                     if (obj instanceof Double) {
                         objResult = ((Double) obj).doubleValue();
                     } else {
-                        objResult = Double.parseDouble(obj.toString());
+                        objResult = NumberUtils.toDouble(obj.toString());
                     }
                     break;
                 case BIGDECIMAL:
                     if (obj instanceof BigDecimal) {
                         objResult = (BigDecimal) obj;
                     } else {
-                        objResult = new BigDecimal(obj.toString());
+                        objResult = NumberUtils.toScaledBigDecimal(obj.toString());
                     }
                     break;
                 case LOCALTIME:

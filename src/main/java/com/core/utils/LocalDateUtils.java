@@ -1,5 +1,7 @@
 package com.core.utils;
 
+import com.core.constants.DateFormatConstant;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -9,8 +11,6 @@ import java.time.format.DateTimeFormatter;
  */
 public class LocalDateUtils {
 
-    public static final String LOCAL_DATE_FORMAT = "yyyy-MM-dd";
-
 
     /***
      * 获取指定时间的指定格式,默认格式(yyyy-MM-dd)
@@ -19,7 +19,7 @@ public class LocalDateUtils {
      * @return
      */
     public static String formatDate(LocalDate time, String pattern) {
-        return time.format(DateTimeFormatter.ofPattern(pattern == null ? LOCAL_DATE_FORMAT : pattern));
+        return time.format(DateTimeFormatter.ofPattern(pattern == null ? DateFormatConstant.LOCAL_DATE_FORMAT : pattern));
     }
 
 
@@ -30,6 +30,6 @@ public class LocalDateUtils {
      * @return
      */
     public static LocalDate formatDate(String time, String pattern) {
-        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern == null ? LOCAL_DATE_FORMAT : pattern));
+        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern == null ? DateFormatConstant.LOCAL_DATE_FORMAT : pattern));
     }
 }

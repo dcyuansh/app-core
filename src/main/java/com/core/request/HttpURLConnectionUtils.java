@@ -11,17 +11,17 @@ import java.net.URL;
  * @author dechun.yuan
  * @version 1.0
  */
-public class HttpRequestPost {
+public class HttpURLConnectionUtils {
 
 
     public static final String POST_URL = "http://localhost:8080/ydc/interface/doPostRequest.do";
 
 
-    public static void httpURLConnectionPOST(String inputStram) {//inputStram 你要post的数据
+    public static void post(String inputStram, String urlStr) {//inputStram 你要post的数据
 
         PrintWriter out = null;
         try {
-            URL url = new URL(POST_URL);
+            URL url = new URL(urlStr);
             // 将url以open方法返回的urlConnection 连接强转为HttpURLConnection连接
             // (标识一个url所引用的远程对象连接)
             // 此时cnnection只是为一个连接对象,待连接中

@@ -93,4 +93,18 @@ public class MatcherUtils {
         }
         return str.matches("^[+-]?(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d)+)?$");
     }
+
+
+    /**
+     * 判断是不是中文字符串
+     *
+     * @param cn
+     * @return
+     */
+    public static boolean isCNStr(String cn) {
+        if (StringUtils.isBlank(cn)) {
+            return false;
+        }
+        return cn.matches("^[\\u4e00-\\u9fa5]{0,}$");
+    }
 }

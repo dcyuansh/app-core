@@ -19,9 +19,10 @@ import java.net.URLDecoder;
  * @author dechun.yuan
  * @version 1.0
  */
-public class HttpRequestUtil {
+public class HttpClientUtils {
 
-    private static Logger logger = LoggerFactory.getLogger(HttpRequestUtil.class);    //日志记录
+    private static Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);    //日志记录
+
 
     /***
      * post请求
@@ -62,13 +63,14 @@ public class HttpRequestUtil {
         return jsonResult;
     }
 
+
     /***
      * 发送get请求
      * @param url 路径
      * @return
      */
     public static String get(String url) {
-        String responseString = null;
+        String res = null;
         try {
             HttpClient client = HttpClientBuilder.create().build();
             //发送get请求
@@ -78,7 +80,7 @@ public class HttpRequestUtil {
             /**请求发送成功，并得到响应**/
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 /**读取服务器返回过来的json字符串数据**/
-                responseString = EntityUtils.toString(response.getEntity());
+                res = EntityUtils.toString(response.getEntity());
                 /**把json字符串转换成json对象**/
             } else {
                 logger.error("get请求提交失败:" + url);
@@ -86,6 +88,6 @@ public class HttpRequestUtil {
         } catch (IOException e) {
             logger.error("get请求提交失败:" + url, e);
         }
-        return responseString;
+        return res;
     }
 }

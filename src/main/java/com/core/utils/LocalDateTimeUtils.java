@@ -1,6 +1,6 @@
 package com.core.utils;
 
-import com.core.constants.DateFormatConstant;
+import com.core.constants.SystemConstant;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -22,7 +22,7 @@ public class LocalDateTimeUtils {
      * @return
      */
     public static String formatTime(LocalDateTime time, String pattern) {
-        return time.format(DateTimeFormatter.ofPattern(pattern == null ? DateFormatConstant.LOCAL_DATE_TIME_FORMAT : pattern));
+        return time.format(DateTimeFormatter.ofPattern(pattern == null ? SystemConstant.DATE_TIME_FORMAT : pattern));
     }
 
 
@@ -33,7 +33,7 @@ public class LocalDateTimeUtils {
      * @return
      */
     public static LocalDateTime formatTime(String time, String pattern) {
-        return LocalDateTime.parse(time, DateTimeFormatter.ofPattern(pattern == null ? DateFormatConstant.LOCAL_DATE_TIME_FORMAT : pattern));
+        return LocalDateTime.parse(time, DateTimeFormatter.ofPattern(pattern == null ? SystemConstant.DATE_TIME_FORMAT : pattern));
     }
 
 
@@ -43,7 +43,7 @@ public class LocalDateTimeUtils {
      * @return
      */
     public static String formatNow(String pattern) {
-        return formatTime(LocalDateTime.now(), pattern == null ? DateFormatConstant.LOCAL_DATE_TIME_FORMAT : pattern);
+        return formatTime(LocalDateTime.now(), pattern == null ? SystemConstant.DATE_TIME_FORMAT : pattern);
     }
 
 

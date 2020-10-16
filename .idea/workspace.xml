@@ -2,12 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93aab755-3870-4cb0-b120-192b32bd8907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prd.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app-core.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/config/AipOcrConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/ApiOcrService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/TestIdCaredController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/impl/ApiOcrServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/repository/CommNumberGenerateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/repository/CommNumberGenerateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/CommNumberGenerateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/CommNumberGenerateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/impl/CommNumberGenerateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/impl/CommNumberGenerateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/repository/CommReferenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/repository/CommReferenceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/CommReferenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/CommReferenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/impl/CommReferenceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/impl/CommReferenceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/controller/IdCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/controller/IdCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/repository/IdCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/repository/IdCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/IdCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/IdCardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/impl/IdCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/impl/IdCardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/JdbcTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/JdbcTemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/impl/JdbcTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/impl/JdbcTemplateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/impl/EmailServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/impl/EmailServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/controller/MailTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/controller/MailTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/repository/MailTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/repository/MailTemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/MailTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/MailTemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/config/AlipayConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/enums/AlipayResponseCodeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/enums/AlipayTradeStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/service/AlipayService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/service/impl/AlipayServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/controller/WorkFlowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/controller/WorkFlowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcApproveStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcApproveStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcStateEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/repository/WorkFlowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/repository/WorkFlowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/constants/DateFormatConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/data/result/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/data/entity/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/AcceptMessageEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/AutoIndCodeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ResultEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/scan/Veracode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/CreateDropSql.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1021_ENTITY.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1152_ENTITY.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1242_ENTITY.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_5005_ENTITY.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_UN_Consolidated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_UN_Consolidated_20200331.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/controller/ExportExcelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/repository/ExportExcelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/service/ExportExcelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/service/impl/ExportExcelServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/exec.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/read.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/config/AipOcrConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/ApiOcrService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/TestIdCaredController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/impl/ApiOcrServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/config/AlipayConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/enums/AlipayResponseCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/enums/AlipayTradeStatusEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/service/AlipayService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/service/impl/AlipayServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/constants/DateFormatConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/constants/SystemConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/constants/SystemConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/data/result/ResultData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/AcceptMessageEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/AutoIndCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ContentTypeMessageEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/ContentTypeMessageEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/EncodeTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/EncodeTypeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ExceptionStatusCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/ExceptionStatusCodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/MonthEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/MonthEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ResultEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/request/HttpClientUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/request/HttpClientUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/scan/Veracode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/EncryptUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/EncryptUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateTimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateTimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/CreateDropSql.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1021_ENTITY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1152_ENTITY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1242_ENTITY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_5005_ENTITY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_UN_Consolidated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_UN_Consolidated_20200331.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/controller/ExportExcelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/repository/ExportExcelRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/service/ExportExcelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/service/impl/ExportExcelServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql/exec.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql/read.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../web-app-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app-service/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +148,71 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/openJDK/jdk-11.0.3/lib/src.zip!/java.base/java/net/URLDecoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/EntityUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="187" column="18" lean-forward="true" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/Args.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpResponse.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpEntity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,8 +229,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>commReferenceService</find>
-      <find>saveCommTask</find>
       <find>dom</find>
       <find>jt</find>
       <find>auths</find>
@@ -88,6 +257,8 @@
       <find>SUNDAY</find>
       <find>OPEN</find>
       <find>汉字</find>
+      <find>RESULT_MESSAGE</find>
+      <find>HttpConstant</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -117,18 +288,33 @@
         <option value="$PROJECT_DIR$/src/main/java/com/core/utils/TestDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/constants/DateFormatConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/enums/StatusEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/enums/WeekEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/utils/MatcherUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/utils/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/data/result/ResultData.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/../web-app-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/common/usermanage/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/data/entity/ResultData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/data/entity/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/AutoIndCodeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/RequestTypeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-prd.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" />
       </list>
     </option>
   </component>
@@ -147,7 +333,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="app-core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="app-core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -239,6 +435,24 @@
               <item name="app-core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -271,7 +485,7 @@
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602852935319" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602866703488" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AIG/Repository/aig_circ_service/build.gradle" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -280,8 +494,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources" />
       <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\sqlserver" />
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\java\com\common\commnumbergenerate" />
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\mysql" />
+      <recent name="C:\dechun.yuan\Repository\web-app-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.core.enums" />
@@ -290,12 +508,8 @@
       <recent name="com.core.utils" />
       <recent name="com.tool.aml.importxmldata" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\sqlserver" />
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\java\com\common\commnumbergenerate" />
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\mysql" />
-      <recent name="C:\dechun.yuan\Repository\web-app-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -673,12 +887,12 @@
       <workItem from="1602810182927" duration="7887000" />
       <workItem from="1602831817944" duration="418000" />
       <workItem from="1602840588000" duration="1821000" />
-      <workItem from="1602851017743" duration="1695000" />
+      <workItem from="1602851017743" duration="12121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47831000" />
+    <option name="totallyTimeSpent" value="58257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,8 +916,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.470922" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24822696" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2822695" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3531915" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34184396" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -714,7 +928,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="Run Dashboard" order="13" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.2" />
       <window_info anchor="right" id="Maven Projects" order="0" weight="0.14745308" />
       <window_info anchor="right" id="Database" order="1" weight="0.3297587" />
       <window_info anchor="right" id="Bean Validation" order="2" weight="0.3297587" />
@@ -793,173 +1007,83 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/ValidateIDCardUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/404Page.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5050">
-          <caret line="154" column="5" lean-forward="true" selection-start-line="151" selection-start-column="3" selection-end-line="154" selection-end-column="5" />
+        <state relative-caret-position="146">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/StringUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/mysql/WorkFlowRepository.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-        </state>
+        <state relative-caret-position="-3974" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/FastJsonUtil.java">
+    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/controller/CommTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/StreamUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/PropertiesUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/MatcherUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="67" column="17" lean-forward="true" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2041">
-          <caret line="83" column="5" selection-start-line="72" selection-start-column="71" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/SpringContextUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="139">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/controller/CommTaskHisController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
+        <state relative-caret-position="139">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/controller/CommTaskController.java">
+    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/enums/TaskStatusEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        <state relative-caret-position="139">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/service/CommTaskService.java">
+    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/service/impl/CommTaskHisServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="139">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/java/com/app/commtaskmanage/service/impl/CommTaskServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+        <state relative-caret-position="-1295">
+          <caret line="46" column="27" selection-start-line="46" selection-end-line="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/CommNumberGenerateService.java">
+    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/resources/sql/sqlserver/create_table_sqlserver.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="35">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/EnumUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="218">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/impl/CommNumberGenerateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/app-core.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/controller/MailTemplateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/repository/MailTemplateRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/MailTemplateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/WeekEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/StatusEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/CodeMessageEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/ResultEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/DataTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="25" />
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -970,163 +1094,299 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/data/model/DataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/DataTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/RequestTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding>
+            <element signature="method#MonthEnum#0;class#MonthEnum#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/StatusEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/data/result/ResultData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/data/model/DataModelList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/WeekEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1006">
-          <caret line="195" column="20" selection-start-line="195" selection-start-column="20" selection-end-line="195" selection-end-column="20" />
+        <state relative-caret-position="287">
+          <caret line="27" column="114" selection-start-line="27" selection-start-column="114" selection-end-line="27" selection-end-column="114" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="171">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
+        <state relative-caret-position="245">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/constants/DateFormatConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-prd.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="65" column="44" lean-forward="true" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/request/HttpURLConnectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-899">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/entity/StringEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/monitor/LogMonitorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/excel/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/JWTTokenUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/MatcherUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/PropertiesUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/SpringContextUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/StreamUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2555">
+          <caret line="78" column="94" selection-start-line="78" selection-start-column="94" selection-end-line="78" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/CharSequenceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/utils/ArrayUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="33" />
+        <state relative-caret-position="226">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/redis/RedisUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/EmailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="226">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/impl/EmailServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="method#sendSimpleEmail#0;class#EmailServiceImp#0" />
+            <element signature="method#sendHtmlEmail#0;class#EmailServiceImp#0" />
+            <element signature="method#sendAttachmentsEmail#0;class#EmailServiceImp#0" />
+            <element signature="method#sendInlineResourceEmail#0;class#EmailServiceImp#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-444">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/redis/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/http/HttpsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/JdbcTemplateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-430">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/impl/JdbcTemplateServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1691">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="24" />
+        <state relative-caret-position="16">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../web-app-service/src/main/resources/logback-spring.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/message/service/impl/MessageManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../web-app-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/idcardmanage/controller/IdCardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/idcardmanage/repository/IdCardRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/impl/IdCardServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1634">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="140">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2162#2163#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/message/service/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-core.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="455">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/AppTests.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpEntity.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="-3">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpResponse.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/openJDK/jdk-11.0.3/lib/src.zip!/java.base/java/net/URLDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/Args.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/EntityUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="187" column="18" lean-forward="true" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

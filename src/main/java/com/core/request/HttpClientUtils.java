@@ -1,6 +1,7 @@
 package com.core.request;
 
 import com.core.enums.EncodeTypeEnum;
+import com.core.utils.StringUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -24,33 +25,32 @@ public class HttpClientUtils {
     private static Logger logger = LoggerFactory.getLogger(HttpClientUtils.class);    //日志记录
 
 
-    /***
-     * post请求
-     * @param url       url地址
-     * @param jsonParam 参数
+    /**
+     * @param url
+     * @param contentType
+     * @param reqParam
      * @return
      */
-    public static String post(String url, String jsonParam) {
+    public static String post(String url, String contentType, String reqParam) {
         //post请求返回结果
         HttpClient httpClient = HttpClientBuilder.create().build();
-        String jsonResult = null;
+        String res = null;
         HttpPost method = new HttpPost(url);
         try {
-            if (null != jsonParam) {
+            if (StringUtils.isNotBlank(reqParam)) {
                 //解决中文乱码问题
-                StringEntity entity = new StringEntity(jsonParam, EncodeTypeEnum.UTF8.getEncodeType());
-                entity.setContentEncoding(EncodeTypeEnum.UTF8.getEncodeType());
-                entity.setContentType("application/json");
+                StringEntity entity = new StringEntity(reqParam, EncodeTypeEnum.UTF8.getCode());
+                entity.setContentEncoding(EncodeTypeEnum.UTF8.getCode());
+                entity.setContentType(contentType);
                 method.setEntity(entity);
             }
             HttpResponse result = httpClient.execute(method);
-            url = URLDecoder.decode(url, EncodeTypeEnum.UTF8.getEncodeType());
+            url = URLDecoder.decode(url, EncodeTypeEnum.UTF8.getCode());
             /**请求发送成功，并得到响应**/
             if (result.getStatusLine().getStatusCode() == 200) {
                 try {
                     /**读取服务器返回过来的json字符串数据**/
-                    jsonResult = EntityUtils.toString(result.getEntity());
-
+                    res = EntityUtils.toString(result.getEntity(), EncodeTypeEnum.UTF8.getCode());
                     /**把json字符串转换成json对象**/
                     //jsonResult = JSONObject.fromObject(str);
                 } catch (Exception e) {
@@ -60,7 +60,7 @@ public class HttpClientUtils {
         } catch (IOException e) {
             logger.error("post请求提交失败:" + url, e);
         }
-        return jsonResult;
+        return res;
     }
 
 
@@ -80,7 +80,7 @@ public class HttpClientUtils {
             /**请求发送成功，并得到响应**/
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 /**读取服务器返回过来的json字符串数据**/
-                res = EntityUtils.toString(response.getEntity());
+                res = EntityUtils.toString(response.getEntity(), EncodeTypeEnum.UTF8.getCode());
                 /**把json字符串转换成json对象**/
             } else {
                 logger.error("get请求提交失败:" + url);

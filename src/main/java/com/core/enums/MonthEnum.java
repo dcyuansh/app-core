@@ -22,9 +22,9 @@ public enum MonthEnum implements CodeMessageEnum {
     private String code;
     private String message;
 
-    MonthEnum(String code, String msg) {
+    MonthEnum(String code, String message) {
         this.code = code;
-        this.message = msg;
+        this.message = message;
     }
 
     @Override

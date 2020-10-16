@@ -10,21 +10,21 @@ public enum ContentTypeMessageEnum implements CodeEnum {
 
     JSON("application/json"), XML("application/xml"), XWWWFORMURLENCODEED("application/x-www-form-urlencoded"), MULTIPART("multipart/form-data"), XMLRPC("text/xml"), UNDEFINED("undefined");
 
-    private String contentTypeValue;
+    private String code;
 
 
-    ContentTypeMessageEnum(String contentTypeValue) {
-        this.contentTypeValue = contentTypeValue;
+    ContentTypeMessageEnum(String code) {
+        this.code = code;
     }
 
     @Override
     public void setCode(String code) {
-        this.contentTypeValue = code;
+        this.code = code;
     }
 
     @Override
     public String getCode() {
-        return contentTypeValue;
+        return code;
     }
 
 

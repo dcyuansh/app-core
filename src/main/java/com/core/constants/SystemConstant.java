@@ -6,5 +6,7 @@ package com.core.constants;
  */
 public final class SystemConstant {
 
-    public static final double MAX_VALUE = 9999999999999.99D;
+    public static final String DATE_FORMAT = "yyyy-MM-dd";
+    public static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+
 }

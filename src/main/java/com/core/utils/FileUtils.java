@@ -25,7 +25,7 @@ public class FileUtils {
             try {
                 FileInputStream input = new FileInputStream(file);
                 //FileReader fileReader = new FileReader(file);
-                InputStreamReader fileReader = new InputStreamReader(new FileInputStream(file), EncodeTypeEnum.UTF8.getEncodeType());
+                InputStreamReader fileReader = new InputStreamReader(new FileInputStream(file), EncodeTypeEnum.UTF8.getCode());
                 BufferedReader reader = new BufferedReader(fileReader);
                 String str = null;
                 while ((str = reader.readLine()) != null) {
@@ -72,7 +72,7 @@ public class FileUtils {
      * @return
      */
     public static String getFileEncodeType(FileInputStream input) {
-        String encodeType = EncodeTypeEnum.UTF8.getEncodeType();
+        String encodeType = EncodeTypeEnum.UTF8.getCode();
         byte[] byt = new byte[3];
         try {
             input.read(byt);
@@ -82,7 +82,7 @@ public class FileUtils {
         //根据文件的前3个字符判断文件应该用什么编码格式
         if (byt.length >= 3) {
             if (!(byt[0] == -17 && byt[1] == -69 && byt[2] == -65)) {
-                encodeType = EncodeTypeEnum.GBK.getEncodeType();
+                encodeType = EncodeTypeEnum.GBK.getCode();
             }
         }
         return encodeType;

@@ -6,7 +6,7 @@ package com.core.enums;
  * @author dechun.yuan
  *
  */
-public enum ExceptionStatusCodeEnum {
+public enum ExceptionStatusCodeEnum implements CodeMessageEnum {
     Success("001", "Success"),
     Fail("002", "Fail"),
     UserNotExist("003", "User not exist"),
@@ -28,18 +28,30 @@ public enum ExceptionStatusCodeEnum {
 
 
     private String code;
-    private String msg;
+    private String message;
 
-    ExceptionStatusCodeEnum(String code, String msg) {
+    ExceptionStatusCodeEnum(String code, String message) {
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
 
-    public String getMsg() {
-        return this.msg;
+    @Override
+    public void setCode(String code) {
+        this.code = code;
     }
 
+    @Override
     public String getCode() {
         return this.code;
+    }
+
+    @Override
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    @Override
+    public String getMessage() {
+        return this.message;
     }
 }

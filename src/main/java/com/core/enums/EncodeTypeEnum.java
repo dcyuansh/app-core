@@ -5,21 +5,23 @@ package com.core.enums;
  * @author dechun.yuan
  * @version 1.0
  */
-public enum EncodeTypeEnum {
+public enum EncodeTypeEnum implements CodeEnum {
 
     UTF8("UTF-8"), GBK("GBK"), GB2312("GB2312"), ISO88591("ISO-8859-1"), ASCII("ASCII");
 
-    private String encodeType;
+    private String code;
 
-    EncodeTypeEnum(String encodeType) {
-        this.encodeType = encodeType;
+    EncodeTypeEnum(String code) {
+        this.code = code;
     }
 
-    public String getEncodeType() {
-        return encodeType;
+    @Override
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public void setEncodeType(String encodeType) {
-        this.encodeType = encodeType;
+    @Override
+    public String getCode() {
+        return this.code;
     }
 }

@@ -1,9 +1,10 @@
 package com.core.controller;
 
 import com.core.data.model.DataModel;
-import com.core.enums.ResultEnum;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
+import org.apache.http.HttpStatus;
+import org.apache.http.protocol.HTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,10 +19,10 @@ public abstract class BaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public static final String RESULT_STATUS = ResultEnum.RESULT_STATUS.getresultType();
-    public static final String RESULT_CODE = ResultEnum.RESULT_CODE.getresultType();
-    public static final String RESULT_DATA = ResultEnum.RESULT_DATA.getresultType();
-    public static final String RESULT_MESSAGE = ResultEnum.RESULT_MESSAGE.getresultType();
+    public static final String RESULT_STATUS = "status";
+    public static final String RESULT_CODE = "code";
+    public static final String RESULT_DATA = "data";
+    public static final String ERROR_MESSAGE = "errorMsg";
 
 
     /***
@@ -107,7 +108,7 @@ public abstract class BaseController {
         logger.warn(ve.getMessage());
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
         resultMap.setFieldValue(RESULT_CODE, "VALIDATION_FAILED");
-        resultMap.setFieldValue(RESULT_MESSAGE, ve.getMessage());
+        resultMap.setFieldValue(ERROR_MESSAGE, ve.getMessage());
         return resultMap;
     }
 
@@ -124,8 +125,9 @@ public abstract class BaseController {
         }
         logger.error(e.getMessage(), e);
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
-        resultMap.setFieldValue(RESULT_CODE, "SYSTEM_EXCEPTION");
-        resultMap.setFieldValue(RESULT_MESSAGE, e.getMessage());
+        //code: 500
+        resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
+        resultMap.setFieldValue(ERROR_MESSAGE, e.getMessage());
         return resultMap;
     }
 
@@ -151,7 +153,8 @@ public abstract class BaseController {
         }
         logger.info("request success!");
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.SUCCESS);
-        resultMap.setFieldValue(RESULT_CODE, "REQUEST_SUCCESS");
+        //code: 200
+        resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_OK);
         if (obj != null) {
             resultMap.setFieldValue(RESULT_DATA, obj);
         }

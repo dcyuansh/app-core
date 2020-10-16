@@ -57,7 +57,7 @@ public class EncryptUtils {
         Encoder encoder = Base64.getEncoder();
         byte[] bt = null;
         try {
-            bt = str.getBytes(encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType);
+            bt = str.getBytes(encodeType == null ? EncodeTypeEnum.UTF8.getCode() : encodeType);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +76,7 @@ public class EncryptUtils {
         byte[] asBytes = decoder.decode(str);
         String decodeStr = null;
         try {
-            decodeStr = new String(asBytes, encodeType == null ? EncodeTypeEnum.UTF8.getEncodeType() : encodeType);
+            decodeStr = new String(asBytes, encodeType == null ? EncodeTypeEnum.UTF8.getCode() : encodeType);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -2,119 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93aab755-3870-4cb0-b120-192b32bd8907" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prd.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app-core.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/config/AipOcrConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/ApiOcrService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/TestIdCaredController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/apiocrmanage/service/impl/ApiOcrServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/repository/CommNumberGenerateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/repository/CommNumberGenerateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/CommNumberGenerateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/CommNumberGenerateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/impl/CommNumberGenerateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commnumbergenerate/service/impl/CommNumberGenerateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/repository/CommReferenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/repository/CommReferenceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/CommReferenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/CommReferenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/impl/CommReferenceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/commreferencemanager/service/impl/CommReferenceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/controller/IdCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/controller/IdCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/repository/IdCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/repository/IdCardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/IdCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/IdCardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/impl/IdCardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/idcardmanage/service/impl/IdCardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/JdbcTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/JdbcTemplateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/impl/JdbcTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/jdbctemplatemanage/service/impl/JdbcTemplateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/impl/EmailServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailservicemanage/service/impl/EmailServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/controller/MailTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/controller/MailTemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/repository/MailTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/repository/MailTemplateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/MailTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/MailTemplateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/mailtemplatemanage/service/impl/MailTemplateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/config/AlipayConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/enums/AlipayResponseCodeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/enums/AlipayTradeStatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/service/AlipayService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/paymentmanage/alipay/service/impl/AlipayServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/usermanage/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/controller/WorkFlowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/controller/WorkFlowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcApproveStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcApproveStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/enums/ProcStateEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/repository/WorkFlowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/repository/WorkFlowRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/impl/WorkFlowServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/constants/DateFormatConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/constants/SystemConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/data/result/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/data/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/AcceptMessageEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/AutoIndCodeEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/ContentTypeMessageEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/EncodeTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/ExceptionStatusCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/enums/MonthEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/enums/ResultEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/scan/Veracode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/EncryptUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateTimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/core/utils/LocalDateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/CreateDropSql.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1021_ENTITY.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1152_ENTITY.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_1242_ENTITY.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_5005_ENTITY.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_UN_Consolidated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/aml/importxmldata/Service_UN_Consolidated_20200331.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/controller/ExportExcelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/repository/ExportExcelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/service/ExportExcelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tool/exportexcelmanage/service/impl/ExportExcelServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/exec.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/read.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/config/AipOcrConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/ApiOcrService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/TestIdCaredController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/apiocrmanage/service/impl/ApiOcrServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/config/AlipayConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/enums/AlipayResponseCodeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/enums/AlipayTradeStatusEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/service/AlipayService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/common/paymentmanage/alipay/service/impl/AlipayServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/constants/DateFormatConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/constants/SystemConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/constants/SystemConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/data/result/ResultData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/AcceptMessageEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/AutoIndCodeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ContentTypeMessageEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/ContentTypeMessageEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/EncodeTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/EncodeTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ExceptionStatusCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/ExceptionStatusCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/MonthEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/enums/MonthEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/enums/ResultEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/request/HttpClientUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/request/HttpClientUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/scan/Veracode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/EncryptUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/EncryptUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/FileUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateTimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateTimeUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/core/utils/LocalDateUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/CreateDropSql.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1021_ENTITY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1152_ENTITY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_1242_ENTITY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_5005_ENTITY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_UN_Consolidated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/aml/importxmldata/Service_UN_Consolidated_20200331.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/controller/ExportExcelController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/repository/ExportExcelRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/service/ExportExcelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tool/exportexcelmanage/service/impl/ExportExcelServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/exec.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/read.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../web-app-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web-app-service/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,65 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="82" column="94" selection-start-line="82" selection-start-column="94" selection-end-line="82" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/openJDK/jdk-11.0.3/lib/src.zip!/java.base/java/net/URLDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/EntityUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="187" column="18" lean-forward="true" selection-start-line="187" selection-start-column="18" selection-end-line="187" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/util/Args.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpResponse.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar!/org/apache/http/HttpEntity.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="70">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -315,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/application-prd.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/core/request/HttpClientUtils.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -407,6 +243,11 @@
             <path>
               <item name="app-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-core" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -485,7 +326,7 @@
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602866703488" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602867313596" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AIG/Repository/aig_circ_service/build.gradle" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -494,12 +335,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\sqlserver" />
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\java\com\common\commnumbergenerate" />
-      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\mysql" />
-      <recent name="C:\dechun.yuan\Repository\web-app-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.core.enums" />
@@ -508,8 +345,12 @@
       <recent name="com.core.utils" />
       <recent name="com.tool.aml.importxmldata" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources" />
       <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\sqlserver" />
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\java\com\common\commnumbergenerate" />
+      <recent name="C:\dechun.yuan\Repository\app-core\src\main\resources\mappers\mysql" />
+      <recent name="C:\dechun.yuan\Repository\web-app-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -892,7 +733,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58257000" />
+    <option name="totallyTimeSpent" value="58381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -905,6 +746,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23592493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1007,9 +849,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/404Page.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/common/workflowmanager/service/WorkFlowService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -1387,6 +1226,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>

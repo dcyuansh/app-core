@@ -1,0 +1,3 @@
+16-10-2020 20:56:04.195 [main] INFO  com.App.logStarting - Starting App on DESKTOP-2CU57BE with PID 8288 (C:\dechun.yuan\Repository\app-core\target\classes started by DeChunYuan in C:\dechun.yuan\Repository\app-core)
+16-10-2020 20:56:04.197 [main] INFO  com.App.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+16-10-2020 20:56:38.463 [main] INFO  com.App.logStarted - Started App in 36.703 seconds (JVM running for 41.792)

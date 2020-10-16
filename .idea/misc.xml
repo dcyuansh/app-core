@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../aig_aml_service/pom.xml" />
+        <option value="$PROJECT_DIR$/../web-app-service/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../app-service/consumer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../app-service/eureka-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../app-service/hystrix-dashboard-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../app-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../app-service/provider-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../app-service/turbine-service/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="OpenJDK_11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

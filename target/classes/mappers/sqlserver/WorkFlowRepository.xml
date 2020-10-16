@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.common.workflowmanager.repository.WorkFlowRepository">
+
+    <!--wf_proc begin-->
+    <insert id="saveWorkFlowProc" parameterType="Map">
+        <selectKey resultType="java.lang.Long" order="AFTER" keyProperty="proc_id">
+            SELECT @@IDENTITY
+        </selectKey>
+        INSERT INTO dbo.wf_proc
+        (
+        wf_code,
+        step_code,
+        business_id,
+        state,
+        user_id,
+        user_group,
+        remark,
+        owner_id,
+        TIMESTAMP
+        )
+        select
+        wf_code,
+        step_code,
+        #{businessId},
+        #{state},
+        user_id,
+        user_group
+        #{remark},
+        #{ownerId},
+        #{timestamp}
+        FROM wf_flow_step_def
+        where wf_code =#{wfCode}
+        and from_step_code is null
+    </insert>
+
+    <select id="findWorkFlowProcByProcId" parameterType="Map" resultType="DataModel">
+        SELECT * FROM FROM wf_proc WHERE proc_id = #{procId}
+    </select>
+
+    <select id="findWorkFlowProcList" parameterType="Map" resultType="DataModel">
+        SELECT * FROM FROM wf_proc where 1=1
+        <if test="procId != null and procId != ''">
+            and proc_id = #{procId}
+        </if>
+        <if test="wfCode != null and wfCode != ''">
+            and wf_code = #{wfCode}
+        </if>
+        <if test="stepCode != null and stepCode != ''">
+            and step_code = #{stepCode}
+        </if>
+        <if test="businessId != null and businessId != ''">
+            and business_id = #{businessId}
+        </if>
+        <if test="state != null and state != ''">
+            and state = #{state}
+        </if>
+        <if test="userId != null and userId != ''">
+            and user_id = #{userId}
+        </if>
+        <if test="userGroup != null and userGroup != ''">
+            and user_group = #{userGroup}
+        </if>
+        <if test="ownerId != null and ownerId != ''">
+            and owner_id = #{ownerId}
+        </if>
+    </select>
+
+    <update id="updateWorkFlowProc" parameterType="Map">
+        update wf_proc
+        set timestamp = #{timestamp}
+        <if test="stepCode != null and stepCode != ''">
+            , step_code = #{stepCode}
+        </if>
+        <if test="state != null and state != ''">
+            , state = #{state}
+        </if>
+        <if test="assignee != null and assignee != ''">
+            , assignee = #{assignee}
+        </if>
+        where proc_id = #{procId}
+    </update>
+    <!--wf_proc end-->
+
+
+    <!--wf_proc_his begin-->
+    <insert id="saveWorkFlowProcHis" parameterType="Map">
+        insert into dbo.wf_proc_his
+        (
+        wf_code,
+        step_code,
+        business_id,
+        owner_id,
+        assignee,
+        state,
+        approve_code,
+        remark,
+        timestamp
+        )
+        values
+        (
+        #{wfCode},
+        #{step_Code},
+        #{businessId},
+        #{ownerId},
+        #{assignee},
+        #{state},
+        #{approveCode},
+        #{remark},
+        #{timestamp}
+        )
+    </insert>
+    <!--wf_proc_his end-->
+
+
+    <!--wf_flow_step_def begin-->
+    <select id="findWorkFlowStepDef" parameterType="Map" resultType="DataModel">
+        SELECT * FROM wf_flow_step_def WHERE wf_code = #{wfCode} AND step_code= #{stepCode}
+    </select>
+    <!--wf_flow_step_def end-->
+
+</mapper>

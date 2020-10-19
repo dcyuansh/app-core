@@ -5,6 +5,7 @@ package com.core.enums;
  * @version 1.0
  */
 public enum RequestTypeEnum {
+
     GET, POST, PUT, PATCH, DELETE, COPY, HEAD, OPTIONS, LINK, UNLINK, PURGE, LOCK, UNLOCK, PROPFIND, VIEW;
 
     public boolean isGet() {

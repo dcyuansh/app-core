@@ -5,6 +5,7 @@ package com.core.enums;
  * @version 1.0
  */
 public enum DataTypeEnum {
+
     STRING, BYTE, CHAR, SHORT, INTEGER, LONG, FLOAT, DOUBLE, BIGDECIMAL, LOCALTIME, LOCALDATE, LOCALDATETIME, BOOLEAN;
 
     public boolean isString() {

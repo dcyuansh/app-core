@@ -87,7 +87,7 @@
             , lock_ind = #{lockInd}
         </if>
         <!--<if test="lockDate != null">-->
-            <!--, lock_date = #{lockDate}-->
+        <!--, lock_date = #{lockDate}-->
         <!--</if>-->
         , lock_date = #{lockDate}
         where user_name = #{userName}

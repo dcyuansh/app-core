@@ -1,10 +1,10 @@
 package com.core.data.model;
 
-import com.core.enums.DataTypeEnum;
-import com.core.utils.ConvertUtils;
 import com.core.utils.StringUtils;
+import com.core.utils.converter.*;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -58,19 +58,39 @@ public class DataModel implements Map, Serializable {
     }
 
     public String getStringValue(String name) {
-        return (String) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.STRING);
+        return (String) StringConverter.convert(getFieldValue(name));
     }
 
     public Integer getIntegerValue(String name) {
-        return (Integer) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.INTEGER);
+        return (Integer) IntegerConverter.convert(getFieldValue(name));
     }
 
-    public LocalDateTime getLocalDateTimeValue(String name) {
-        return (LocalDateTime) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.LOCALDATETIME);
+    public Float getFloatValue(String name) {
+        return (Float) FloatConverter.convert(getFieldValue(name));
+    }
+
+    public Long getLongValue(String name) {
+        return (Long) LongConverter.convert(getFieldValue(name));
+    }
+
+    public Double getDoubleValue(String name) {
+        return (Double) DoubleConverter.convert(getFieldValue(name));
+    }
+
+    public BigDecimal getBigDecimalValue(String name) {
+        return (BigDecimal) BigDecimalConverter.convert(getFieldValue(name));
+    }
+
+    public Date getDateValue(String name) {
+        return (Date) DateConverter.convert(getFieldValue(name));
     }
 
     public LocalDate getLocalDateValue(String name) {
-        return (LocalDate) ConvertUtils.objectConvert(getFieldValue(name), DataTypeEnum.LOCALDATE);
+        return (LocalDate) LocalDateConverter.convert(getFieldValue(name));
+    }
+
+    public LocalDateTime getLocalDateTimeValue(String name) {
+        return (LocalDateTime) LocalDateTimeConverter.convert(getFieldValue(name));
     }
 
     public boolean hasField(String name) {

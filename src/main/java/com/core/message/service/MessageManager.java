@@ -24,7 +24,7 @@ public abstract class MessageManager {
     public abstract boolean hasWarningMessages();
 
     public abstract boolean hasInfoMessages();
-    
+
     public abstract void addErrorMessage(String messageKey);
 
     public abstract void addWarningMessage(String messageKey);

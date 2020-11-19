@@ -4,7 +4,6 @@ import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
 import org.apache.http.HttpStatus;
-import org.apache.http.protocol.HTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

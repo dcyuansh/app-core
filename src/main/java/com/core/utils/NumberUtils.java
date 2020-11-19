@@ -10,13 +10,10 @@ import java.math.RoundingMode;
  */
 public class NumberUtils {
 
-
     public static final Integer INTEGER_TWO = 2;
-
 
     public NumberUtils() {
     }
-
 
     public static int toInt(String str) {
         return toInt(str, 0);

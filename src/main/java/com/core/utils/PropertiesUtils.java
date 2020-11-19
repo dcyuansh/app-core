@@ -1,6 +1,7 @@
 package com.core.utils;
 
-import com.core.enums.DataTypeEnum;
+import com.core.utils.converter.BooleanConverter;
+import com.core.utils.converter.IntegerConverter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -69,7 +70,7 @@ public class PropertiesUtils {
     public static int getInt(Properties properties, String key, int defaultValue) {
         int value = defaultValue;
         if (properties.containsKey(key)) {
-            value = (Integer) ConvertUtils.objectConvert(properties.getProperty(key), DataTypeEnum.INTEGER);
+            value = (Integer) IntegerConverter.convert(properties.getProperty(key));
         }
         return value;
     }
@@ -85,7 +86,7 @@ public class PropertiesUtils {
     public static boolean getBoolean(Properties properties, String key, Boolean defaultValue) {
         boolean value = defaultValue;
         if (properties.containsKey(key)) {
-            value = (boolean) ConvertUtils.objectConvert(properties.getProperty(key), DataTypeEnum.BOOLEAN);
+            value = (boolean) BooleanConverter.convert(properties.getProperty(key));
         }
         return value;
     }

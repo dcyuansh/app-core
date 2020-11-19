@@ -230,7 +230,8 @@ public class ExcelUtils {
                         Date date = cell.getDateCellValue();
                         cellvalue = date;
                     } else {
-                        cellvalue = String.valueOf(cell.getNumericCellValue());
+                        double d = cell.getNumericCellValue();
+                        cellvalue = Double.valueOf(d).longValue() + "";
                     }
                     break;
                 }

@@ -212,5 +212,27 @@ public class RedisUtils {
         return zset.rangeByScore(key, scoure, scoure1);
     }
 
+
+    /**
+     * 指定 list 从左入栈
+     *
+     * @param key
+     * @return 当前队列的长度
+     */
+    public Long leftPush(String key, Object value) {
+        return redisTemplate.opsForList().leftPush(key, value);
+    }
+
+
+    /**
+     * 指定 list 从左出栈 如果列表没有元素,会堵塞到列表一直有元素或者超时为止
+     *
+     * @param key
+     * @return 出栈的值
+     */
+    public Object leftPop(String key) {
+        return redisTemplate.opsForList().leftPop(key);
+    }
+
 }
 

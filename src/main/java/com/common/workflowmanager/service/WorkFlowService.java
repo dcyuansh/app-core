@@ -25,7 +25,6 @@ public interface WorkFlowService {
     void completeWorkFlowProc(DataModel updateModel);
 
 
-
     /***
      * query workflow process
      * @param queryModel

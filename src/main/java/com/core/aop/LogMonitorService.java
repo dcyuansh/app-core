@@ -1,4 +1,4 @@
-package com.core.monitor;
+package com.core.aop;
 
 import com.core.message.service.MessageManager;
 import org.aspectj.lang.JoinPoint;

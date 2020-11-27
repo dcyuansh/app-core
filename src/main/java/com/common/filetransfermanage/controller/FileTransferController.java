@@ -4,6 +4,7 @@ import com.common.filetransfermanage.service.FileTransferService;
 import com.core.controller.BaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
+import com.core.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,7 +109,7 @@ public class FileTransferController extends BaseController {
         } catch (IOException ex) {
             logger.info("Could not determine file type");
         }
-        if (contentType == null) {
+        if (StringUtils.isBlank(contentType)) {
             contentType = "application/octet-stream";
         }
         return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType))

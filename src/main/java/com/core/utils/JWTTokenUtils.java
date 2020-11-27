@@ -37,7 +37,7 @@ public class JWTTokenUtils {
     public static String sign(String subject, Map<String, Object> claims, long expireTime) {
         //json claim参数
         claims.forEach((key, val) ->
-                claims.put(key, JSON.toJSONString(val))
+                claims.put(key, val instanceof String ? val : JSON.toJSONString(val))
         );
 
         //过期时间

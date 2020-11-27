@@ -33,7 +33,7 @@ public class JWTTokenAuthenticationFilter extends OncePerRequestFilter {
 
         Boolean isExempt = false;
         //判断下面的url请求是不是需要豁免的资源
-        List<String> exemptList = List.of("/druid", "/api", "/api/user/save", "/api/user/query");
+        List<String> exemptList = List.of("/druid", "/api/user/save", "/api/user/query");
         for (String exempt : exemptList) {
             if (request.getRequestURL().toString().contains(exempt)) {
                 isExempt = true;

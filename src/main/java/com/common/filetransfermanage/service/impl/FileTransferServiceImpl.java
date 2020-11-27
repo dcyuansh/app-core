@@ -34,8 +34,6 @@ public class FileTransferServiceImpl implements FileTransferService {
 
     /**
      * 初始化file保存路径
-     *
-     * @param fileStorageProperties
      */
     @Autowired
     public FileTransferServiceImpl(FileStorageProperties fileStorageProperties) {
@@ -50,9 +48,6 @@ public class FileTransferServiceImpl implements FileTransferService {
 
     /**
      * 存储file文件
-     *
-     * @param file
-     * @return
      */
     @Override
     public String storeFile(MultipartFile file) {
@@ -72,9 +67,6 @@ public class FileTransferServiceImpl implements FileTransferService {
 
     /**
      * 加载file文件
-     *
-     * @param fileName
-     * @return
      */
     @Override
     public Resource loadFileAsResource(String fileName) {

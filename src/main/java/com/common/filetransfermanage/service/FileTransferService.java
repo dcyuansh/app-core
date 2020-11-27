@@ -12,17 +12,12 @@ public interface FileTransferService {
 
     /**
      * 存储文件
-     *
-     * @param file
-     * @return
      */
     String storeFile(MultipartFile file);
 
+
     /**
      * 查询文件
-     *
-     * @param fileName
-     * @return
      */
     Resource loadFileAsResource(String fileName);
 }

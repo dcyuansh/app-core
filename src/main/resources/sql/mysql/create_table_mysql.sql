@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : ydc
+Source Server         : localhost
 Source Server Version : 80012
 Source Host           : localhost:3306
-Source Database       : study
+Source Database       : itech
 
 Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2020-07-13 12:23:36
+Date: 2020-12-10 15:24:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -69,7 +69,7 @@ CREATE TABLE `comm_number_generate` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_number_generate` (`number_name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for comm_reference
@@ -125,13 +125,13 @@ CREATE TABLE `comm_sys_user` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_user_name` (`user_name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for comm_task
+-- Table structure for pms_task
 -- ----------------------------
-DROP TABLE IF EXISTS `comm_task`;
-CREATE TABLE `comm_task` (
+DROP TABLE IF EXISTS `pms_task`;
+CREATE TABLE `pms_task` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `task_no` varchar(50) NOT NULL,
   `task_type` varchar(50) DEFAULT NULL,
@@ -146,17 +146,17 @@ CREATE TABLE `comm_task` (
   `status` varchar(20) DEFAULT NULL,
   `attached_id` varchar(20) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `submission_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insert_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_task_no` (`task_no`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for comm_task_his
+-- Table structure for pms_task_his
 -- ----------------------------
-DROP TABLE IF EXISTS `comm_task_his`;
-CREATE TABLE `comm_task_his` (
+DROP TABLE IF EXISTS `pms_task_his`;
+CREATE TABLE `pms_task_his` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `task_no` varchar(50) NOT NULL,
   `task_type` varchar(50) DEFAULT NULL,
@@ -171,28 +171,30 @@ CREATE TABLE `comm_task_his` (
   `status` varchar(20) DEFAULT NULL,
   `attached_id` varchar(20) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `submission_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insert_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for comm_timesheet
+-- Table structure for pms_timesheet
 -- ----------------------------
-DROP TABLE IF EXISTS `comm_timesheet`;
-CREATE TABLE `comm_timesheet` (
+DROP TABLE IF EXISTS `pms_timesheet`;
+CREATE TABLE `pms_timesheet` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `work_day` date DEFAULT NULL,
   `user_name` varchar(100) DEFAULT NULL,
+  `work_day` date DEFAULT NULL,
+  `actual_effort` decimal(12,2) DEFAULT NULL,
   `task_no` varchar(50) DEFAULT NULL,
   `task_type` varchar(50) DEFAULT NULL,
   `task_subject` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `task_content` text,
-  `effort` decimal(12,2) DEFAULT NULL,
+  `system_name` varchar(100) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
+  `insert_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for wf_def

@@ -30,6 +30,6 @@ public class LocalDateUtils {
      * @return
      */
     public static LocalDate formatDate(String time, String pattern) {
-        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern == null ? SystemConstant.DATE_TIME_FORMAT : pattern));
+        return LocalDate.parse(time, DateTimeFormatter.ofPattern(pattern == null ? SystemConstant.DATE_FORMAT : pattern));
     }
 }

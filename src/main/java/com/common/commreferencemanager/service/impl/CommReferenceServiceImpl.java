@@ -22,10 +22,6 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     private CommReferenceRepository commReferenceRepository;
 
 
-    /***
-     * save comm_reference info
-     * @param saveModel
-     */
     @Override
     public void saveCommReference(DataModel saveModel) {
         this.validateSaveOrUpdateCommNumber(saveModel);
@@ -33,23 +29,12 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     }
 
 
-    /**
-     * query comm_reference
-     *
-     * @param queryModel
-     * @return
-     */
     @Override
     public DataModel queryCommReference(DataModel queryModel) {
         return commReferenceRepository.queryCommReference(queryModel);
     }
 
 
-    /***
-     * query comm_reference list
-     * @param queryModel
-     * @return
-     */
     @Override
     public List<DataModel> queryCommReferenceList(DataModel queryModel) {
         return commReferenceRepository.queryCommReferenceList(queryModel);
@@ -65,11 +50,11 @@ public class CommReferenceServiceImpl implements CommReferenceService {
         if (numberModel == null) {
             validationMsg = "params can not be null!";
         }
-        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("type"))) {
-            validationMsg = "type can not be null!";
+        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementName"))) {
+            validationMsg = "element name can not be null!";
         }
-        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("code"))) {
-            validationMsg = "code can not be null!";
+        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementCode"))) {
+            validationMsg = "element code can not be null!";
         }
         if (StringUtils.isNotEmpty(validationMsg)) {
             throw ExceptionHelper.getInstance().handleValidationException(validationMsg);

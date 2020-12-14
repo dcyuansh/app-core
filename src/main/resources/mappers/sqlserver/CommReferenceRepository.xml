@@ -4,30 +4,32 @@
 <mapper namespace="com.common.commreferencemanager.repository.CommReferenceRepository">
 
     <insert id="saveCommReference" parameterType="Map">
-        insert into comm_reference(
-            type,
-            code,
+        insert into comm_reftab(
+            element_code,
+            element_name,
             language_id,
-            category_cd,
-            code_desc,
+            category_code,
+            category_desc,
             remarks
         )
         values (
-            #{type},
-            #{code},
+            #{elementCode},
+            #{elementName},
             #{languageId},
-            #{categoryCd},
-            #{codeDesc},
+            #{categoryCode},
+            #{categoryDesc},
             #{remarks}
         )
     </insert>
 
     <select id="queryCommReference" parameterType="Map" resultType="DataModel">
-        select * from comm_reference where id = #{id}
+        select * from comm_reftab where id = #{id}
     </select>
 
     <select id="queryCommReferenceList" parameterType="Map" resultType="DataModel">
-        select * from comm_reference where type = #{type} and code = #{code}
+        select * from comm_reftab
+        where element_name = #{elementName}
+        and element_code = #{elementCode}
         <if test="languageId != null and languageId != ''">
             and language_id = #{languageId}
         </if>

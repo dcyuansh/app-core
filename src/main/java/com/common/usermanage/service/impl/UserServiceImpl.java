@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
@@ -33,6 +32,9 @@ public class UserServiceImpl implements UserService {
         this.validateSaveOrUpdateUser(saveModel);
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         saveModel.setFieldValue("password", bCryptPasswordEncoder.encode(saveModel.getStringValue("password")));
+        //set insert timestamp
+        saveModel.setFieldValue("insertDate", LocalDateTime.now());
+        saveModel.setFieldValue("timestamp", LocalDateTime.now());
         userRepository.saveUser(saveModel);
     }
 
@@ -83,7 +85,7 @@ public class UserServiceImpl implements UserService {
             updateModel.setFieldValue("password", bCryptPasswordEncoder.encode(updateModel.getStringValue("password")));
         }
         //设置更新时间为系统当前时间
-        updateModel.setFieldValue("timestamp", LocalDate.now());
+        updateModel.setFieldValue("timestamp", LocalDateTime.now());
         //更新账号锁定时间
         if (StringUtils.isNotBlank(updateModel.getStringValue("lockInd")) && "Y".equals(updateModel.getStringValue("lockInd"))) {
             updateModel.setFieldValue("lockDate", LocalDateTime.now());

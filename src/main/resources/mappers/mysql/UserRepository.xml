@@ -4,7 +4,7 @@
 <mapper namespace="com.common.usermanage.repository.UserRepository">
 
     <insert id="saveUser" parameterType="Map">
-        insert into comm_sys_user
+        insert into sys_user
         (
             user_name,
             password,
@@ -12,7 +12,9 @@
             email,
             phone,
             address,
-            remarks
+            remarks,
+            insert_date,
+            timestamp
         )values (
             #{userName},
             #{password},
@@ -20,16 +22,18 @@
             #{email},
             #{phone},
             #{address},
-            #{remarks}
+            #{remarks},
+            #{insertDate},
+            #{timestamp}
         )
     </insert>
 
     <select id="findUser" parameterType="Map" resultType="DataModel">
-        select * from comm_sys_user where user_name = #{userName}
+        select * from sys_user where user_name = #{userName}
     </select>
 
     <select id="findUserList" parameterType="Map" resultType="DataModel">
-        select * from comm_sys_user where 1=1
+        select * from sys_user where 1=1
         <if test="userName != null and userName != ''">
             and user_name = #{userName}
         </if>
@@ -54,7 +58,7 @@
     </select>
 
     <update id="updateUser" parameterType="Map">
-        update comm_sys_user
+        update sys_user
         set timestamp = #{timestamp}
         <if test="userName != null and userName != ''">
             , user_name = #{userName}
@@ -94,6 +98,6 @@
     </update>
 
     <delete id="deleteUser" parameterType="Map">
-        delete from comm_sys_user where user_name = #{userName}
+        delete from sys_user where user_name = #{userName}
     </delete>
 </mapper>

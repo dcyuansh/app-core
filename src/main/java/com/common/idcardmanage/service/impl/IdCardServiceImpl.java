@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -27,6 +28,8 @@ public class IdCardServiceImpl implements IdCardService {
     @Override
     public void saveIdCard(DataModel saveModel) {
         this.validateSaveOrUpdateIdCard(saveModel);
+        //set insert timestamp
+        saveModel.setFieldValue("timestamp", LocalDateTime.now());
         idCardRepository.saveIdCard(saveModel);
     }
 
@@ -65,6 +68,8 @@ public class IdCardServiceImpl implements IdCardService {
      */
     @Override
     public void updateIdCard(DataModel updateModel) {
+        //set update timestamp
+        updateModel.setFieldValue("timestamp", LocalDateTime.now());
         idCardRepository.updateIdCard(updateModel);
     }
 

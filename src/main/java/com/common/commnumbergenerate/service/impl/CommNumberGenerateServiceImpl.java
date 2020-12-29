@@ -29,6 +29,8 @@ public class CommNumberGenerateServiceImpl implements CommNumberGenerateService 
     @Override
     public void saveCommNumberGenerate(DataModel saveModel) {
         this.validateSaveOrUpdateNumberGenerate(saveModel);
+        //set insert timestamp
+        saveModel.setFieldValue("timestamp", LocalDateTime.now());
         commNumberGenerateRepository.saveCommNumberGenerate(saveModel);
     }
 
@@ -51,6 +53,8 @@ public class CommNumberGenerateServiceImpl implements CommNumberGenerateService 
     @Override
     public void updateCommNumberGenerate(DataModel updateModel) {
         this.validateSaveOrUpdateNumberGenerate(updateModel);
+        //set update timestamp
+        updateModel.setFieldValue("timestamp", LocalDateTime.now());
         commNumberGenerateRepository.updateCommNumberGenerate(updateModel);
     }
 

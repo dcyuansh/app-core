@@ -8,6 +8,7 @@ import com.core.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -25,6 +26,8 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     @Override
     public void saveCommReference(DataModel saveModel) {
         this.validateSaveOrUpdateCommNumber(saveModel);
+        //set insert timestamp
+        saveModel.setFieldValue("timestamp", LocalDateTime.now());
         commReferenceRepository.saveCommReference(saveModel);
     }
 

@@ -12,9 +12,6 @@ public class RandomUtils {
 
     /**
      * 随机生成指定长度的字符串
-     *
-     * @param size
-     * @return
      */
     public static String randomStr(int size) {
         StringBuilder sb = new StringBuilder();
@@ -27,8 +24,6 @@ public class RandomUtils {
 
     /**
      * 随机生成6位验证码，可能会重复
-     *
-     * @return
      */
     public static int randomVerCode() {
         int x = Math.abs(RANDOM.nextInt(899999));

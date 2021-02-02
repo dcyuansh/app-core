@@ -6,13 +6,18 @@ package com.core.constants;
  */
 public final class SystemConstant {
 
-    private static final String DECIMAL_DEFAULT_FORMAT = "###,###,###,##0.00";
+    //decimal format
+    public static final String DECIMAL_DEFAULT_FORMAT = "###,###,###,##0.00";
+    //number format
     public static final String NUMBER_FORMAT = "#,##0.00";
+    //date format
     public static final String DATE_FORMAT = "yyyy-MM-dd";
-    public static final String DATE_SHORT_FORMAT = "yyyyMMdd";
     public static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     public static final String ISO_DATE_TIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
-    private static final String LOCALE_CN_DATE_FORMAT = "yyyy MM dd";
-    private static final String LOCALE_CN_DATE_TIME_FORMAT = "yyyy MM dd HH mm ss";
+    public static final String LOCALE_CN_DATE_FORMAT = "yyyy MM dd";
+    public static final String LOCALE_CN_DATE_TIME_FORMAT = "yyyy MM dd HH mm ss";
+    public static final String DATE_LONG_FORMAT = "yyyyMMdd";
+    public static final String DATE_TIME_LONG_FORMAT = "yyyyMMddHHmmss";
+    public static final String LOCAL_TIME_LONG_FORMAT = "yyyyMMddHHmmssSSS";
 
 }

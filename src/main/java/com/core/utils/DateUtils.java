@@ -1,5 +1,7 @@
 package com.core.utils;
 
+import com.core.constants.SystemConstant;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,10 +13,6 @@ import java.util.Date;
  */
 public class DateUtils {
 
-    public static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
-    public static final String DATE_FORMAT = "yyyy-MM-dd";
-
-
     /***
      * formate date user def, return string
      * @param date
@@ -23,7 +21,7 @@ public class DateUtils {
      */
     public static String dateFormat(Date date, String pattern) {
         if (date == null) return null;
-        SimpleDateFormat formatter = new SimpleDateFormat(pattern == null ? DATE_TIME_FORMAT : pattern);
+        SimpleDateFormat formatter = new SimpleDateFormat(pattern == null ? SystemConstant.DATE_TIME_FORMAT : pattern);
         String formResult = null;
         try {
             formResult = formatter.format(date);
@@ -41,7 +39,7 @@ public class DateUtils {
      */
     public static Date formatDate(String dateTime, String pattern) {
         if (dateTime == null) return null;
-        SimpleDateFormat formatter = new SimpleDateFormat(pattern == null ? DATE_FORMAT : pattern);
+        SimpleDateFormat formatter = new SimpleDateFormat(pattern == null ? SystemConstant.DATE_FORMAT : pattern);
         Date resultDate = null;
         try {
             resultDate = formatter.parse(dateTime);

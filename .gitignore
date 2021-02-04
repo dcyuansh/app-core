@@ -273,3 +273,4 @@ target/surefire-reports/TEST-com.AppTests.xml
 .idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml
 .idea/uiDesigner.xml
 *.class
+target/surefire-reports/2021-02-04T09-53-31_191-jvmRun1.dump

@@ -27,6 +27,7 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     public void saveCommReference(DataModel saveModel) {
         this.validateSaveOrUpdateCommNumber(saveModel);
         //set insert timestamp
+        saveModel.setFieldValue("insertDate", LocalDateTime.now());
         saveModel.setFieldValue("timestamp", LocalDateTime.now());
         commReferenceRepository.saveCommReference(saveModel);
     }
@@ -53,8 +54,8 @@ public class CommReferenceServiceImpl implements CommReferenceService {
         if (numberModel == null) {
             validationMsg = "params can not be null!";
         }
-        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementName"))) {
-            validationMsg = "element name can not be null!";
+        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementType"))) {
+            validationMsg = "element type can not be null!";
         }
         if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementCode"))) {
             validationMsg = "element code can not be null!";

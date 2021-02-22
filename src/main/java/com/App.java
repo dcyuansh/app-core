@@ -11,9 +11,9 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableRedisHttpSession
 @SpringBootApplication
 @ServletComponentScan
-public class CoreApp {
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(CoreApp.class, args);
+        SpringApplication.run(App.class, args);
     }
 }

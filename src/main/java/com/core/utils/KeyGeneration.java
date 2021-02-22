@@ -1,7 +1,7 @@
 package com.core.utils;
 
 /**
- * @author ydc
+ * @author spring
  * @version 1.0
  */
 public class KeyGeneration {

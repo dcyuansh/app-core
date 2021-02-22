@@ -3,7 +3,7 @@ package com.common.mailservicemanage.service;
 
 /***
  * 发送邮件服务
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public interface EmailService {

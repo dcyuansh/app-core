@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public abstract class BaseController {

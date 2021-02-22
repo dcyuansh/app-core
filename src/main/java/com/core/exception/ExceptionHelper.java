@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public class ExceptionHelper {

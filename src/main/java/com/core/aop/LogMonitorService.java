@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  * 通用AOP处理Web请求日志
  */

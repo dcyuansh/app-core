@@ -2,7 +2,7 @@ package com.core.message.enums;
 
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public enum MessageCategoryEnum {

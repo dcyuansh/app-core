@@ -4,7 +4,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public interface FileTransferService {

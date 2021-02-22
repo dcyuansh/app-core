@@ -3,7 +3,7 @@ package com.core.enums;
 
 /***
  *
- * @author dechun.yuan
+ * @author spring
  *
  */
 public enum ExceptionStatusCodeEnum implements CodeMessageEnum {

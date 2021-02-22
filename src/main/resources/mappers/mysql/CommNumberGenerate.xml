@@ -8,13 +8,17 @@
             number_name,
             current_value,
             span,
-            number_desc
+            number_desc,
+            insert_date,
+            timestamp
         )
         values (
             #{numberName},
             #{currentValue},
             #{span},
-            #{numberDesc}
+            #{numberDesc},
+            #{insertDate},
+            #{timestamp}
         )
     </insert>
 

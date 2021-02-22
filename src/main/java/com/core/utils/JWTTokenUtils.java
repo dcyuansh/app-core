@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public class JWTTokenUtils {

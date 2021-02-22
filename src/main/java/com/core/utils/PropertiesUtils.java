@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public class PropertiesUtils {

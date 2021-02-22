@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 @Service
@@ -30,6 +30,7 @@ public class CommNumberGenerateServiceImpl implements CommNumberGenerateService 
     public void saveCommNumberGenerate(DataModel saveModel) {
         this.validateSaveOrUpdateNumberGenerate(saveModel);
         //set insert timestamp
+        saveModel.setFieldValue("insertDate", LocalDateTime.now());
         saveModel.setFieldValue("timestamp", LocalDateTime.now());
         commNumberGenerateRepository.saveCommNumberGenerate(saveModel);
     }

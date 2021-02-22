@@ -4,7 +4,7 @@ import com.core.enums.CodeEnum;
 import com.core.enums.CodeMessageEnum;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public class EnumUtil {

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 /**
- * @author dechun.yuan
+ * @author spring
  * @version 1.0
  */
 public class JdbcUtils {

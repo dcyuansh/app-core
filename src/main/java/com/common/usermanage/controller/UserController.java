@@ -17,6 +17,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * @author spring
+ * @version 1.0
+ */
 @Controller
 @RequestMapping("/api/user")
 public class UserController extends BaseController {

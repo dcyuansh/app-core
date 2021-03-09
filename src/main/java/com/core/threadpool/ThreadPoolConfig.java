@@ -10,7 +10,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 @EnableAsync

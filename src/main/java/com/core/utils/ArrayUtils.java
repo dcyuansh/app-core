@@ -3,7 +3,7 @@ package com.core.utils;
 import java.lang.reflect.Array;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class ArrayUtils {

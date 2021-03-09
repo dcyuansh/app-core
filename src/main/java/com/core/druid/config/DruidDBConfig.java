@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 @Configuration

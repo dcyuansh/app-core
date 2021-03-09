@@ -14,7 +14,7 @@ import java.util.*;
 
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class XmlParserUtil {

@@ -5,7 +5,7 @@ import com.core.utils.NumberUtils;
 import java.util.Date;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class LongConverter {

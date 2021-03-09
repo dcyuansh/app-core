@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class MatcherUtils {

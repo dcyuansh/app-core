@@ -1,7 +1,7 @@
 package com.core.utils.converter;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class BooleanConverter {

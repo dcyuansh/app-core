@@ -8,7 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class HttpURLConnectionUtils {

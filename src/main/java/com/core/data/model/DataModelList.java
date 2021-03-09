@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class DataModelList implements List, Serializable {

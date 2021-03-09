@@ -1,7 +1,7 @@
 package com.common.workflowmanager.enums;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public enum ProcStateEnum {

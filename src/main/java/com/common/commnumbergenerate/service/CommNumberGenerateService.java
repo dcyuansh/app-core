@@ -3,7 +3,7 @@ package com.common.commnumbergenerate.service;
 import com.core.data.model.DataModel;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public interface CommNumberGenerateService {

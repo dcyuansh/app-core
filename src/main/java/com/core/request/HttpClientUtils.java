@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URLDecoder;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public class HttpClientUtils {

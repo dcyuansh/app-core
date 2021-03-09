@@ -2,7 +2,7 @@ package com.core.enums;
 
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 public enum EncodeTypeEnum implements CodeEnum {

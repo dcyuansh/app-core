@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 import java.io.File;
 
 /**
- * @author spring
+ * @author spring.yuan
  * @version 1.0
  */
 @Component

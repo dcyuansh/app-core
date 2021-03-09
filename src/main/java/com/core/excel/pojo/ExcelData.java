@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /****
- * @author spring
+ * @author spring.yuan
  *
  */
 public class ExcelData implements Serializable {

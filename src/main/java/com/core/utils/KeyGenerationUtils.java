@@ -4,27 +4,27 @@ package com.core.utils;
  * @author spring.yuan
  * @version 1.0
  */
-public class KeyGeneration {
+public class KeyGenerationUtils {
 
     private static final String LOCAL_TIME_VAULE_FORMAT = "yyyyMMddHHmmssSSS";
 
-    private static KeyGeneration keyGeneration = null;
+    private static KeyGenerationUtils keyGenerationUtils = null;
 
-    private KeyGeneration() {
+    private KeyGenerationUtils() {
     }
 
     /**
      * 单例实例
      */
-    public static KeyGeneration getInstance() {
-        if (keyGeneration == null) {
-            synchronized (KeyGeneration.class) {
-                if (keyGeneration == null) {
-                    keyGeneration = new KeyGeneration();
+    public static KeyGenerationUtils getInstance() {
+        if (keyGenerationUtils == null) {
+            synchronized (KeyGenerationUtils.class) {
+                if (keyGenerationUtils == null) {
+                    keyGenerationUtils = new KeyGenerationUtils();
                 }
             }
         }
-        return keyGeneration;
+        return keyGenerationUtils;
     }
 
 

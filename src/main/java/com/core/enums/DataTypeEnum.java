@@ -65,7 +65,8 @@ public enum DataTypeEnum {
         try {
             result = DataTypeEnum.valueOf(dataType.toUpperCase());
         } catch (Exception e) {
-            result = DataTypeEnum.STRING;
+            throw new IllegalArgumentException("Invalid date type:'" + dataType
+                    + "'");
         }
         return result;
     }

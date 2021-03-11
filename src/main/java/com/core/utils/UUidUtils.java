@@ -6,7 +6,7 @@ import java.util.UUID;
  * @author spring.yuan
  * @version 1.0
  */
-public class UUIDUtils {
+public class UUidUtils {
 
     /***
      * get uuid

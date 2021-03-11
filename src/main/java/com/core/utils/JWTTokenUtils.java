@@ -45,7 +45,7 @@ public class JWTTokenUtils {
         Date now = new Date(nowMillis);
         Date expireDate = new Date(nowMillis + (expireTime == 0 ? EXPIRE_TIME : expireTime));
         return Jwts.builder()
-                .setId(UUIDUtils.getUUID())
+                .setId(UUidUtils.getUUID())
                 .setIssuer(ISSUER) //签发者信息
                 .setSubject(StringUtils.isBlank(subject) ? SUBJECT : subject) //主题说明
                 .addClaims(claims) //claim信息

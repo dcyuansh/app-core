@@ -1,7 +1,7 @@
 package com.core.utils;
 
 
-public class IpUtils {  
+public class IpUtils {
     public static String longToIpV4(long longIp) {
         int octet3 = (int) ((longIp >> 24) % 256);
         int octet2 = (int) ((longIp >> 16) % 256);
@@ -10,6 +10,11 @@ public class IpUtils {
         return octet3 + "." + octet2 + "." + octet1 + "." + octet0;
     }
 
+    /**
+     * ipv4 to long
+     * @param ip
+     * @return
+     */
     public static long ipV4ToLong(String ip) {
         String[] octets = ip.split("\\.");
         return (Long.parseLong(octets[0]) << 24) + (Integer.parseInt(octets[1]) << 16)

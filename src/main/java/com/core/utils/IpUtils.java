@@ -1,7 +1,7 @@
 package com.core.utils;
 
 
-public class IpUtils {
+public class IpUtils {  
     public static String longToIpV4(long longIp) {
         int octet3 = (int) ((longIp >> 24) % 256);
         int octet2 = (int) ((longIp >> 16) % 256);

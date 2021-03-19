@@ -4,6 +4,7 @@ package com.core.security;
 import com.core.utils.JWTTokenUtils;
 import com.core.utils.StringUtils;
 import io.jsonwebtoken.Claims;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,7 +25,8 @@ import java.util.List;
 public class JWTTokenAuthenticationFilter extends OncePerRequestFilter {
 
     //token header
-    private static String TOKEN_HEADER = "authorization";
+    @Value("${jwt.token.header}")
+    private String TOKEN_HEADER;
 
 
     @Override
@@ -32,10 +34,12 @@ public class JWTTokenAuthenticationFilter extends OncePerRequestFilter {
         String token = request.getHeader(TOKEN_HEADER);
 
         Boolean isExempt = false;
+        //获取当前url
+        String currentURL = request.getRequestURL().toString();
         //判断下面的url请求是不是需要豁免的资源
-        List<String> exemptList = List.of("/druid", "/api/user/save", "/api/user/query");
+        List<String> exemptList = List.of("/druid", "/api/user/save", "/api/user/query", ".ico", ".css", ".js");
         for (String exempt : exemptList) {
-            if (request.getRequestURL().toString().contains(exempt)) {
+            if (currentURL.contains(exempt)) {
                 isExempt = true;
             }
         }

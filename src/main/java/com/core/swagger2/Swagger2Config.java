@@ -31,9 +31,9 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("系统Restful API")
-                .description("系统Restful API")
-                .termsOfServiceUrl("http://localhost:8080/")
-                .contact("dechun.yuan")
+                .description("所有api统一json格式")
+                .termsOfServiceUrl("https://localhost:8443/")
+                .contact("spring.yuan")
                 .version("1.0")
                 .build();
     }

@@ -26,7 +26,7 @@ import java.util.Map;
 @RequestMapping("/api/user")
 public class UserController extends BaseController {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger LOG = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private UserService userService;

@@ -23,7 +23,6 @@
         <!-- 在properties中统一控制依赖包的版本，更清晰-->
         <mybatis.version>2.1.3</mybatis.version>
         <jtds.version>1.3.1</jtds.version>
-        <security.version>2.3.3.RELEASE</security.version>
         <pagehelper.version>1.2.3</pagehelper.version>
         <druid.version>1.1.18</druid.version>
         <poi.version>4.1.0</poi.version>
@@ -93,7 +92,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>${security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>

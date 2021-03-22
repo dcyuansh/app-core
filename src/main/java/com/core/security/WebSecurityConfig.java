@@ -59,10 +59,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 放行druid
                 .antMatchers("/druid/**").permitAll()
-                // 放行register
-                .antMatchers("/api/user/query").permitAll()
-                // 放行login
-                .antMatchers("/api/user/query").permitAll()
+                // 放行swagger
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/webjars/**").permitAll()
+                .antMatchers("/v2/**").permitAll()
+                .antMatchers("/swagger-resources/**").permitAll()
+                // 放行系统api
+                .antMatchers("/api/**").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
         httpSecurity.addFilterBefore(jwtTokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

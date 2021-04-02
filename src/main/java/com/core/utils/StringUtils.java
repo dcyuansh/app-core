@@ -1195,13 +1195,10 @@ public class StringUtils {
             }
             int strLen = str.length();
             int pads = size - strLen;
-            if (pads <= 0) {
-                return str;
-            } else {
-                str = leftPad(str, strLen + pads / 2, padStr);
-                str = rightPad(str, size, padStr);
-                return str;
-            }
+            if (pads <= 0) return str;
+            str = leftPad(str, strLen + pads / 2, padStr);
+            str = rightPad(str, size, padStr);
+            return str;
         } else {
             return str;
         }

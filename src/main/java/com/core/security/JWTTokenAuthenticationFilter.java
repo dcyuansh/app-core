@@ -37,7 +37,7 @@ public class JWTTokenAuthenticationFilter extends OncePerRequestFilter {
         //获取当前url
         String currentURL = request.getRequestURL().toString();
         //判断下面的url请求是不是需要豁免的资源
-        List<String> exemptList = List.of("druid", "/api/user/save", "/api/user/query", "swagger", "webjars", "v2", "favicon.ico", ".ico", ".css", ".js");
+        List<String> exemptList = List.of("druid", "/api", "swagger", "webjars", "v2", "favicon.ico", ".ico", ".css", ".js");
         for (String exempt : exemptList) {
             if (currentURL.contains(exempt)) {
                 isExempt = true;

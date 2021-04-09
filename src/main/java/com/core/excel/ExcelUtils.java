@@ -184,13 +184,13 @@ public class ExcelUtils {
     }
 
 
-    /***
-     * 将Workbook转换为ExcelData对象
+    /**
      * @param wb
      * @param sheetName
      * @param beginRowIndex
      * @param beginColIndex
      * @return
+     * @desc 将Workbook转换为ExcelData对象
      */
     public static List<DataModel> convertExcelData(Workbook wb, String sheetName, int beginRowIndex, int beginColIndex) {
         List<DataModel> resultModel = new ArrayList<>();
@@ -215,10 +215,10 @@ public class ExcelUtils {
     }
 
 
-    /***
-     * 根据cell类型转换cell value
+    /**
      * @param cell
      * @return
+     * @desc 根据cell类型转换cell value
      */
     public static Object getCellFormatValue(Cell cell) {
         Object cellvalue = "";

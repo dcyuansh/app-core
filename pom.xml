@@ -217,6 +217,20 @@
             <version>${activation.version}</version>
         </dependency>
 
+        <!-- baidu api智能识别 -->
+        <dependency>
+            <groupId>com.baidu.aip</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>4.11.0</version>
+            <!--排除这个slf4j-simple-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
         <!-- spring boot test configuration -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -229,7 +243,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
 
 

@@ -12,6 +12,7 @@ public class IpUtils {
 
     /**
      * ipv4 to long
+     *
      * @param ip
      * @return
      */

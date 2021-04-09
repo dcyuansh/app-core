@@ -32,11 +32,11 @@ public class UserController extends BaseController {
     private UserService userService;
 
 
-    /****
-     * save user info
+    /**
      * @param request
      * @param requestMap
      * @return
+     * @desc save user info
      */
     @RequestMapping(method = RequestMethod.POST, value = "/save")
     @ResponseBody
@@ -55,11 +55,11 @@ public class UserController extends BaseController {
     }
 
 
-    /****
-     * login
+    /**
      * @param request
      * @param requestMap
      * @return
+     * @desc user login
      */
     @RequestMapping(method = RequestMethod.POST, value = "/query")
     @ResponseBody
@@ -78,11 +78,11 @@ public class UserController extends BaseController {
     }
 
 
-    /****
-     * query all user info
+    /**
      * @param request
      * @param requestMap
      * @return
+     * @desc query all user info
      */
     @RequestMapping(method = RequestMethod.POST, value = "/query/all")
     @ResponseBody
@@ -101,10 +101,10 @@ public class UserController extends BaseController {
     }
 
 
-    /****
-     * delete user info by user name
+    /**
      * @param request
      * @return
+     * @desc delete user info by user name
      */
     @RequestMapping(method = RequestMethod.DELETE, value = "/delete")
     @ResponseBody
@@ -123,11 +123,11 @@ public class UserController extends BaseController {
     }
 
 
-    /***
-     * update user info by user name
+    /**
      * @param request
      * @param requestMap
      * @return
+     * @desc update user info by user name
      */
     @RequestMapping(method = RequestMethod.PATCH, value = "/update")
     @ResponseBody

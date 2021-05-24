@@ -90,6 +90,9 @@ public class DruidDBConfig {
     @Value("${spring.datasource.druid.use-global-data-source-stat}")
     private boolean useGlobalDataSourceStat;
 
+    @Value("${mybatis.mapper-locations}")
+    private String mybatisMapperLocations;
+
 
     /*
     @Bean(name = "dataSource") // 声明其为Bean实例
@@ -141,7 +144,7 @@ public class DruidDBConfig {
         bean.setDataSource(dataSource);
         //模块依赖打包的时候报错，找不到setTypeAliasesPackage，所以需要添加下面设置
         VFS.addImplClass(SpringBootVFS.class);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/**/*.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(mybatisMapperLocations));
         //bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/mysql/*.xml"));
         bean.setTypeAliasesPackage("com.core.data.model");
         return bean.getObject();

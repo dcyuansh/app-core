@@ -350,3 +350,4 @@ target/surefire-reports/2021-02-04T09-53-31_191-jvmRun1.dump
 .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_4.xml
 .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_4.xml
 target/classes/mappers/mysql/MyBatisGenerateTest.xml
+target/surefire-reports/2021-05-24T17-42-15_249-jvmRun1.dump

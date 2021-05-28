@@ -147,6 +147,7 @@ public class GenerateSql {
                     System.out.println("go");
                     count_no++;
                 }*/
+              /*
                 while ((str = reader.readLine()) != null) {
                     String[] strList = str.split(",");
                     System.out.println("----" + count_no);
@@ -156,7 +157,59 @@ public class GenerateSql {
                     System.out.println("go");
                     count_no++;
                 }
-
+                */
+                //国家代码mapping
+                /*
+                while ((str = reader.readLine()) != null) {
+                    String[] strList = str.split(",");
+                    //System.out.println("----" + count_no);
+                    System.out.println("insert into comm_country(country_cd,country_name) values("
+                                    +"'"+ strList[0].trim() +"',"
+                                    +"'" + strList[1].trim() +"'"
+                                    +");");
+                    //System.out.println("go");
+                    count_no++;
+                }
+                */
+                //省
+                /*
+                while ((str = reader.readLine()) != null) {
+                    String[] strList = str.split(",");
+                    //System.out.println("----" + count_no);
+                    System.out.println("insert into comm_province(country_cd,province_cd,province_name) values("
+                            +"'"+ "CHN" +"',"
+                            +"'"+ strList[0].trim() +"',"
+                            +"'" + strList[1].trim() +"'"
+                            +");");
+                    //System.out.println("go");
+                    count_no++;
+                }
+                */
+                //市
+                /*
+                while ((str = reader.readLine()) != null) {
+                    String[] strList = str.split(",");
+                    //System.out.println("----" + count_no);
+                    System.out.println("insert into comm_city(province_cd,city_cd,city_name) values("
+                            +"'"+ strList[0].trim().substring(0,2)+"0000" +"',"
+                            +"'"+ strList[0].trim() +"',"
+                            +"'" + strList[1].trim() +"'"
+                            +");");
+                    //System.out.println("go");
+                    count_no++;
+                }*/
+                //县
+                while ((str = reader.readLine()) != null) {
+                    String[] strList = str.split(",");
+                    //System.out.println("----" + count_no);
+                    System.out.println("insert into comm_county(city_cd,county_cd,county_name) values("
+                            +"'"+ strList[0].trim().substring(0,4)+"00" +"',"
+                            +"'"+ strList[0].trim() +"',"
+                            +"'" + strList[1].trim() +"'"
+                            +");");
+                    //System.out.println("go");
+                    count_no++;
+                }
 
                 System.out.println("total count =" + count_no);
             } catch (Exception e) {

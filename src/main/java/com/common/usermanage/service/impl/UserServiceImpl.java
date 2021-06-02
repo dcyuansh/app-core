@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         saveModel.setFieldValue("password", bCryptPasswordEncoder.encode(saveModel.getStringValue("password")));
         //set insert timestamp
-        saveModel.setFieldValue("insertDate", LocalDateTime.now());
+        saveModel.setFieldValue("insertTime", LocalDateTime.now());
         saveModel.setFieldValue("timestamp", LocalDateTime.now());
         userRepository.saveUser(saveModel);
     }
@@ -86,12 +86,6 @@ public class UserServiceImpl implements UserService {
         }
         //设置更新时间为系统当前时间
         updateModel.setFieldValue("timestamp", LocalDateTime.now());
-        //更新账号锁定时间
-        if (StringUtils.isNotBlank(updateModel.getStringValue("lockInd")) && "Y".equals(updateModel.getStringValue("lockInd"))) {
-            updateModel.setFieldValue("lockDate", LocalDateTime.now());
-        } else {
-            updateModel.setFieldValue("lockDate", null);
-        }
         userRepository.updateUser(updateModel);
     }
 

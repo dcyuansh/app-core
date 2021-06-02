@@ -438,3 +438,9 @@ target/surefire-reports/2021-02-04T09-53-31_191-jvmRun1.dump
 .idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml
 .idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_2.xml
 .idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml
+.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml
+.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml
+.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml
+.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml
+.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_2_6.xml
+.idea/libraries/Maven__com_alibaba_druid_1_2_6.xml

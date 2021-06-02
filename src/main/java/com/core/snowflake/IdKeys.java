@@ -53,7 +53,6 @@ public class IdKeys {
         } catch (UnknownHostException e) {
             return DEFAULT_WORK_ID;
         }
-
     }
 
     /**
@@ -66,7 +65,6 @@ public class IdKeys {
         } catch (UnknownHostException e) {
             return DEFAULT_DATA_CENTER_ID;
         }
-
     }
 
     /**

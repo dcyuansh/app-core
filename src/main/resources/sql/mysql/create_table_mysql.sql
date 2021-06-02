@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2021-05-28 11:08:21
+Date: 2021-06-01 16:18:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -33,7 +33,7 @@ CREATE TABLE `comm_address` (
   `address` varchar(50) DEFAULT NULL,
   `post_cd` varchar(20) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`address_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -51,7 +51,7 @@ CREATE TABLE `comm_city` (
   `city_cd` varchar(20) NOT NULL,
   `city_name` varchar(50) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`province_cd`,`city_cd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -407,7 +407,7 @@ CREATE TABLE `comm_country` (
   `country_cd` varchar(20) NOT NULL,
   `country_name` varchar(50) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`country_cd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -664,7 +664,7 @@ CREATE TABLE `comm_county` (
   `county_cd` varchar(20) NOT NULL,
   `county_name` varchar(50) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`city_cd`,`county_cd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3542,7 +3542,7 @@ CREATE TABLE `comm_id_card` (
   `effective_date` date DEFAULT NULL,
   `expired_date` date DEFAULT NULL,
   `sign_office` varchar(200) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_id_card` (`id_card`) USING BTREE
@@ -3568,7 +3568,7 @@ CREATE TABLE `comm_mail_template` (
   `mail_body` text,
   `module_code` varchar(60) DEFAULT NULL,
   `user_id` varchar(200) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3587,7 +3587,7 @@ CREATE TABLE `comm_number_generate` (
   `current_value` int(11) DEFAULT NULL,
   `span` int(11) DEFAULT '1',
   `number_desc` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_number_generate` (`number_name`) USING BTREE
@@ -3607,7 +3607,7 @@ CREATE TABLE `comm_province` (
   `province_cd` varchar(20) NOT NULL,
   `province_name` varchar(50) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`country_cd`,`province_cd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3664,7 +3664,7 @@ CREATE TABLE `comm_reftab` (
   `category_code` varchar(100) DEFAULT NULL,
   `category_desc` varchar(200) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_reference` (`element_type`,`element_code`,`element_name`) USING BTREE
@@ -3682,7 +3682,7 @@ CREATE TABLE `comm_sys_role` (
   `role_cd` varchar(50) NOT NULL,
   `role_name` varchar(200) DEFAULT NULL,
   `role_desc` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`role_cd`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3708,7 +3708,7 @@ CREATE TABLE `comm_sys_user` (
   `role_cd` varchar(50) DEFAULT NULL,
   `state` varchar(16) DEFAULT NULL COMMENT 'state:ACITVE/DEACITVE/FROZEN',
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_user_name` (`user_name`) USING BTREE
@@ -3737,7 +3737,7 @@ CREATE TABLE `pms_task` (
   `status` varchar(20) DEFAULT NULL,
   `attached_id` varchar(20) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_task_no` (`task_no`) USING BTREE
@@ -3770,7 +3770,7 @@ CREATE TABLE `pms_task_his` (
   `status` varchar(20) DEFAULT NULL,
   `attached_id` varchar(20) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
@@ -3828,7 +3828,7 @@ CREATE TABLE `pms_timesheet` (
   `task_content` text,
   `system_name` varchar(100) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
@@ -3865,7 +3865,7 @@ CREATE TABLE `sys_user` (
   `lock_date` datetime DEFAULT NULL,
   `address` varchar(500) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_user_name` (`user_name`) USING BTREE
@@ -3891,7 +3891,7 @@ CREATE TABLE `wf_def` (
   `state` varchar(20) DEFAULT NULL,
   `wf_desc` varchar(500) DEFAULT NULL,
   `created_by` varchar(50) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`wf_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3919,7 +3919,7 @@ CREATE TABLE `wf_flow_step_def` (
   `flow_step_desc` varchar(500) DEFAULT NULL,
   `is_multi` varchar(10) DEFAULT NULL,
   `created_by` varchar(50) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`flow_step_id`),
   UNIQUE KEY `indx_flow_step_def` (`wf_code`,`step_code`) USING BTREE
@@ -3943,7 +3943,7 @@ CREATE TABLE `wf_proc` (
   `assignee_group` varchar(100) DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL,
   `owner_id` varchar(100) NOT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`proc_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3966,7 +3966,7 @@ CREATE TABLE `wf_proc_his` (
   `state` varchar(20) NOT NULL,
   `approve_code` varchar(20) DEFAULT NULL,
   `remark` varchar(500) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`proc_his_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3986,7 +3986,7 @@ CREATE TABLE `wf_step_def` (
   `state` varchar(20) DEFAULT NULL,
   `step_desc` varchar(500) DEFAULT NULL,
   `created_by` varchar(50) DEFAULT NULL,
-  `insert_date` datetime DEFAULT NULL,
+  `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`step_id`),
   UNIQUE KEY `indx_step_code` (`step_code`) USING BTREE

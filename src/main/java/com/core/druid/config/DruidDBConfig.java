@@ -161,7 +161,10 @@ public class DruidDBConfig {
     @Bean(name = "sqlSessionTemplate")
     @Primary
     public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
-        return new SqlSessionTemplate(sqlSessionFactory);
+        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
+        //解决mybatis查询过滤掉为空字段的问题
+        sqlSessionTemplate.getConfiguration().setCallSettersOnNulls(true);
+        return sqlSessionTemplate;
     }
 }
 

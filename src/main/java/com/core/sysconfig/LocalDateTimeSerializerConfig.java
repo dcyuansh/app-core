@@ -13,11 +13,11 @@ import java.time.format.DateTimeFormatter;
 /**
  * @author spring.yuan
  * @version 1.0
- * @desc 全局格式化LocalDateTime格式
+ * @desc 序列化LocalDateTime格式
  */
 @Configuration
 public class LocalDateTimeSerializerConfig {
-
+    
 
     @Bean
     public LocalDateTimeSerializer localDateTimeDeserializer() {

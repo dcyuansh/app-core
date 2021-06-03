@@ -27,7 +27,7 @@ public class CommReferenceServiceImpl implements CommReferenceService {
     public void saveCommReference(DataModel saveModel) {
         this.validateSaveOrUpdateCommNumber(saveModel);
         //set insert timestamp
-        saveModel.setFieldValue("insertDate", LocalDateTime.now());
+        saveModel.setFieldValue("insertTime", LocalDateTime.now());
         saveModel.setFieldValue("timestamp", LocalDateTime.now());
         commReferenceRepository.saveCommReference(saveModel);
     }

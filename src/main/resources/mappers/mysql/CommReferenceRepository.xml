@@ -12,7 +12,7 @@
             category_code,
             category_desc,
             remarks,
-            insert_date,
+            insert_time,
             timestamp
         )
         values (
@@ -23,7 +23,7 @@
             #{categoryCode},
             #{categoryDesc},
             #{remarks},
-            #{insertDate},
+            #{insertTime},
             #{timestamp}
         )
     </insert>

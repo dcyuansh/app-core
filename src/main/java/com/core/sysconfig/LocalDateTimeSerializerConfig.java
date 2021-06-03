@@ -1,3 +1,4 @@
+/*
 package com.core.sysconfig;
 
 import com.core.constants.SystemConstant;
@@ -10,11 +11,13 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
+*/
 /**
  * @author spring.yuan
  * @version 1.0
  * @desc 序列化LocalDateTime格式
- */
+ *//*
+
 @Configuration
 public class LocalDateTimeSerializerConfig {
     
@@ -28,4 +31,4 @@ public class LocalDateTimeSerializerConfig {
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
         return builder -> builder.serializerByType(LocalDateTime.class, localDateTimeDeserializer());
     }
-}
+}*/

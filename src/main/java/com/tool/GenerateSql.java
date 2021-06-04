@@ -199,6 +199,7 @@ public class GenerateSql {
                     count_no++;
                 }*/
                 //县
+                /*
                 while ((str = reader.readLine()) != null) {
                     String[] strList = str.split(",");
                     //System.out.println("----" + count_no);
@@ -210,7 +211,14 @@ public class GenerateSql {
                     //System.out.println("go");
                     count_no++;
                 }
-
+                */
+                //更新east table batchno
+                while ((str = reader.readLine()) != null) {
+                    //System.out.println("----" + count_no);
+                    //System.out.println("update  " + str + "  set  batchno= @batchno  where batchno=''");
+                    System.out.println("delete from   " + str + "  where batchno=''");
+                    //System.out.println("go");
+                }
                 System.out.println("total count =" + count_no);
             } catch (Exception e) {
                 e.printStackTrace();

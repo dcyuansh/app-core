@@ -3,6 +3,7 @@ package com.core.controller;
 import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
+import com.core.message.service.MessageManager;
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ public abstract class BaseController {
     public static final String RESULT_STATUS = "status";
     public static final String RESULT_CODE = "code";
     public static final String RESULT_DATA = "data";
-    public static final String ERROR_MESSAGE = "errorMsg";
+    public static final String RESULT_MSG = "msg";
 
 
     /***
@@ -65,8 +66,8 @@ public abstract class BaseController {
 
     protected List<DataModel> getInputDataList(HttpServletRequest request, List parmNameList) {
         List<DataModel> modelList = new ArrayList<>();
-        for (Object aParmNameList : parmNameList) {
-            String paramName = String.valueOf(aParmNameList);
+        for (Object onParamNName : parmNameList) {
+            String paramName = String.valueOf(onParamNName);
             String[] paramValues = request.getParameterValues(paramName);
             if (paramValues != null) {
                 for (int j = 0; j < paramValues.length; j++) {
@@ -106,8 +107,11 @@ public abstract class BaseController {
         }
         logger.warn(ve.getMessage());
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
+        //code: VALIDATION_FAILED
         resultMap.setFieldValue(RESULT_CODE, "VALIDATION_FAILED");
-        resultMap.setFieldValue(ERROR_MESSAGE, ve.getMessage());
+        resultMap.setFieldValue(RESULT_MSG, ve.getMessage());
+        //message信息
+        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
         return resultMap;
     }
 
@@ -126,7 +130,9 @@ public abstract class BaseController {
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
         //code: 500
         resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
-        resultMap.setFieldValue(ERROR_MESSAGE, e.getMessage());
+        resultMap.setFieldValue(RESULT_MSG, e.getMessage());
+        //message信息
+        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
         return resultMap;
     }
 
@@ -154,9 +160,10 @@ public abstract class BaseController {
         resultMap.setFieldValue(RESULT_STATUS, StatusEnum.SUCCESS);
         //code: 200
         resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_OK);
-        if (obj != null) {
-            resultMap.setFieldValue(RESULT_DATA, obj);
-        }
+        //data: 数据
+        resultMap.setFieldValue(RESULT_DATA, obj);
+        //message信息
+        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
         return resultMap;
     }
 }

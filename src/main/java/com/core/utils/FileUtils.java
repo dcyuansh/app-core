@@ -11,8 +11,9 @@ import java.io.*;
  */
 public class FileUtils {
 
-    /***
+    /**
      * 根据文件路径，按行读取文件
+     *
      * @param dirPath
      * @return
      */
@@ -42,8 +43,9 @@ public class FileUtils {
     }
 
 
-    /***
+    /**
      * 写入txt
+     *
      * @param filePath
      * @param content
      */
@@ -66,8 +68,9 @@ public class FileUtils {
     }
 
 
-    /***
+    /**
      * 根据文件的前3个字符判断文件的字符编码
+     *
      * @param input
      * @return
      */

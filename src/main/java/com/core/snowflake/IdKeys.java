@@ -31,7 +31,7 @@ public class IdKeys {
     /**
      * 初始化雪花算法对象
      */
-    private SnowflakeIdWorker SNOWFLAKE_ID_WORKER = new SnowflakeIdWorker(getWorkId(), getDataCenterId());
+    private static SnowflakeIdWorker SNOWFLAKE_ID_WORKER = new SnowflakeIdWorker(getWorkId(), getDataCenterId());
 
 
     /**

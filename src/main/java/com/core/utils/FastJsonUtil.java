@@ -12,12 +12,13 @@ import java.util.List;
  */
 public class FastJsonUtil {
 
-    /***
+    /**
      * object to json
+     *
      * @param object
      * @return
      */
-    public static JSON objectToJson(Object object) {
+    public static JSON objToJson(Object object) {
         JSON resultJson = null;
         if (object != null) {
             resultJson = JSON.parseObject(JSON.toJSONString(object));
@@ -25,13 +26,15 @@ public class FastJsonUtil {
         return resultJson;
     }
 
-    /***
+
+    /**
      * object to json exclude keys
+     *
      * @param object
      * @param excludeKeys
      * @return
      */
-    public static JSON objectToJson(Object object, String... excludeKeys) {
+    public static JSON objToJson(Object object, String... excludeKeys) {
         JSON resultJson = null;
         if (object != null && excludeKeys != null) {
             List<String> excludes = Arrays.asList(excludeKeys);
@@ -42,13 +45,15 @@ public class FastJsonUtil {
         return resultJson;
     }
 
-    /***
+
+    /**
      * object to json exclude list key
+     *
      * @param object
      * @param excludeKeys
      * @return
      */
-    public static JSON objectToJson(Object object, List<String> excludeKeys) {
+    public static JSON objToJson(Object object, List<String> excludeKeys) {
         JSON resultJson = null;
         if (object != null && excludeKeys != null) {
             SimplePropertyPreFilter filter = new SimplePropertyPreFilter();
@@ -58,14 +63,16 @@ public class FastJsonUtil {
         return resultJson;
     }
 
-    /***
+
+    /**
      * json to object
+     *
      * @param json
      * @param clazz
      * @param <T>
      * @return
      */
-    public static <T> T jsonToObject(String json, Class<T> clazz) {
+    public static <T> T jsonToObj(String json, Class<T> clazz) {
         T object = null;
         if (json != null) {
             object = JSON.parseObject(json, clazz);

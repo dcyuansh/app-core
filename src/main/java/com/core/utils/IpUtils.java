@@ -8,9 +8,10 @@ public class IpUtils {
 
 
     /**
+     * long to ipv4
+     *
      * @param longIp
      * @return
-     * @desc long to ipv4
      */
     public static String longToIpV4(long longIp) {
         int octet3 = (int) ((longIp >> 24) % 256);
@@ -21,9 +22,10 @@ public class IpUtils {
     }
 
     /**
+     * ipv4 to long
+     *
      * @param ip
      * @return
-     * @desc ipv4 to long
      */
     public static long ipV4ToLong(String ip) {
         String[] octets = ip.split("\\.");
@@ -33,10 +35,11 @@ public class IpUtils {
 
 
     /**
+     * 返回string host ip
+     *
      * @return
-     * @desc 返回string host ip
      */
-    public static String getHostIp() throws UnknownHostException{
+    public static String getHostIp() throws UnknownHostException {
         try {
             return Inet4Address.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {

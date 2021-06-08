@@ -10,8 +10,9 @@ import com.core.enums.CodeMessageEnum;
 public class EnumUtil {
 
 
-    /***
+    /**
      * 对应只有code的枚举，通过code获取枚举对象
+     *
      * @param code
      * @param tClass
      * @param <T>
@@ -27,8 +28,9 @@ public class EnumUtil {
     }
 
 
-    /***
+    /**
      * 通过code编码获取枚举对象
+     *
      * @param code   枚举的编码
      * @param tClass 枚举类
      * @param <T>
@@ -44,10 +46,11 @@ public class EnumUtil {
     }
 
 
-    /***
+    /**
      * 通过code编码获取枚举对象
+     *
      * @param message 枚举的msg
-     * @param tClass 枚举类
+     * @param tClass  枚举类
      * @param <T>
      * @return
      */

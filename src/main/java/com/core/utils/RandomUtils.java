@@ -46,7 +46,7 @@ public class RandomUtils {
     /**
      * 从集合中获取随机一个
      */
-    public static <T> T getRandom(Collection<T> collections) {
+    public static <T> T getCollRandom(Collection<T> collections) {
         if (collections == null || collections.isEmpty())
             return null;
         Object[] os = collections.toArray();
@@ -58,7 +58,7 @@ public class RandomUtils {
     /**
      * 从 [min, max]中取出num个不重复的随机数
      */
-    public static java.util.List<Integer> getRandomValues(int min, int max, int num) {
+    public static java.util.List<Integer> getRandomListVal(int min, int max, int num) {
         final java.util.List<Integer> list = new java.util.LinkedList<Integer>();
         if (max < 0)
             return list;

@@ -25,7 +25,7 @@ public class XmlParserUtil {
      * @param obj
      * @return
      */
-    public static String objectToXml(Object obj) {
+    public static String objToXml(Object obj) {
         //创建输出流
         StringWriter writer = new StringWriter();
         try {
@@ -49,7 +49,7 @@ public class XmlParserUtil {
      * @param obj
      * @param path
      */
-    public static void objectToXml(Object obj, String path) {
+    public static void objToXml(Object obj, String path) {
         try {
             // 利用jdk中自带的转换类实现
             JAXBContext context = JAXBContext.newInstance(obj.getClass());
@@ -78,7 +78,7 @@ public class XmlParserUtil {
      * @param obj
      * @return
      */
-    public static Object xmlToObject(String xmlStr, Class<?> obj) {
+    public static Object xmlToObj(String xmlStr, Class<?> obj) {
         Object xmlObject = null;
         try {
             JAXBContext context = JAXBContext.newInstance(obj);
@@ -99,7 +99,7 @@ public class XmlParserUtil {
      * @param obj
      * @return
      */
-    public static Object xmlFileToObject(String xmlPath, Class<?> obj) {
+    public static Object xmlFileToObj(String xmlPath, Class<?> obj) {
         Object xmlObject = null;
         try {
             JAXBContext context = JAXBContext.newInstance(obj);

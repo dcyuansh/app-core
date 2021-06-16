@@ -25,8 +25,8 @@
         step_code,
         #{businessId},
         #{state},
-        user_id,
-        user_group
+        #{userId},
+        #{userGroup},
         #{remark},
         #{ownerId},
         #{timestamp}

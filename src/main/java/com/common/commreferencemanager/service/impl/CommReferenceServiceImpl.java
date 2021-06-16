@@ -57,7 +57,7 @@ public class CommReferenceServiceImpl implements CommReferenceService {
         if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementType"))) {
             validationMsg = "element type can not be null!";
         }
-        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementCode"))) {
+        if (numberModel != null && StringUtils.isBlank(numberModel.getStringValue("elementCd"))) {
             validationMsg = "element code can not be null!";
         }
         if (StringUtils.isNotEmpty(validationMsg)) {

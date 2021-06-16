@@ -6,22 +6,22 @@
     <insert id="saveCommReference" parameterType="Map">
         insert into comm_reftab(
             element_type,
-            element_code,
+            element_cd,
             element_name,
             language_id,
-            category_code,
-            category_desc,
+            ref_cd,
+            ref_desc,
             remarks,
             insert_time,
             timestamp
         )
         values (
             #{elementType},
-            #{elementCode},
+            #{elementCd},
             #{elementName},
             #{languageId},
-            #{categoryCode},
-            #{categoryDesc},
+            #{refCd},
+            #{refDesc},
             #{remarks},
             #{insertTime},
             #{timestamp}
@@ -34,7 +34,7 @@
 
     <select id="queryCommReferenceList" parameterType="Map" resultType="DataModel">
         select * from comm_reftab
-        where element_code = #{elementCode}
+        where element_cd = #{elementCd}
         <if test="elementType != null and elementType != ''">
             and element_type = #{elementType}
         </if>

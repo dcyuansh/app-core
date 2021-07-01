@@ -213,12 +213,23 @@ public class GenerateSql {
                 }
                 */
                 //更新east table batchno
+               /* while ((str = reader.readLine()) != null) {
+                    //System.out.println("----" + count_no);
+                    System.out.println("update  " + str + "  set  batch_no= @batchno  where batch_no=''");
+                    //System.out.println("delete from  " + str + "  where batch_no=''");
+                    //System.out.println("go");
+                }*/
+
+               //中科软etl抽取sql
                 while ((str = reader.readLine()) != null) {
                     //System.out.println("----" + count_no);
-                    //System.out.println("update  " + str + "  set  batchno= @batchno  where batchno=''");
-                    System.out.println("delete from   " + str + "  where batchno=''");
+                    System.out.println("\"SELECT * FROM  "
+                            + str +
+                            " WHERE batch_no='\"+@[User::batchno]+\"'\"");
+                    //System.out.println("delete from  " + str + "  where batch_no=''");
                     //System.out.println("go");
                 }
+
                 System.out.println("total count =" + count_no);
             } catch (Exception e) {
                 e.printStackTrace();

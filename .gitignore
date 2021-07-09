@@ -446,3 +446,5 @@ target/surefire-reports/2021-05-24T17-42-15_249-jvmRun1.dump
 .idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml
 .idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_2.xml
 .idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml
+target/classes/sql/exec.sql
+target/classes/sql/read.txt

@@ -1,13 +1,19 @@
-package com.core.utils;
+package com.core.security;
 
 
 import com.alibaba.fastjson.JSON;
+import com.core.utils.StringUtils;
+import com.core.utils.UUidUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import javax.xml.bind.DatatypeConverter;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Map;
 
@@ -15,26 +21,31 @@ import java.util.Map;
  * @author spring.yuan
  * @version 1.0
  */
-public class JWTTokenUtils {
+@Data
+@ConfigurationProperties(prefix = "jwt.token")
+@Component
+public class JwtTokenUtils implements Serializable {
 
-    //设置过期时间1天
-    private static long EXPIRE_TIME = 1 * 24 * 60 * 60 * 1000;
     //token私钥
-    private static String TOKEN_SECRET = "System Token";
+    private String secret;
     //签发者
-    private static String ISSUER = "System Administrator";
+    private String issuer;
     //主题
-    private static String SUBJECT = "System Authorization";
+    private String subject;
+    //设置过期时间1天
+    private long expiration;
+    //token头
+    private String header;
 
 
     /***
      * 生成token签名，过期日期为expireTime
-     * @param subject
+     * @param subject_
      * @param claims
      * @param expireTime
      * @return
      */
-    public static String sign(String subject, Map<String, Object> claims, long expireTime) {
+    public String sign(String subject_, Map<String, Object> claims, long expireTime) {
         //json claim参数
         claims.forEach((key, val) ->
                 claims.put(key, val instanceof String ? val : JSON.toJSONString(val))
@@ -43,15 +54,15 @@ public class JWTTokenUtils {
         //过期时间
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
-        Date expireDate = new Date(nowMillis + (expireTime == 0 ? EXPIRE_TIME : expireTime));
+        Date expireDate = new Date(nowMillis + (expireTime == 0 ? expiration : expireTime));
         return Jwts.builder()
                 .setId(UUidUtils.getUUID())
-                .setIssuer(ISSUER) //签发者信息
-                .setSubject(StringUtils.isBlank(subject) ? SUBJECT : subject) //主题说明
+                .setIssuer(issuer) //签发者信息
+                .setSubject(StringUtils.isBlank(subject_) ? subject : subject_) //主题说明
                 .addClaims(claims) //claim信息
                 .setIssuedAt(now)  //签发时间
                 .setExpiration(expireDate) //过期时间戳
-                .signWith(SignatureAlgorithm.HS256, TOKEN_SECRET) //加密方式
+                .signWith(SignatureAlgorithm.HS256, secret) //加密方式
                 .compact();
     }
 
@@ -62,7 +73,7 @@ public class JWTTokenUtils {
      * @param token_secret
      * @return
      */
-    public static boolean isExpiration(String token, String token_secret) {
+    public boolean isExpiration(String token, String token_secret) {
         try {
             return parserToken(token, token_secret)
                     .getExpiration()
@@ -78,11 +89,11 @@ public class JWTTokenUtils {
      * @param token
      * @return
      */
-    public static Claims parserToken(String token, String token_secret) {
+    public Claims parserToken(String token, String token_secret) {
         Claims claims = null;
         try {
             claims = Jwts.parser()
-                    .setSigningKey(DatatypeConverter.parseBase64Binary(StringUtils.isBlank(token_secret) ? TOKEN_SECRET : token_secret))
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(StringUtils.isBlank(token_secret) ? secret : token_secret))
                     .parseClaimsJws(token).getBody();
         } catch (Exception e) {
             e.printStackTrace();

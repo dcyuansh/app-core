@@ -13,10 +13,9 @@ import java.util.List;
 public class FastJsonUtil {
 
     /**
-     * object to json
-     *
      * @param object
      * @return
+     * @desc object to json
      */
     public static JSON objToJson(Object object) {
         JSON resultJson = null;
@@ -28,11 +27,10 @@ public class FastJsonUtil {
 
 
     /**
-     * object to json exclude keys
-     *
      * @param object
      * @param excludeKeys
      * @return
+     * @desc object to json exclude keys
      */
     public static JSON objToJson(Object object, String... excludeKeys) {
         JSON resultJson = null;
@@ -47,11 +45,10 @@ public class FastJsonUtil {
 
 
     /**
-     * object to json exclude list key
-     *
      * @param object
      * @param excludeKeys
      * @return
+     * @desc object to json exclude list key
      */
     public static JSON objToJson(Object object, List<String> excludeKeys) {
         JSON resultJson = null;
@@ -65,12 +62,11 @@ public class FastJsonUtil {
 
 
     /**
-     * json to object
-     *
      * @param json
      * @param clazz
      * @param <T>
      * @return
+     * @desc json to object
      */
     public static <T> T jsonToObj(String json, Class<T> clazz) {
         T object = null;

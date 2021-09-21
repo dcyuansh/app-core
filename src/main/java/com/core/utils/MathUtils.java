@@ -11,11 +11,10 @@ public class MathUtils {
 
 
     /**
-     * 四舍五入保留newScale位小数
-     *
      * @param newScale 精确度
      * @param v        原数据
      * @return 返回四色五入后的结果
+     * @desc 四舍五入保留newScale位小数
      */
     public static double round(double v, int newScale) {
         BigDecimal b = new BigDecimal(Double.toString(v));
@@ -24,11 +23,10 @@ public class MathUtils {
 
 
     /**
-     * 最大公约数
-     *
      * @param a
      * @param b
      * @return
+     * @desc 最大公约数
      */
     public static int GetGCD(int a, int b) {
         if (a < 0 || b < 0) {

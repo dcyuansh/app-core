@@ -10,18 +10,17 @@ import java.util.regex.Pattern;
 public class MatcherUtils {
 
 
-    /***
-     * 验证是不是有效的身份证号
+    /**
      * @param certNo
      * @return
+     * @desc 验证是不是有效的身份证号
      */
     public static boolean isIDCard(String certNo) {
         return ValidateIDCardUtils.isIDCard(certNo);
     }
 
 
-    /****
-     *
+    /**
      * @param （6-16位数字和字母和特殊字符的组合）
      * @return
      */
@@ -35,10 +34,10 @@ public class MatcherUtils {
     }
 
 
-    /****
-     * tel 11位,1开头，第二位(3,4,5,7,8)
+    /**
      * @param tel
      * @return
+     * @desc tel 11位,1开头，第二位(3,4,5,7,8)
      */
     public static boolean isValidTel(String tel) {
         if (StringUtils.isBlank(tel)) {
@@ -50,10 +49,10 @@ public class MatcherUtils {
     }
 
 
-    /***
-     * 是否为16-22位银行账号
+    /**
      * @param bankAccount
      * @return
+     * @desc 是否为16-22位银行账号
      */
     public static boolean isBankAccount(String bankAccount) {
         if (StringUtils.isBlank(bankAccount)) {
@@ -64,7 +63,7 @@ public class MatcherUtils {
 
 
     /***
-     * 是否是纯数字，不含空格
+     * @desc 是否是纯数字，不含空格
      * @param str
      * @return
      */
@@ -82,10 +81,10 @@ public class MatcherUtils {
     }
 
 
-    /***
-     * 是否数值类型，整数或小数
+    /**
      * @param str
      * @return
+     * @desc 是否数值类型，整数或小数
      */
     public static boolean isNumericalValue(String str) {
         if (StringUtils.isBlank(str)) {
@@ -96,10 +95,9 @@ public class MatcherUtils {
 
 
     /**
-     * 判断是不是中文字符串
-     *
      * @param cn
      * @return
+     * @desc 判断是不是中文字符串
      */
     public static boolean isCNStr(String cn) {
         if (StringUtils.isBlank(cn)) {

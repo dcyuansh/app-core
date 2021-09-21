@@ -20,8 +20,8 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    /***
-     * 对于没有通过认证而访问特殊资源的用户返回401未授权错误.
+    /**
+     * @desc 对于没有通过认证而访问特殊资源的用户返回401未授权错误.
      * @param request
      * @param response
      * @param authException

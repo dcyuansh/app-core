@@ -24,17 +24,17 @@ import java.util.Arrays;
 public class LogMonitorService {
     private Logger logger = LoggerFactory.getLogger(LogMonitorService.class);
 
-    /***
-     * 指定切点
+    /**
+     * @desc 指定切点
      * 匹配 com..*.controller包及其子包下的所有类的所有方法
      */
     @Pointcut("execution(public * com..*.controller.*.*(..))")
     public void execute() {
     }
 
-    /***
-     * 前置通知，方法调用前被调用
+    /**
      * @param joinPoint
+     * @desc 前置通知，方法调用前被调用
      */
     @Before("execute()")
     public void doBefore(JoinPoint joinPoint) {
@@ -66,10 +66,10 @@ public class LogMonitorService {
     }
 
 
-    /***
-     * 处理完请求返回内容
-     * @param result
+    /**
+     * @param result 返回的结果集
      * @throws Throwable
+     * @desc 处理完请求返回内容
      */
     @AfterReturning(returning = "result", pointcut = "execute()")
     public void doAfterReturning(Object result) throws Throwable {
@@ -83,28 +83,29 @@ public class LogMonitorService {
         logger.info("Request Return Value：" + result);
     }
 
-    /***
-     * 后置异常通知
+    /**
      * @param jp
+     * @desc 后置异常通知
      */
     @AfterThrowing("execute()")
     public void throwss(JoinPoint jp) {
         logger.error("方法异常时执行.....");
     }
 
-    /***
-     * 后置最终通知,final增强，不管是抛出异常或者正常退出都会执行
+
+    /**
      * @param jp
+     * @desc 后置最终通知, final增强，不管是抛出异常或者正常退出都会执行
      */
     @After("execute()")
     public void after(JoinPoint jp) {
 
     }
 
-    /***
-     * 环绕通知,环绕增强，相当于MethodInterceptor
+    /**
      * @param pjp
-     * @return
+     * @return 返回结果集
+     * @desc 环绕通知, 环绕增强，相当于MethodInterceptor
      */
     @Around("execute()")
     public Object arround(ProceedingJoinPoint pjp) {

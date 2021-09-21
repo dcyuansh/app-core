@@ -88,10 +88,9 @@ public class SnowflakeIdWorker {
     //==============================Constructors=====================================
 
     /**
-     * 构造函数
-     *
      * @param workerId     工作ID (0~31)
      * @param datacenterId 数据中心ID (0~31)
+     * @desc 构造函数
      */
     public SnowflakeIdWorker(long workerId, long datacenterId) {
         if (workerId > maxWorkerId || workerId < 0) {
@@ -107,9 +106,8 @@ public class SnowflakeIdWorker {
     // ==============================Methods==========================================
 
     /**
-     * 获得下一个ID (该方法是线程安全的)
-     *
      * @return SnowflakeId
+     * @desc 获得下一个ID (该方法是线程安全的)
      */
     public synchronized long nextId() {
         long timestamp = timeGen();
@@ -145,10 +143,9 @@ public class SnowflakeIdWorker {
     }
 
     /**
-     * 阻塞到下一个毫秒，直到获得新的时间戳
-     *
      * @param lastTimestamp 上次生成ID的时间截
      * @return 当前时间戳
+     * @desc 阻塞到下一个毫秒，直到获得新的时间戳
      */
     protected long tilNextMillis(long lastTimestamp) {
         long timestamp = timeGen();

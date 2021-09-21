@@ -19,7 +19,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * @author spring.yuan
+ * @version 1.0
+ */
 @Component
 public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
 

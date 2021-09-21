@@ -26,10 +26,10 @@ public class HttpClientUtils {
 
 
     /**
-     * @param url
-     * @param contentType
-     * @param reqParam
-     * @return
+     * @param url         请求url
+     * @param contentType 请求方式content type
+     * @param reqParam    请求参数
+     * @return 取服务器返回过来的json字符串数据
      */
     public static String post(String url, String contentType, String reqParam) {
         //post请求返回结果
@@ -47,7 +47,7 @@ public class HttpClientUtils {
             HttpResponse result = httpClient.execute(method);
             url = URLDecoder.decode(url, EncodeTypeEnum.UTF8.getCode());
             /**请求发送成功，并得到响应**/
-            if (result.getStatusLine().getStatusCode() == 200) {
+            if (result.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 try {
                     /**读取服务器返回过来的json字符串数据**/
                     res = EntityUtils.toString(result.getEntity(), EncodeTypeEnum.UTF8.getCode());
@@ -64,10 +64,10 @@ public class HttpClientUtils {
     }
 
 
-    /***
-     * 发送get请求
+    /**
      * @param url 路径
-     * @return
+     * @return 读取服务器返回过来的json字符串数据
+     * @desc 发送get请求
      */
     public static String get(String url) {
         String res = null;

@@ -20,4 +20,10 @@ public final class SystemConstant {
     public static final String DATE_TIME_LONG_FORMAT = "yyyyMMddHHmmss";
     public static final String LOCAL_TIME_LONG_FORMAT = "yyyyMMddHHmmssSSS";
 
+    //API接口返回代码
+    public static final String RESULT_STATUS = "status";
+    public static final String RESULT_CODE = "code";
+    public static final String RESULT_DATA = "data";
+    public static final String RESULT_MSG = "msg";
+
 }

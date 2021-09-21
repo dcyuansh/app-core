@@ -18,9 +18,7 @@ public class SecurityUtils {
 
 
     /**
-     * get the login of the current user.
-     *
-     * @return
+     * @return get the login of the current user.
      */
     public static String getCurUsername() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

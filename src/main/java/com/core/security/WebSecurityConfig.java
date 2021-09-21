@@ -26,7 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAccessDeniedHandler jwtAccessDeniedHandler;
     @Autowired
-    private JWTTokenAuthenticationFilter jwtTokenAuthenticationFilter;
+    private JwtTokenAuthenticationFilter jwtTokenAuthenticationFilter;
 
 
     @Override
@@ -57,8 +57,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 基于token，所以不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
-                // 放行所有系统api
-                .antMatchers("/**").permitAll()
+                // 放行druid
+                .antMatchers("/druid/**").permitAll()
+                // 放行swagger
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/webjars/**").permitAll()
+                .antMatchers("/v2/**").permitAll()
+                .antMatchers("/swagger-resources/**").permitAll()
+                // 放行系统api
+                .antMatchers("/api/**").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
         httpSecurity.addFilterBefore(jwtTokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

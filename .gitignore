@@ -469,3 +469,4 @@ target/classes/sql/mysql/wf_flow_step_def.sql
 target/classes/sql/mysql/wf_proc.sql
 target/classes/sql/mysql/wf_proc_his.sql
 target/classes/sql/mysql/wf_step_def.sql
+target/classes/META-INF/spring-configuration-metadata.json

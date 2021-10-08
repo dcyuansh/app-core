@@ -1,5 +1,7 @@
 package com.core.aop;
 
+import com.core.constants.SystemConstant;
+import com.core.message.service.MessageManager;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -13,6 +15,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author spring.yuan
@@ -73,13 +77,12 @@ public class LogMonitorService {
      */
     @AfterReturning(returning = "result", pointcut = "execute()")
     public void doAfterReturning(Object result) throws Throwable {
-        /*
         // 处理完请求，返回内容
         if (result instanceof Map) {
             List messageList = MessageManager.getInstance().getAllMessage();
-            ((Map) result).put("messages", messageList);
+            if (messageList.size() > 0)
+                ((Map) result).put(SystemConstant.RESULT_INFO, messageList);
         }
-        */
         logger.info("Request Return Value：" + result);
     }
 

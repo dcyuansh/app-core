@@ -4,7 +4,6 @@ import com.core.constants.SystemConstant;
 import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
-import com.core.message.service.MessageManager;
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -91,44 +90,46 @@ public abstract class BaseController {
     }
 
 
-    /***
-     * 请求有校验错误信息是，设置返回参数
+    /**
      * @param ve
      * @param resultMap
      * @return
+     * @desc 请求有校验错误信息是，设置返回参数
      */
     public Map<String, Object> handleValidationExcpetion(ValidationException ve, DataModel resultMap) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
-        logger.warn(ve.getMessage());
+        logger.error("validation exception: " + ve.getMessage());
         resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
-        //code: VALIDATION_FAILED
-        resultMap.setFieldValue(SystemConstant.RESULT_CODE, "VALIDATION_FAILED");
-        resultMap.setFieldValue(SystemConstant.RESULT_MSG, ve.getMessage());
-        //message信息
-        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
+        //code: 400
+        resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_BAD_REQUEST);
+        //data: 数据
+        resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
+        //message: 错误信息
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, ve.getMessage());
         return resultMap;
     }
 
 
-    /***
-     * 请求发送异常时，设置返回参数
+    /**
      * @param e
      * @param resultMap
      * @return
+     * @desc 请求发送异常时，设置返回参数
      */
     public Map<String, Object> handleException(Exception e, DataModel resultMap) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
-        logger.error(e.getMessage(), e);
+        logger.error("system exception: " + e.getMessage());
         resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
         //code: 500
         resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
-        resultMap.setFieldValue(SystemConstant.RESULT_MSG, e.getMessage());
-        //message信息
-        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
+        //data: 数据
+        resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
+        //message: 错误信息
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, e.getMessage());
         return resultMap;
     }
 
@@ -143,10 +144,10 @@ public abstract class BaseController {
     }
 
 
-    /***
-     * 请求成功收，设置返回参数
+    /**
      * @param resultMap
      * @return
+     * @desc 请求成功收，设置返回参数
      */
     public Map<String, Object> handleSuccess(Object obj, DataModel resultMap) {
         if (resultMap == null) {
@@ -158,8 +159,8 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_OK);
         //data: 数据
         resultMap.setFieldValue(SystemConstant.RESULT_DATA, obj);
-        //message信息
-        resultMap.setFieldValue("messages", MessageManager.getInstance().getAllMessage());
+        //message: 信息
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, "");
         return resultMap;
     }
 }

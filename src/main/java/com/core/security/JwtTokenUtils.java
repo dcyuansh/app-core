@@ -38,12 +38,12 @@ public class JwtTokenUtils implements Serializable {
     private String header;
 
 
-    /***
-     * 生成token签名，过期日期为expireTime
+    /**
      * @param subject_
      * @param claims
      * @param expireTime
      * @return
+     * @desc 生成token签名，过期日期为expireTime
      */
     public String sign(String subject_, Map<String, Object> claims, long expireTime) {
         //json claim参数
@@ -67,11 +67,11 @@ public class JwtTokenUtils implements Serializable {
     }
 
 
-    /***
-     * 判断token是否过期
+    /**
      * @param token
      * @param token_secret
      * @return
+     * @desc 判断token是否过期
      */
     public boolean isExpiration(String token, String token_secret) {
         try {
@@ -84,10 +84,26 @@ public class JwtTokenUtils implements Serializable {
     }
 
 
-    /***
-     * 私钥获取token信息
+    /**
+     * @param token
+     * @param token_secret
+     * @return new token
+     * @desc refresh token
+     */
+    public String refreshToken(String token, String token_secret) {
+        String refToken = "";
+        Claims claims = this.parserToken(token, token_secret);
+        if (claims != null) {
+            refToken = this.sign(null, claims, 0);
+        }
+        return refToken;
+    }
+
+
+    /**
      * @param token
      * @return
+     * @desc 私钥获取token信息
      */
     public Claims parserToken(String token, String token_secret) {
         Claims claims = null;

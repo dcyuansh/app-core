@@ -39,7 +39,7 @@ public class DynamicDataSourceConfig {
 
 
     @Bean(name = "masterDataSource") // 声明其为Bean实例
-    //@Primary // 在同样的DataSource中，首先使用被标注的DataSource
+    @Primary // 在同样的DataSource中，首先使用被标注的DataSource
     @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     public DataSource masterDataSource() {
         return DruidDataSourceBuilder.create().build();
@@ -58,8 +58,7 @@ public class DynamicDataSourceConfig {
      * @desc 动态配置多数据源
      */
     @Bean(name = "dynamicDataSource")
-    @Primary
-    public DataSource multipleDataSource(@Qualifier("masterDataSource") DataSource masterDb, @Qualifier("slaveDataSource") DataSource slaveDb) {
+    public DynamicDataSource multipleDataSource(@Qualifier("masterDataSource") DataSource masterDb, @Qualifier("slaveDataSource") DataSource slaveDb) {
         DynamicDataSource multipleDataSource = new DynamicDataSource();
         Map<Object, Object> targetDataSources = new HashMap<>();
         targetDataSources.put(DataSourceType.MASTER, masterDb);

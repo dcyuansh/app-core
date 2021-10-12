@@ -492,3 +492,17 @@ target/classes/sql/mysql/comm_country.sql
 target/classes/sql/mysql/comm_city.sql
 >>>>>>> Stashed changes
 target/classes/META-INF/spring-configuration-metadata.json
+.idea/libraries/Maven__jakarta_jms_jakarta_jms_api_2_0_3.xml
+.idea/libraries/Maven__org_apache_activemq_activemq_broker_5_16_2.xml
+.idea/libraries/Maven__org_apache_activemq_activemq_client_5_16_2.xml
+.idea/libraries/Maven__org_apache_activemq_activemq_jms_pool_5_16_2.xml
+.idea/libraries/Maven__org_apache_activemq_activemq_openwire_legacy_5_16_2.xml
+.idea/libraries/Maven__org_apache_activemq_activemq_pool_5_16_2.xml
+.idea/libraries/Maven__org_apache_commons_commons_pool2_2_9_0.xml
+.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_management_1_1_spec_1_0_1.xml
+.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jms_1_1_spec_1_1_1.xml
+.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml
+.idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_11.xml
+.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_activemq_2_5_0.xml
+.idea/libraries/Maven__org_springframework_spring_jms_5_3_7.xml
+.idea/libraries/Maven__org_springframework_spring_messaging_5_3_7.xml

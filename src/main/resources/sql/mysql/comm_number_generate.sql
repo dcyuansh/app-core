@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : aliyun
 Source Server Version : 80012
-Source Host           : localhost:3306
+Source Host           : 106.14.202.126:3306
 Source Database       : itech
 
 Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2021-06-16 17:51:59
+Date: 2021-11-04 10:13:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,9 +29,9 @@ CREATE TABLE `comm_number_generate` (
   `timestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `indx_number_generate` (`number_name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comm_number_generate
 -- ----------------------------
-INSERT INTO `comm_number_generate` VALUES ('4', 'taskNo', '4', '1', 'ticket no自增长序号,从1开始，每次增加span。', '2020-11-27 13:49:01', '2021-03-22 11:36:14');
+INSERT INTO `comm_number_generate` VALUES ('5', 'taskNo', '15', '1', '', '2021-07-19 14:16:40', '2021-07-27 15:20:10');

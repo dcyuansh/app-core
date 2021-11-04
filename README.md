@@ -27,3 +27,9 @@
 ### 4、Swagger UI页面
 
 地址：https://localhost:8443/swagger-ui.html
+
+
+
+### 5、Redis启动
+
+启动方式：双击redis/redis-server.exe

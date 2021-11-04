@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : aliyun
 Source Server Version : 80012
-Source Host           : localhost:3306
+Source Host           : 106.14.202.126:3306
 Source Database       : itech
 
 Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2021-06-16 17:51:31
+Date: 2021-11-04 10:12:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,12 +20,12 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `comm_country`;
 CREATE TABLE `comm_country` (
-  `country_cd` varchar(20) NOT NULL,
+  `country_code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `country_name` varchar(50) DEFAULT NULL,
   `remarks` varchar(500) DEFAULT NULL,
   `insert_time` datetime DEFAULT NULL,
   `timestamp` datetime DEFAULT NULL,
-  PRIMARY KEY (`country_cd`)
+  PRIMARY KEY (`country_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : aliyun
 Source Server Version : 80012
-Source Host           : localhost:3306
+Source Host           : 106.14.202.126:3306
 Source Database       : itech
 
 Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2021-06-16 17:52:27
+Date: 2021-11-04 10:13:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;

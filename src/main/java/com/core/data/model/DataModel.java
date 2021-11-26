@@ -13,17 +13,17 @@ import java.util.*;
  * @author spring.yuan
  * @version 1.0
  */
-public class DataModel implements Map, Serializable {
+public class DataModel implements Map<String, Object>, Serializable {
 
-    private Map fieldMap;
+    private Map<String, Object> fieldMap;
 
 
     public DataModel() {
-        fieldMap = new LinkedHashMap<String, Object>();
+        fieldMap = new LinkedHashMap();
     }
 
     public DataModel(Map<String, Object> fieldMap) {
-        this.fieldMap = new LinkedHashMap<String, Object>();
+        this.fieldMap = new LinkedHashMap();
         if (fieldMap != null) {
             for (String key : fieldMap.keySet()) {
                 this.put(key, fieldMap.get(key), true, false);
@@ -32,7 +32,7 @@ public class DataModel implements Map, Serializable {
     }
 
     @Override
-    public Object put(Object key, Object value) {
+    public Object put(String key, Object value) {
         return put(key, value, true, true);
     }
 
@@ -93,18 +93,6 @@ public class DataModel implements Map, Serializable {
         return (LocalDateTime) LocalDateTimeConverter.convert(getFieldValue(name));
     }
 
-    public boolean hasField(String name) {
-        return fieldMap.containsKey(name);
-    }
-
-    public boolean hasFieldValue(String name) {
-        return hasField(name) && getFieldValue(name) != null;
-    }
-
-    public void removeField(String name) {
-        fieldMap.remove(name);
-    }
-
     @Override
     public int size() {
         return fieldMap.size();
@@ -136,7 +124,7 @@ public class DataModel implements Map, Serializable {
     }
 
     @Override
-    public void putAll(Map m) {
+    public void putAll(Map<? extends String, ?> m) {
         fieldMap.putAll(m);
     }
 
@@ -146,17 +134,17 @@ public class DataModel implements Map, Serializable {
     }
 
     @Override
-    public Set keySet() {
+    public Set<String> keySet() {
         return fieldMap.keySet();
     }
 
     @Override
-    public Collection values() {
+    public Collection<Object> values() {
         return fieldMap.values();
     }
 
     @Override
-    public Set<Entry> entrySet() {
+    public Set<Entry<String, Object>> entrySet() {
         return fieldMap.entrySet();
     }
 

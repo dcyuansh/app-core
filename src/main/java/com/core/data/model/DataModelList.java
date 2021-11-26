@@ -12,6 +12,10 @@ public class DataModelList implements List, Serializable {
     private final List modelList = new ArrayList();
 
 
+    public DataModel getDataModel(int index) {
+        return (DataModel) this.get(index);
+    }
+
     @Override
     public boolean add(Object o) {
         if (o instanceof DataModel) {
@@ -108,10 +112,6 @@ public class DataModelList implements List, Serializable {
     @Override
     public Object get(int index) {
         return modelList.get(index);
-    }
-
-    public DataModel getDataModel(int index) {
-        return (DataModel) this.get(index);
     }
 
     @Override

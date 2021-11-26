@@ -17,10 +17,10 @@ public class StringUtils {
     private static final double MAX_VALUE = 9999999999999.99D;
 
 
-    /***
-     * format filed name
+    /**
      * @param columnName
      * @return
+     * @desc format filed name
      */
     public static String formatFieldName(String columnName) {
         String resultColumnName;
@@ -35,10 +35,9 @@ public class StringUtils {
 
 
     /**
-     * translate value
-     *
      * @param value
      * @return
+     * @desc translate value
      */
     public static Object translateValue(Object value) {
         Object resultObject = value;
@@ -54,10 +53,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 将字符串中的下划线(_)去掉，后面第一个字母大写
+    /**
      * @param param
      * @return
+     * @desc 将字符串中的下划线(_)去掉，后面第一个字母大写
      */
     public static String underlineToCamel(String param) {
         if (StringUtils.isBlank(param)) {
@@ -79,10 +78,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 判断字符是否为空，空格、制表符、tab
+    /**
      * @param str
      * @return
+     * @desc 判断字符是否为空，空格、制表符、tab
      */
     public static boolean isBlank(CharSequence str) {
         int strLen;
@@ -100,10 +99,10 @@ public class StringUtils {
     }
 
 
-    /***
-     *　判断字符串不能为空，空格、制表符、tab
+    /**
      * @param str
      * @return
+     * @desc 判断字符串不能为空，空格、制表符、tab
      */
     public static boolean isNotBlank(CharSequence str) {
         return !isBlank(str);
@@ -111,10 +110,9 @@ public class StringUtils {
 
 
     /**
-     * 判断所有字符串是有有为空，空格、制表符、tab
-     *
      * @param css
      * @return
+     * @desc 判断所有字符串是有有为空，空格、制表符、tab
      */
     public static boolean isAnyBlank(CharSequence... css) {
         if (ArrayUtils.isEmpty(css)) {
@@ -134,10 +132,9 @@ public class StringUtils {
 
 
     /**
-     * 判断所有字符串，是不是都不为空，空格、制表符、tab
-     *
      * @param css
      * @return
+     * @desc 判断所有字符串，是不是都不为空，空格、制表符、tab
      */
     public static boolean isNoneBlank(CharSequence... css) {
         return !isAnyBlank(css);
@@ -145,10 +142,9 @@ public class StringUtils {
 
 
     /**
-     * 判断所有字符串，是不是都为空，空格、制表符、tab
-     *
      * @param css
      * @return
+     * @desc 判断所有字符串，是不是都为空，空格、制表符、tab
      */
     public static boolean isAllBlank(CharSequence... css) {
         if (ArrayUtils.isEmpty(css)) {
@@ -167,20 +163,20 @@ public class StringUtils {
     }
 
 
-    /***
-     * 判断是否为空字符串,没有判断空格
+    /**
      * @param str
      * @return 如果为空，则返回true
+     * @desc 判断是否为空字符串, 没有判断空格
      */
     public static boolean isEmpty(CharSequence str) {
         return str == null || str.length() == 0;
     }
 
 
-    /***
-     * 判断字符串是否非空
+    /**
      * @param str 如果不为空，则返回true
      * @return
+     * @desc 判断字符串是否非空
      */
     public static boolean isNotEmpty(CharSequence str) {
         return !isEmpty(str);
@@ -188,10 +184,9 @@ public class StringUtils {
 
 
     /**
-     * 判断是否有一个字符串是空，没有判断空格
-     *
      * @param css
      * @return
+     * @desc 判断是否有一个字符串是空，没有判断空格
      */
     public static boolean isAnyEmpty(CharSequence... css) {
         if (ArrayUtils.isEmpty(css)) {
@@ -211,10 +206,9 @@ public class StringUtils {
 
 
     /**
-     * 所有字符串都部位空
-     *
      * @param css
      * @return
+     * @desc 所有字符串都部位空
      */
     public static boolean isNoneEmpty(CharSequence... css) {
         return !isAnyEmpty(css);
@@ -222,10 +216,9 @@ public class StringUtils {
 
 
     /**
-     * 判断所有字符串是否都是空
-     *
      * @param css
      * @return
+     * @desc 判断所有字符串是否都是空
      */
     public static boolean isAllEmpty(CharSequence... css) {
         if (ArrayUtils.isEmpty(css)) {
@@ -245,10 +238,9 @@ public class StringUtils {
 
 
     /**
-     * 字符串trim
-     *
      * @param str
      * @return
+     * @desc 字符串trim
      */
     public static String trim(String str) {
         return str == null ? null : str.trim();
@@ -256,11 +248,10 @@ public class StringUtils {
 
 
     /**
-     * 字符串截取，从第start个字符串开始截取
-     *
      * @param str
      * @param start
      * @return
+     * @desc 字符串截取，从第start个字符串开始截取
      */
     public static String subString(String str, int start) {
         if (str == null) {
@@ -278,12 +269,11 @@ public class StringUtils {
 
 
     /**
-     * 字符串截取，从位置start开始到位置end结束
-     *
      * @param str
      * @param start
      * @param end
      * @return
+     * @desc 字符串截取，从位置start开始到位置end结束
      */
     public static String subString(String str, int start, int end) {
         if (str == null) {
@@ -314,11 +304,10 @@ public class StringUtils {
 
 
     /**
-     * 字符串左边截取len长
-     *
      * @param str
      * @param len
      * @return
+     * @desc 字符串左边截取len长
      */
     public static String subStrLeft(String str, int len) {
         if (str == null) {
@@ -332,11 +321,10 @@ public class StringUtils {
 
 
     /**
-     * 字符串右边截取len长
-     *
      * @param str
      * @param len
      * @return
+     * @desc 字符串右边截取len长
      */
     public static String subStrRight(String str, int len) {
         if (str == null) {
@@ -350,12 +338,11 @@ public class StringUtils {
 
 
     /**
-     * 从pos位置开始，截取长度为len
-     *
      * @param str
      * @param pos
      * @param len
      * @return
+     * @desc 从pos位置开始，截取长度为len
      */
     public static String subStrMid(String str, int pos, int len) {
         if (str == null) {
@@ -372,11 +359,10 @@ public class StringUtils {
 
 
     /**
-     * 判断两个字符串是否相等，区分大小写
-     *
      * @param cs1
      * @param cs2
      * @return
+     * @desc 判断两个字符串是否相等，区分大小写
      */
     public static boolean equals(CharSequence cs1, CharSequence cs2) {
         if (cs1 == cs2) {
@@ -394,11 +380,10 @@ public class StringUtils {
 
 
     /**
-     * 不区分大小写判断两个字符串是否相同
-     *
      * @param str1
      * @param str2
      * @return
+     * @desc 不区分大小写判断两个字符串是否相同
      */
     public static boolean equalsIgnoreCase(CharSequence str1, CharSequence str2) {
         if (str1 != null && str2 != null) {
@@ -414,11 +399,10 @@ public class StringUtils {
 
 
     /**
-     * 判断是否有一个字符串和string相同，有一个相同：true，否则：false
-     *
      * @param string
      * @param searchStrings
      * @return
+     * @desc 判断是否有一个字符串和string相同，有一个相同：true，否则：false
      */
     public static boolean equalsAny(CharSequence string, CharSequence... searchStrings) {
         if (ArrayUtils.isNotEmpty(searchStrings)) {
@@ -436,11 +420,10 @@ public class StringUtils {
 
 
     /**
-     * 不区分大小写，判断是否有一个字符串和string相同，有一个相同：true，否则：false
-     *
      * @param string
      * @param searchStrings
      * @return
+     * @desc 不区分大小写，判断是否有一个字符串和string相同，有一个相同：true，否则：false
      */
     public static boolean equalsAnyIgnoreCase(CharSequence string, CharSequence... searchStrings) {
         if (ArrayUtils.isNotEmpty(searchStrings)) {
@@ -458,11 +441,10 @@ public class StringUtils {
 
 
     /**
-     * 判断seq是不是包含searchSeq，包含：true；不包含：false
-     *
      * @param seq
      * @param searchSeq
      * @return
+     * @desc 判断seq是不是包含searchSeq，包含：true；不包含：false
      */
     public static boolean contains(CharSequence seq, CharSequence searchSeq) {
         if (seq != null && searchSeq != null) {
@@ -474,11 +456,10 @@ public class StringUtils {
 
 
     /**
-     * 不区分大小写,判断seq是不是包含searchSeq，包含：true；不包含：false
-     *
      * @param str
      * @param searchStr
      * @return
+     * @desc 不区分大小写, 判断seq是不是包含searchSeq，包含：true；不包含：false
      */
     public static boolean containsIgnoreCase(CharSequence str, CharSequence searchStr) {
         if (str != null && searchStr != null) {
@@ -497,11 +478,10 @@ public class StringUtils {
 
 
     /**
-     * 判断是否包含其中一个char，包含：true，全不不包含：false
-     *
      * @param cs
      * @param searchChars
      * @return
+     * @desc 判断是否包含其中一个char，包含：true，全不不包含：false
      */
     public static boolean containsAny(CharSequence cs, char... searchChars) {
         if (!isEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {
@@ -533,11 +513,10 @@ public class StringUtils {
 
 
     /**
-     * 判断cs中是否包含searchChars中的任何一个字母，包含：true，不包含：false
-     *
      * @param cs
      * @param searchChars
      * @return
+     * @desc 判断cs中是否包含searchChars中的任何一个字母，包含：true，不包含：false
      */
     public static boolean containsAny(CharSequence cs, CharSequence searchChars) {
         return searchChars == null ? false : containsAny(cs, CharSequenceUtils.toCharArray(searchChars));
@@ -545,11 +524,10 @@ public class StringUtils {
 
 
     /**
-     * 判断是否包含其中一个string，包含：true，全不不包含：false
-     *
      * @param cs
      * @param searchCharSequences
      * @return
+     * @desc 判断是否包含其中一个string，包含：true，全不不包含：false
      */
     public static boolean containsAny(CharSequence cs, CharSequence... searchCharSequences) {
         if (!isEmpty(cs) && !ArrayUtils.isEmpty(searchCharSequences)) {
@@ -569,11 +547,10 @@ public class StringUtils {
 
 
     /**
-     * 用map替换String中的值，替换key为values
-     *
      * @param str
      * @param map
      * @return
+     * @desc 用map替换String中的值，替换key为values
      */
     public static String replaceByMap(String str, Map<String, String> map) {
         String result = str;
@@ -587,12 +564,12 @@ public class StringUtils {
     }
 
 
-    /***
-     *  替换字符串，rep数值里面的值，为with
+    /**
      * @param text
      * @param rep
      * @param with
      * @return
+     * @desc 替换字符串，rep数值里面的值，为with
      */
     public static String replaceAll(String text, String[] rep, String with) {
         String result = text;
@@ -603,11 +580,11 @@ public class StringUtils {
     }
 
 
-    /***
-     * 将字符串，按照分隔符，拆分为字符串数组
+    /**
      * @param value
      * @param delimiter
      * @return
+     * @desc 将字符串，按照分隔符，拆分为字符串数组
      */
     public static String[] delimitedToArray(String value, String delimiter) {
         String[] list = null;
@@ -628,11 +605,11 @@ public class StringUtils {
     }
 
 
-    /***
-     * 替换字符串，中的&key&，map中的values
+    /**
      * @param content
      * @param map
      * @return
+     * @desc 替换字符串，中的&key&，map中的values
      */
     public static String replaceVariables(String content, Map<String, String> map) {
         if (isEmpty(content)) {
@@ -650,10 +627,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 将double钱转换为中文
+    /**
      * @param v
      * @return
+     * @desc 将double钱转换为中文
      */
     public static String convMonyToCHS(double v) {
         if (v < 0 || v > MAX_VALUE) {
@@ -694,10 +671,10 @@ public class StringUtils {
     }
 
 
-    /***
-     *  判断是不是中文字符
+    /**
      * @param c
      * @return
+     * @desc 判断是不是中文字符
      */
     public static boolean isChineseChar(char c) {
         Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
@@ -713,10 +690,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 判断是不是中文字符串
+    /**
      * @param str
      * @return
+     * @desc 判断是不是中文字符串
      */
     public static boolean isChineseStr(String str) {
         boolean res = true;
@@ -731,10 +708,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 判断字符串中是不是包含中文
+    /**
      * @param str
      * @return
+     * @desc 判断字符串中是不是包含中文
      */
     public static boolean containChinese(String str) {
         Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
@@ -746,10 +723,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 去掉英文，只保留中文字符串
+    /**
      * @param str
      * @return
+     * @desc 去掉英文，只保留中文字符串
      */
     public static String getCnStr(String str) {
         if (!StringUtils.isEmpty(str)) {
@@ -760,10 +737,10 @@ public class StringUtils {
     }
 
 
-    /***
-     * 去掉中文，只保留英文字符串
+    /**
      * @param str
      * @return
+     * @desc 去掉中文，只保留英文字符串
      */
     public static String getEnStr(String str) {
         if (!StringUtils.isEmpty(str)) {
@@ -778,11 +755,10 @@ public class StringUtils {
 
 
     /**
-     * 字符串连接
-     *
      * @param elements
      * @param <T>
      * @return
+     * @desc 字符串连接
      */
     @SafeVarargs
     public static <T> String join(T... elements) {
@@ -791,11 +767,10 @@ public class StringUtils {
 
 
     /**
-     * 用分隔符separator连接array中的数据
-     *
      * @param array
      * @param separator
      * @return
+     * @desc 用分隔符separator连接array中的数据
      */
     public static String join(Object[] array, String separator) {
         return array == null ? null : join((Object[]) array, separator, 0, array.length);
@@ -803,13 +778,12 @@ public class StringUtils {
 
 
     /**
-     * 用分隔符separator连接array中指定开始，结束位置的数据,
-     *
      * @param array
      * @param separator
      * @param startIndex
      * @param endIndex
      * @return
+     * @desc 用分隔符separator连接array中指定开始，结束位置的数据,
      */
     public static String join(Object[] array, String separator, int startIndex, int endIndex) {
         if (array == null) {
@@ -838,13 +812,12 @@ public class StringUtils {
 
 
     /**
-     * 用分隔符separator连接list中指定开始，结束位置的数据,
-     *
      * @param list
      * @param separator
      * @param startIndex
      * @param endIndex
      * @return
+     * @desc 用分隔符separator连接list中指定开始，结束位置的数据,
      */
     public static String join(List<?> list, String separator, int startIndex, int endIndex) {
         if (list == null) {
@@ -862,11 +835,10 @@ public class StringUtils {
 
 
     /**
-     * 用分隔符separator连接集合数据
-     *
      * @param iterator
      * @param separator
      * @return
+     * @desc 用分隔符separator连接集合数据
      */
     public static String join(Iterator<?> iterator, String separator) {
         if (iterator == null) {
@@ -903,11 +875,10 @@ public class StringUtils {
 
 
     /**
-     * remove字符串中的指定子串
-     *
      * @param str
      * @param remove
      * @return
+     * @desc remove字符串中的指定子串
      */
     public static String remove(String str, String remove) {
         return !isEmpty(str) && !isEmpty(remove) ? replace(str, remove, "", -1) : str;
@@ -915,11 +886,10 @@ public class StringUtils {
 
 
     /**
-     * remove字符串中的指定子串,不区分大小写
-     *
      * @param str
      * @param remove
      * @return
+     * @desc remove字符串中的指定子串, 不区分大小写
      */
     public static String removeIgnoreCase(String str, String remove) {
         return !isEmpty(str) && !isEmpty(remove) ? replaceIgnoreCase(str, remove, "", -1) : str;
@@ -968,11 +938,10 @@ public class StringUtils {
 
 
     /**
-     * 将字符串重复几次拼接在一起
-     *
      * @param str
      * @param repeat
      * @return
+     * @desc 将字符串重复几次拼接在一起
      */
     public static String repeat(String str, int repeat) {
         if (str == null) {
@@ -1015,11 +984,10 @@ public class StringUtils {
 
 
     /**
-     * 将字符重复几次拼接在一起
-     *
      * @param ch
      * @param repeat
      * @return
+     * @desc 将字符重复几次拼接在一起
      */
     public static String repeat(char ch, int repeat) {
         if (repeat <= 0) {
@@ -1035,12 +1003,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的左侧填充指定的字符padChar
-     *
      * @param str
      * @param size
      * @param padChar
      * @return
+     * @desc 指定字符串长度，不够的左侧填充指定的字符padChar
      */
     public static String leftPad(String str, int size, char padChar) {
         if (str == null) {
@@ -1057,12 +1024,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的左侧填充指定的字符串padStr
-     *
      * @param str
      * @param size
      * @param padStr
      * @return
+     * @desc 指定字符串长度，不够的左侧填充指定的字符串padStr
      */
     public static String leftPad(String str, int size, String padStr) {
         if (str == null) {
@@ -1096,12 +1062,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的右侧填充指定的字符padChar
-     *
      * @param str
      * @param size
      * @param padChar
      * @return
+     * @desc 指定字符串长度，不够的右侧填充指定的字符padChar
      */
     public static String rightPad(String str, int size, char padChar) {
         if (str == null) {
@@ -1118,12 +1083,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的左侧填充指定的字符串padStr
-     *
      * @param str
      * @param size
      * @param padStr
      * @return
+     * @desc 指定字符串长度，不够的左侧填充指定的字符串padStr
      */
     public static String rightPad(String str, int size, String padStr) {
         if (str == null) {
@@ -1156,12 +1120,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的两侧侧填充指定的字符padChar
-     *
      * @param str
      * @param size
      * @param padChar
      * @return
+     * @desc 指定字符串长度，不够的两侧侧填充指定的字符padChar
      */
     public static String centerPad(String str, int size, char padChar) {
         if (str != null && size > 0) {
@@ -1181,12 +1144,11 @@ public class StringUtils {
 
 
     /**
-     * 指定字符串长度，不够的两侧侧填充指定的字符padStr
-     *
      * @param str
      * @param size
      * @param padStr
      * @return
+     * @desc 指定字符串长度，不够的两侧侧填充指定的字符padStr
      */
     public static String centerPad(String str, int size, String padStr) {
         if (str != null && size > 0) {
@@ -1206,11 +1168,10 @@ public class StringUtils {
 
 
     /**
-     * 判断子串在字符串中出现的次数
-     *
      * @param str
      * @param sub
      * @return
+     * @desc 判断子串在字符串中出现的次数
      */
     public static int countMatches(CharSequence str, CharSequence sub) {
         if (!isEmpty(str) && !isEmpty(sub)) {
@@ -1223,6 +1184,4 @@ public class StringUtils {
             return 0;
         }
     }
-
-
 }

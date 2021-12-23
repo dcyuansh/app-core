@@ -207,7 +207,7 @@ public class ExcelUtils {
             DataModel rowModel = new DataModel();
             //列循环
             for (int j = beginColIndex; j < row.getLastCellNum(); j++) {
-                rowModel.setFieldValue(sheet.getRow(beginColIndex).getCell(j).getStringCellValue(), getCellFormatValue(sheet.getRow(i).getCell(j)));
+                rowModel.setFieldValue(sheet.getRow(beginColIndex).getCell(j).getStringCellValue(), getCellFormatValue(sheet.getRow(i + 1).getCell(j)));
             }
             resultModel.add(rowModel);
         }

@@ -6,6 +6,13 @@ package com.core.constants;
  */
 public final class SystemConstant {
 
+    //API接口返回代码
+    public static final String RESULT_STATUS = "status";
+    public static final String RESULT_CODE = "code";
+    public static final String RESULT_DATA = "data";
+    public static final String RESULT_MESSAGE = "message";
+    public static final String RESULT_INFO = "info";
+
     //decimal format
     public static final String DECIMAL_DEFAULT_FORMAT = "###,###,###,##0.00";
     //number format
@@ -19,12 +26,5 @@ public final class SystemConstant {
     public static final String DATE_LONG_FORMAT = "yyyyMMdd";
     public static final String DATE_TIME_LONG_FORMAT = "yyyyMMddHHmmss";
     public static final String LOCAL_TIME_LONG_FORMAT = "yyyyMMddHHmmssSSS";
-
-    //API接口返回代码
-    public static final String RESULT_STATUS = "status";
-    public static final String RESULT_CODE = "code";
-    public static final String RESULT_DATA = "data";
-    public static final String RESULT_MESSAGE = "message";
-    public static final String RESULT_INFO = "info";
 
 }

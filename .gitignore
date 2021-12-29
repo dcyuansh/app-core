@@ -449,3 +449,4 @@ target/surefire-reports/2021-05-24T17-42-15_249-jvmRun1.dump
 target/classes/sql/exec.sql
 target/classes/sql/read.txt
 target/app-core-21.10.11.jar
+target/app-core-21.10.11-exec.jar

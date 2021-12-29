@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="app-core-21.10.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../itech-service/src/lib/app-core-21.10.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

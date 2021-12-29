@@ -92,10 +92,8 @@ public class StringUtils {
                     return false;
                 }
             }
-            return true;
-        } else {
-            return true;
         }
+        return true;
     }
 
 

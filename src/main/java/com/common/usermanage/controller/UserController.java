@@ -47,7 +47,7 @@ public class UserController extends BaseController {
             userService.saveUser(queryModel);
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }
@@ -70,7 +70,7 @@ public class UserController extends BaseController {
             DataModel userModel = userService.findUser(queryModel);
             this.handleSuccess(userModel, resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }
@@ -93,7 +93,7 @@ public class UserController extends BaseController {
             List<DataModel> userModel = userService.findUserList(queryModel);
             this.handleSuccess(userModel, resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }
@@ -115,7 +115,7 @@ public class UserController extends BaseController {
             userService.deleteUser(queryModel);
             this.handleSuccess(null, resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }
@@ -138,7 +138,7 @@ public class UserController extends BaseController {
             userService.updateUser(queryModel);
             this.handleSuccess(null, resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }

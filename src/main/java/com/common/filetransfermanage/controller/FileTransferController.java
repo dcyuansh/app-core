@@ -53,7 +53,7 @@ public class FileTransferController extends BaseController {
             resultModel.setFieldValue("fileSize", file.getSize());
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }
@@ -85,7 +85,7 @@ public class FileTransferController extends BaseController {
             resultModel.setFieldValue("uploadResults", fileListModel);
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }

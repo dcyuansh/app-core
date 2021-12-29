@@ -96,7 +96,7 @@ public abstract class BaseController {
      * @return
      * @desc 请求有校验错误信息是，设置返回参数
      */
-    public Map<String, Object> handleValidationExcpetion(ValidationException ve, DataModel resultMap) {
+    public Map<String, Object> handleValidationException(ValidationException ve, DataModel resultMap) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }

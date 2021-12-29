@@ -40,7 +40,7 @@ public class ProducerController extends BaseController {
             LOG.info("发布队列sms.mail.queue信息：" + message);
             jmsMessagingTemplate.convertAndSend(this.mailQueue, message);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }

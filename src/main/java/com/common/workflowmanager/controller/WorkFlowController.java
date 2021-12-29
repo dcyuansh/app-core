@@ -45,7 +45,7 @@ public class WorkFlowController extends BaseController {
             workFlowService.startWorkFlowProc(queryModel);
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationExcpetion(ve, resultModel);
+            this.handleValidationException(ve, resultModel);
         } catch (Exception e) {
             this.handleException(e, resultModel);
         }

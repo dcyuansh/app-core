@@ -6,6 +6,12 @@ package com.core.constants;
  */
 public final class SystemConstant {
 
+    //接口返回代码
+    public static final String RESULT_STATUS = "status";
+    public static final String RESULT_CODE = "code";
+    public static final String RESULT_DATA = "data";
+    public static final String RESULT_MESSAGE = "message";
+
     //decimal format
     public static final String DECIMAL_DEFAULT_FORMAT = "###,###,###,##0.00";
     //number format

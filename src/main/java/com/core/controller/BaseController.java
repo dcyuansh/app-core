@@ -1,5 +1,6 @@
 package com.core.controller;
 
+import com.core.constants.SystemConstant;
 import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
@@ -18,14 +19,10 @@ public abstract class BaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public static final String RESULT_STATUS = "status";
-    public static final String RESULT_CODE = "code";
-    public static final String RESULT_DATA = "data";
-    public static final String ERROR_MESSAGE = "errorMsg";
 
-
-    /***
+    /**
      * 获取请求map参数，封装为DataModel对象
+     *
      * @param requestMap
      * @return
      */
@@ -38,8 +35,9 @@ public abstract class BaseController {
     }
 
 
-    /***
+    /**
      * 获取request请求参数，封装为DataModel对象
+     *
      * @param request
      * @return
      */
@@ -94,45 +92,9 @@ public abstract class BaseController {
     }
 
 
-    /***
-     * 请求有校验错误信息是，设置返回参数
-     * @param ve
-     * @param resultMap
-     * @return
-     */
-    public Map<String, Object> handleValidationExcpetion(ValidationException ve, DataModel resultMap) {
-        if (resultMap == null) {
-            resultMap = new DataModel();
-        }
-        logger.warn(ve.getMessage());
-        resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
-        resultMap.setFieldValue(RESULT_CODE, "VALIDATION_FAILED");
-        resultMap.setFieldValue(ERROR_MESSAGE, ve.getMessage());
-        return resultMap;
-    }
-
-
-    /***
-     * 请求发送异常时，设置返回参数
-     * @param e
-     * @param resultMap
-     * @return
-     */
-    public Map<String, Object> handleException(Exception e, DataModel resultMap) {
-        if (resultMap == null) {
-            resultMap = new DataModel();
-        }
-        logger.error(e.getMessage(), e);
-        resultMap.setFieldValue(RESULT_STATUS, StatusEnum.FAILED);
-        //code: 500
-        resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
-        resultMap.setFieldValue(ERROR_MESSAGE, e.getMessage());
-        return resultMap;
-    }
-
-
-    /***
+    /**
      * 请求成功收，设置返回参数
+     *
      * @param resultMap
      * @return
      */
@@ -141,22 +103,57 @@ public abstract class BaseController {
     }
 
 
-    /***
+    /**
      * 请求成功收，设置返回参数
+     *
      * @param resultMap
      * @return
      */
     public Map<String, Object> handleSuccess(Object obj, DataModel resultMap) {
-        if (resultMap == null) {
+        if (resultMap == null)
             resultMap = new DataModel();
-        }
-        logger.info("request success!");
-        resultMap.setFieldValue(RESULT_STATUS, StatusEnum.SUCCESS);
-        //code: 200
-        resultMap.setFieldValue(RESULT_CODE, HttpStatus.SC_OK);
-        if (obj != null) {
-            resultMap.setFieldValue(RESULT_DATA, obj);
-        }
+        resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.SUCCESS);
+        resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_OK);
+        resultMap.setFieldValue(SystemConstant.RESULT_DATA, obj);
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, "");
+        return resultMap;
+    }
+
+
+    /**
+     * 请求有校验错误信息是，设置返回参数
+     *
+     * @param ve
+     * @param resultMap
+     * @return
+     */
+    public Map<String, Object> handleValidationException(ValidationException ve, DataModel resultMap) {
+        if (resultMap == null)
+            resultMap = new DataModel();
+        resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
+        resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_BAD_REQUEST);
+        resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, ve.getMessage());
+        logger.warn("validation exception:{}", ve.getMessage());
+        return resultMap;
+    }
+
+
+    /**
+     * 请求发送异常时，设置返回参数
+     *
+     * @param e
+     * @param resultMap
+     * @return
+     */
+    public Map<String, Object> handleException(Exception e, DataModel resultMap) {
+        if (resultMap == null)
+            resultMap = new DataModel();
+        resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
+        resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
+        resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
+        resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, e.getMessage());
+        logger.error("system runtime exception:{}", e.getMessage());
         return resultMap;
     }
 }

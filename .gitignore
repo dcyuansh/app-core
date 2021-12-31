@@ -544,3 +544,4 @@ target/classes/META-INF/spring-configuration-metadata.json
 .idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_30.xml
 *.sql
 *.xml
+target/classes/banner.txt

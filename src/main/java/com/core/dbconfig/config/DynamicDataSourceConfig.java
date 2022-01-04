@@ -12,12 +12,10 @@ import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
@@ -32,10 +30,6 @@ import java.util.Map;
 public class DynamicDataSourceConfig {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-
-    @Value("${mybatis.mapper-locations}")
-    private String mybatisMapperLocations;
 
 
     @Bean(name = "masterDataSource") // 声明其为Bean实例
@@ -79,9 +73,8 @@ public class DynamicDataSourceConfig {
         bean.setDataSource(dataSource);
         //模块依赖打包的时候报错，找不到setTypeAliasesPackage，所以需要添加下面设置
         VFS.addImplClass(SpringBootVFS.class);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(mybatisMapperLocations));
         //bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mappers/mysql/*.xml"));
-        bean.setTypeAliasesPackage("com.core.data.model");
+        //bean.setTypeAliasesPackage("com.core.data.model");
         return bean.getObject();
     }
 

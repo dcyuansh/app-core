@@ -11,6 +11,7 @@ public final class SystemConstant {
     public static final String RESULT_CODE = "code";
     public static final String RESULT_DATA = "data";
     public static final String RESULT_MESSAGE = "message";
+    public static final String RESULT_INFO = "info";
 
     //decimal format
     public static final String DECIMAL_DEFAULT_FORMAT = "###,###,###,##0.00";

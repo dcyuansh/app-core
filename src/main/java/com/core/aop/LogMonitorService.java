@@ -1,5 +1,6 @@
 package com.core.aop;
 
+import com.core.constants.SystemConstant;
 import com.core.message.service.MessageManager;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -79,7 +80,7 @@ public class LogMonitorService {
         // 处理完请求，返回内容
         if (result instanceof Map) {
             List messageList = MessageManager.getInstance().getAllMessage();
-            ((Map) result).put("messages", messageList);
+            ((Map) result).put(SystemConstant.RESULT_INFO, messageList);
         }
         logger.info("Request Return Value：" + result);
     }

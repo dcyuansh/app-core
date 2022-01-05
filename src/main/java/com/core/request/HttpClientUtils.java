@@ -54,11 +54,11 @@ public class HttpClientUtils {
                     /**把json字符串转换成json对象**/
                     //jsonResult = JSONObject.fromObject(str);
                 } catch (Exception e) {
-                    logger.error("post请求提交失败:" + url, e);
+                    logger.error("post请求提交失败,url:{},exception:{}", url, e);
                 }
             }
         } catch (IOException e) {
-            logger.error("post请求提交失败:" + url, e);
+            logger.error("post请求提交失败,url:{},exception:{}", url, e);
         }
         return res;
     }
@@ -83,10 +83,10 @@ public class HttpClientUtils {
                 res = EntityUtils.toString(response.getEntity(), EncodeTypeEnum.UTF8.getCode());
                 /**把json字符串转换成json对象**/
             } else {
-                logger.error("get请求提交失败:" + url);
+                logger.error("get请求提交失败:{}", url);
             }
         } catch (IOException e) {
-            logger.error("get请求提交失败:" + url, e);
+            logger.error("get请求提交失败,url:{},exception:{}", url, e);
         }
         return res;
     }

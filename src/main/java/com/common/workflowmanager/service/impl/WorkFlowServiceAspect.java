@@ -76,7 +76,7 @@ public class WorkFlowServiceAspect {
                 //update workflow process info
                 workFlowService.updateWorkFlowProc(queryModel);
             }
-            logger.info("auto to next workflow node" + argItem);
+            logger.info("auto to next workflow node:{}", argItem);
         }
     }
 }

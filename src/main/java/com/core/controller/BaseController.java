@@ -107,8 +107,9 @@ public abstract class BaseController {
      * @desc 请求成功收，设置返回参数
      */
     public Map<String, Object> handleSuccess(Object obj, DataModel resultMap) {
-        if (resultMap == null)
+        if (resultMap == null) {
             resultMap = new DataModel();
+        }
         resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.SUCCESS);
         //code: 200
         resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_OK);
@@ -118,8 +119,10 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, "");
         //info: 前端提示信息
         List messageList = MessageManager.getInstance().getAllMessage();
-        if (messageList.size() > 0)
+        if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
+        }
+        //logger.info("the request is successful, return data:{}", obj);
         return resultMap;
     }
 
@@ -130,8 +133,9 @@ public abstract class BaseController {
      * @desc 请求有校验错误信息是，设置返回参数
      */
     public Map<String, Object> handleValidationException(ValidationException ve, DataModel resultMap) {
-        if (resultMap == null)
+        if (resultMap == null) {
             resultMap = new DataModel();
+        }
         resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
         //code: 400
         resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_BAD_REQUEST);
@@ -141,8 +145,9 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, ve.getMessage());
         //info: 前端提示信息
         List messageList = MessageManager.getInstance().getAllMessage();
-        if (messageList.size() > 0)
+        if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
+        }
         logger.warn("validation exception:{}", ve.getMessage());
         return resultMap;
     }
@@ -155,8 +160,9 @@ public abstract class BaseController {
      * @desc 请求发送异常时，设置返回参数
      */
     public Map<String, Object> handleException(Exception e, DataModel resultMap) {
-        if (resultMap == null)
+        if (resultMap == null) {
             resultMap = new DataModel();
+        }
         resultMap.setFieldValue(SystemConstant.RESULT_STATUS, StatusEnum.FAILED);
         //code: 500
         resultMap.setFieldValue(SystemConstant.RESULT_CODE, HttpStatus.SC_INTERNAL_SERVER_ERROR);
@@ -166,8 +172,9 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, e.getMessage());
         //info: 前端提示信息
         List messageList = MessageManager.getInstance().getAllMessage();
-        if (messageList.size() > 0)
+        if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
+        }
         logger.error("system runtime exception:{}", e.getMessage());
         return resultMap;
     }

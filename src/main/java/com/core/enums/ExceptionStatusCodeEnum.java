@@ -1,10 +1,8 @@
 package com.core.enums;
 
-
-/***
- *
+/**
  * @author spring.yuan
- *
+ * @version 1.0
  */
 public enum ExceptionStatusCodeEnum implements CodeMessageEnum {
     Success("001", "Success"),

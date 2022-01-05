@@ -1,7 +1,5 @@
 package com.core.aop;
 
-import com.core.constants.SystemConstant;
-import com.core.message.service.MessageManager;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -15,8 +13,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author spring.yuan
@@ -56,17 +52,17 @@ public class LogMonitorService {
 
         // 记录下请求内容
         //请求IP
-        logger.info("Request IP：" + req.getRemoteAddr());
+        logger.info("Request IP:{}", req.getRemoteAddr());
         //请求URL
-        logger.info("Request URL：" + req.getRequestURL().toString());
+        logger.info("Request URL:{}", req.getRequestURL().toString());
         //HTTP_METHOD
-        logger.info("Request Type：" + req.getMethod());
+        logger.info("Request Type:{}", req.getMethod());
         //参数名
-        logger.info("Request Parameter：" + Arrays.toString(strings));
+        logger.info("Request Parameter:{}", Arrays.toString(strings));
         //参数值ARGS
-        logger.info("Request Parameter Values：" + Arrays.toString(joinPoint.getArgs()));
+        logger.info("Request Parameter Values:{}", Arrays.toString(joinPoint.getArgs()));
         //CLASS_METHOD
-        logger.info("Request Method：" + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+        logger.info("Request Method:{}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
     }
 
 
@@ -83,7 +79,7 @@ public class LogMonitorService {
 //            if (messageList.size() > 0)
 //                ((Map) result).put(SystemConstant.RESULT_INFO, messageList);
 //        }
-        logger.info("Request Return Value：" + result);
+        logger.info("Request Return Value:{}", result);
     }
 
     /**

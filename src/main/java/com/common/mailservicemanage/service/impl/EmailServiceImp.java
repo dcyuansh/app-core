@@ -46,7 +46,7 @@ public class EmailServiceImp implements EmailService {
             mailSender.send(message);// 执行发送邮件
             logger.info("简单邮件已经发送。");
         } catch (Exception e) {
-            logger.error("发送简单邮件时发生异常！", e);
+            logger.error("发送简单邮件时发生异常:{}", e);
         }
     }
 
@@ -64,7 +64,7 @@ public class EmailServiceImp implements EmailService {
             mailSender.send(message);
             logger.info("html邮件发送成功");
         } catch (MessagingException e) {
-            logger.error("发送html邮件时发生异常！", e);
+            logger.error("发送html邮件时发生异常:{}", e);
         }
     }
 
@@ -91,7 +91,7 @@ public class EmailServiceImp implements EmailService {
             mailSender.send(message);
             logger.info("带附件的邮件已经发送。");
         } catch (MessagingException e) {
-            logger.error("发送带附件的邮件时发生异常！", e);
+            logger.error("发送带附件的邮件时发生异常:{}", e);
         }
     }
 
@@ -114,7 +114,7 @@ public class EmailServiceImp implements EmailService {
             mailSender.send(message);
             logger.info("嵌入静态资源的邮件已经发送。");
         } catch (MessagingException e) {
-            logger.error("发送嵌入静态资源的邮件时发生异常！", e);
+            logger.error("发送嵌入静态资源的邮件时发生异常:{}", e);
         }
     }
 }

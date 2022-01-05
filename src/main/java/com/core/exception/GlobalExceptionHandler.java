@@ -28,7 +28,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     @ResponseBody
     public String httpRequestMethodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException e) {
-        logger.error("http请求的方法不正确:【" + e.getMessage() + "】");
+        logger.error("http请求的方法不正确:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.RequestMethodNotAllowed);
     }
 
@@ -39,7 +39,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MissingServletRequestParameterException.class)
     @ResponseBody
     public String missingServletRequestParameterExceptionHandler(MissingServletRequestParameterException e) {
-        logger.error("请求参数不全:【" + e.getMessage() + "】");
+        logger.error("请求参数不全:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.MissingServletRequestParameter);
     }
 
@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(TypeMismatchException.class)
     @ResponseBody
     public String typeMismatchExceptionHandler(TypeMismatchException e) {
-        logger.error("请求参数类型不正确:【" + e.getMessage() + "】");
+        logger.error("请求参数类型不正确:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.TypeMismatchException);
     }
 
@@ -61,7 +61,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(DataFormatException.class)
     @ResponseBody
     public String dataFormatExceptionHandler(DataFormatException e) {
-        logger.error("数据格式不正确:【" + e.getMessage() + "】");
+        logger.error("数据格式不正确:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.DataFormatException);
     }
 
@@ -72,7 +72,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseBody
     public String illegalArgumentExceptionHandler(IllegalArgumentException e) {
-        logger.error("非法输入:【" + e.getMessage() + "】");
+        logger.error("非法输入:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.IllegalArgumentException);
     }
 
@@ -84,7 +84,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ArithmeticException.class)
     @ResponseBody
     public String arithmeticExecption(ArithmeticException e) {
-        logger.error("算术异常:【" + e.getMessage() + "】");
+        logger.error("算术异常:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.ArithmeticException);
     }
 
@@ -97,7 +97,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ClassCastException.class)
     @ResponseBody
     public String classCastException(ClassCastException e) {
-        logger.error("类型强制转换异常:【" + e.getMessage() + "】");
+        logger.error("类型强制转换异常:{}", e.getMessage());
         return ExceptionUtil.resultOf(ExceptionStatusCodeEnum.ClassCastException);
     }
 
@@ -110,7 +110,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler
     @ResponseBody
     public String allExceptionHandler(Exception e) {
-        logger.error("具体错误信息:【" + ExceptionUtil.getErrorMessage(e) + "】");//会记录出错的代码行等具体信息
+        logger.error("具体错误信息:{}", ExceptionUtil.getErrorMessage(e));//会记录出错的代码行等具体信息
         int count = 0; //只打印15行的错误堆栈
         for (StackTraceElement stackTraceElement : e.getStackTrace()) {
             logger.error(stackTraceElement.toString());

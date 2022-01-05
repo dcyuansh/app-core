@@ -4,6 +4,7 @@ import com.core.constants.SystemConstant;
 import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
+import com.core.message.service.MessageManager;
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -115,6 +116,10 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_DATA, obj);
         //message: 信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, "");
+        //info: 前端提示信息
+        List messageList = MessageManager.getInstance().getAllMessage();
+        if (messageList.size() > 0)
+            resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         return resultMap;
     }
 
@@ -134,6 +139,10 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
         //message: 错误信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, ve.getMessage());
+        //info: 前端提示信息
+        List messageList = MessageManager.getInstance().getAllMessage();
+        if (messageList.size() > 0)
+            resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         logger.warn("validation exception:{}", ve.getMessage());
         return resultMap;
     }
@@ -155,6 +164,10 @@ public abstract class BaseController {
         resultMap.setFieldValue(SystemConstant.RESULT_DATA, null);
         //message: 错误信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, e.getMessage());
+        //info: 前端提示信息
+        List messageList = MessageManager.getInstance().getAllMessage();
+        if (messageList.size() > 0)
+            resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         logger.error("system runtime exception:{}", e.getMessage());
         return resultMap;
     }

@@ -47,7 +47,7 @@ public abstract class BaseController {
             String[] values = request.getParameterValues(paramName);
             if (values.length > 1) {
                 inputData.put(paramName, values, true, false);
-                List paramArrayList = new ArrayList();
+                List<String> paramArrayList = new ArrayList<>();
                 Collections.addAll(paramArrayList, values);
                 if (request.getParameter(paramName + "List") == null)
                     inputData.put(paramName + "List", paramArrayList, true, false);
@@ -78,7 +78,7 @@ public abstract class BaseController {
     }
 
 
-    protected List<DataModel> getInputDataList(List<Map> requestDataList) {
+    protected List<DataModel> getInputDataList(List<Map<String, Object>> requestDataList) {
         List<DataModel> modelList = new ArrayList<>();
         if (requestDataList != null) {
             for (int i = 0; i < requestDataList.size(); i++) {

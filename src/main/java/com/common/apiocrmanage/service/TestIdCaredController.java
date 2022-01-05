@@ -34,7 +34,7 @@ public class TestIdCaredController {
         JSONObject jo_ba = apiOcrService.idCard(mf2.getBytes(), "back");
         //System.out.println("背面：" + jo_ba);
 
-        Map map = new HashMap<String, String>();
+        Map<String,Object> map = new HashMap<>();
         map.put("front", jo_fr.toMap());
         map.put("back", jo_ba.toMap());
         //System.out.println(map.toString());

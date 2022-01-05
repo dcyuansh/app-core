@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class DataModelList implements List, Serializable {
 
-    private final List modelList = new ArrayList();
+    private final List<Object> modelList = new ArrayList<>();
 
 
     public DataModel getDataModel(int index) {

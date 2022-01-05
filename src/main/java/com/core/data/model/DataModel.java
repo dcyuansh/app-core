@@ -19,11 +19,11 @@ public class DataModel implements Map<String, Object>, Serializable {
 
 
     public DataModel() {
-        fieldMap = new LinkedHashMap();
+        fieldMap = new LinkedHashMap<>();
     }
 
     public DataModel(Map<String, Object> fieldMap) {
-        this.fieldMap = new LinkedHashMap();
+        this.fieldMap = new LinkedHashMap<>();
         if (fieldMap != null) {
             for (String key : fieldMap.keySet()) {
                 this.put(key, fieldMap.get(key), true, false);

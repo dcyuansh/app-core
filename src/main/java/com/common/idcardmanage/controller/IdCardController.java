@@ -41,9 +41,9 @@ public class IdCardController extends BaseController {
             idCardService.saveIdCard(queryModel);
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }

@@ -97,7 +97,7 @@ public abstract class BaseController {
      * @return
      */
     public Map<String, Object> handleSuccess(DataModel resultMap) {
-        return this.handleSuccess(null, resultMap);
+        return this.handleSuccess(resultMap, null);
     }
 
 
@@ -106,7 +106,7 @@ public abstract class BaseController {
      * @return
      * @desc 请求成功收，设置返回参数
      */
-    public Map<String, Object> handleSuccess(Object obj, DataModel resultMap) {
+    public Map<String, Object> handleSuccess(DataModel resultMap, Object obj) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
@@ -126,13 +126,14 @@ public abstract class BaseController {
         return resultMap;
     }
 
+
     /**
      * @param ve
      * @param resultMap
      * @return
      * @desc 请求有校验错误信息是，设置返回参数
      */
-    public Map<String, Object> handleValidationException(ValidationException ve, DataModel resultMap) {
+    public Map<String, Object> handleValidationException(DataModel resultMap, ValidationException ve) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
@@ -159,7 +160,7 @@ public abstract class BaseController {
      * @return
      * @desc 请求发送异常时，设置返回参数
      */
-    public Map<String, Object> handleException(Exception e, DataModel resultMap) {
+    public Map<String, Object> handleException(DataModel resultMap, Exception e) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }

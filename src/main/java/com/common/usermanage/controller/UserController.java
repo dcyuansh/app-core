@@ -47,9 +47,9 @@ public class UserController extends BaseController {
             userService.saveUser(queryModel);
             this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }
@@ -68,11 +68,11 @@ public class UserController extends BaseController {
         try {
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userModel = userService.findUser(queryModel);
-            this.handleSuccess(userModel, resultModel);
+            this.handleSuccess(resultModel, userModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }
@@ -91,11 +91,11 @@ public class UserController extends BaseController {
         try {
             DataModel queryModel = this.getInputData(requestMap);
             List<DataModel> userModel = userService.findUserList(queryModel);
-            this.handleSuccess(userModel, resultModel);
+            this.handleSuccess(resultModel, userModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }
@@ -113,11 +113,11 @@ public class UserController extends BaseController {
         try {
             DataModel queryModel = this.getInputData(request);
             userService.deleteUser(queryModel);
-            this.handleSuccess(null, resultModel);
+            this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }
@@ -136,11 +136,11 @@ public class UserController extends BaseController {
         try {
             DataModel queryModel = this.getInputData(requestMap);
             userService.updateUser(queryModel);
-            this.handleSuccess(null, resultModel);
+            this.handleSuccess(resultModel);
         } catch (ValidationException ve) {
-            this.handleValidationException(ve, resultModel);
+            this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
-            this.handleException(e, resultModel);
+            this.handleException(resultModel, e);
         }
         return resultModel;
     }

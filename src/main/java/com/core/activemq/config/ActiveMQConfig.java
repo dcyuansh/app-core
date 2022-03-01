@@ -1,3 +1,4 @@
+/*
 package com.core.activemq.config;
 
 
@@ -16,10 +17,12 @@ import javax.jms.Queue;
 import javax.jms.Topic;
 
 
+*/
 /**
  * @author spring.yuan
  * @version 1.0
- */
+ *//*
+
 @Configuration
 public class ActiveMQConfig {
 
@@ -33,37 +36,45 @@ public class ActiveMQConfig {
     private String password;
 
 
-    /**
+    */
+/**
      * @return
      * @desc 邮件队列
-     */
+     *//*
+
     @Bean(name = "mailQueue")
     public Queue mailQueue() {
         return new ActiveMQQueue("sms.mail.queue");
     }
 
-    /**
+    */
+/**
      * @return
      * @desc 任务队列
-     */
+     *//*
+
     @Bean(name = "taskQueue")
     public Queue taskQueue() {
         return new ActiveMQQueue("sms.task.queue");
     }
 
-    /**
+    */
+/**
      * @return
      * @desc 发布主题
-     */
+     *//*
+
     @Bean(name = "topic")
     public Topic topic() {
         return new ActiveMQTopic("sms.topic");
     }
 
-    /**
+    */
+/**
      * @return
      * @desc 发布提醒主题
-     */
+     *//*
+
     @Bean(name = "remindTopic")
     public Topic remindTopic() {
         return new ActiveMQTopic("sms.remind.topic");
@@ -81,11 +92,13 @@ public class ActiveMQConfig {
     }
 
 
-    /**
+    */
+/**
      * @param connectionFactory
      * @return
      * @desc 在Queue模式中，对消息的监听需要对containerFactory进行配置
-     */
+     *//*
+
     @Bean("queueListener")
     public JmsListenerContainerFactory<?> queueJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
@@ -95,11 +108,13 @@ public class ActiveMQConfig {
     }
 
 
-    /**
+    */
+/**
      * @param connectionFactory
      * @return
      * @desc 在Topic模式中，对消息的监听需要对containerFactory进行配置
-     */
+     *//*
+
     @Bean("topicListener")
     public JmsListenerContainerFactory<?> topicJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
@@ -108,3 +123,4 @@ public class ActiveMQConfig {
         return factory;
     }
 }
+*/

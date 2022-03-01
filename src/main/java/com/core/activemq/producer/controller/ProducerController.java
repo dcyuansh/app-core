@@ -1,3 +1,4 @@
+/*
 package com.core.activemq.producer.controller;
 
 import com.core.controller.BaseController;
@@ -17,10 +18,12 @@ import javax.jms.Queue;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+*/
 /**
  * @author spring.yuan
  * @version 1.0
- */
+ *//*
+
 @RestController
 @RequestMapping("/api/mq")
 public class ProducerController extends BaseController {
@@ -47,3 +50,4 @@ public class ProducerController extends BaseController {
         return resultModel;
     }
 }
+*/

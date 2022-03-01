@@ -1,3 +1,4 @@
+/*
 package com.core.activemq.comsumer;
 
 import org.slf4j.Logger;
@@ -5,10 +6,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
+*/
 /**
  * @author spring.yuan
  * @version 1.0
- */
+ *//*
+
 @Component
 public class QueueConsumerListener {
 
@@ -19,3 +22,4 @@ public class QueueConsumerListener {
         LOG.info("消费队列sms.mail.queue信息：" + message);
     }
 }
+*/

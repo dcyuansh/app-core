@@ -1,6 +1,6 @@
 package com.common.mailtemplatemanage.controller;
 
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/api/mail/template")
-public class MailTemplateController extends BaseController {
+public class MailTemplateController extends AbstractBaseController {
 }

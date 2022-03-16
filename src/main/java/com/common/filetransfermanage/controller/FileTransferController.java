@@ -1,7 +1,7 @@
 package com.common.filetransfermanage.controller;
 
 import com.common.filetransfermanage.service.FileTransferService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import com.core.utils.StringUtils;
@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/file")
-public class FileTransferController extends BaseController {
+public class FileTransferController extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 

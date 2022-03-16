@@ -2,7 +2,7 @@ package com.core.message.service.impl;
 
 import com.core.message.enums.MessageCategoryEnum;
 import com.core.message.service.Message;
-import com.core.message.service.MessageManager;
+import com.core.message.service.AbstractMessageManager;
 import com.core.message.service.MessageStorageManager;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MessageManagerImpl extends MessageManager {
+public class MessageManagerImpl extends AbstractMessageManager {
 
 
     private void addMessage(MessageCategoryEnum messageCategory, String messageKey) {

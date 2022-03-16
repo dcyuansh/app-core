@@ -1,7 +1,7 @@
 package com.common.usermanage.controller;
 
 import com.common.usermanage.service.UserService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/api/user")
-public class UserController extends BaseController {
+public class UserController extends AbstractBaseController {
 
     private Logger LOG = LoggerFactory.getLogger(this.getClass());
 

@@ -1,7 +1,7 @@
 package com.common.idcardmanage.controller;
 
 import com.common.idcardmanage.service.IdCardService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import org.slf4j.Logger;
@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/api/idCard")
-public class IdCardController extends BaseController {
+public class IdCardController extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(IdCardController.class);
 

@@ -4,7 +4,7 @@ import com.common.usermanage.repository.UserRepository;
 import com.common.usermanage.service.UserService;
 import com.core.data.model.DataModel;
 import com.core.exception.ExceptionHelper;
-import com.core.message.service.MessageManager;
+import com.core.message.service.AbstractMessageManager;
 import com.core.security.JwtTokenUtils;
 import com.core.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,9 +56,9 @@ public class UserServiceImpl implements UserService {
             claims.put("userName", userModel.getStringValue("userName"));
             String token = jwtTokenUtils.sign(null, claims, 0);
             userModel.setFieldValue("token", token);
-            MessageManager.getInstance().addSuccessMessage("sys.user.query.success");
+            AbstractMessageManager.getInstance().addSuccessMessage("sys.user.query.success");
         } else {
-            MessageManager.getInstance().addErrorMessage("sys.user.query.fail");
+            AbstractMessageManager.getInstance().addErrorMessage("sys.user.query.fail");
             throw ExceptionHelper.getInstance().handleValidationException("user name or password is not right!");
         }
         return userModel;

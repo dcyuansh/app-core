@@ -75,7 +75,7 @@ public class LogMonitorService {
     public void doAfterReturning(Object result) throws Throwable {
         // 处理完请求，返回内容
 //        if (result instanceof Map) {
-//            List messageList = MessageManager.getInstance().getAllMessage();
+//            List messageList = AbstractMessageManager.getInstance().getAllMessage();
 //            if (messageList.size() > 0)
 //                ((Map) result).put(SystemConstant.RESULT_INFO, messageList);
 //        }

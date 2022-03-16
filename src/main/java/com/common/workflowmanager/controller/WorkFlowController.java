@@ -1,7 +1,7 @@
 package com.common.workflowmanager.controller;
 
 import com.common.workflowmanager.service.WorkFlowService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/api/workflow")
-public class WorkFlowController extends BaseController {
+public class WorkFlowController extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 

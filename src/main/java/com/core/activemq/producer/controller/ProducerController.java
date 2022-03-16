@@ -1,7 +1,7 @@
 /*
 package com.core.activemq.producer.controller;
 
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import com.core.utils.UUidUtils;
@@ -26,7 +26,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/mq")
-public class ProducerController extends BaseController {
+public class ProducerController extends AbstractBaseController {
 
     private Logger LOG = LoggerFactory.getLogger(this.getClass());
 

@@ -4,11 +4,11 @@ import com.core.message.service.impl.MessageManagerImpl;
 
 import java.util.List;
 
-public abstract class MessageManager {
+public abstract class AbstractMessageManager {
 
-    private static MessageManager message_instance;
+    private static AbstractMessageManager message_instance;
 
-    public static MessageManager getInstance() {
+    public static AbstractMessageManager getInstance() {
         if (message_instance == null) {
             message_instance = new MessageManagerImpl();
         }

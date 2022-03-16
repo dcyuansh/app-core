@@ -4,7 +4,7 @@ import com.core.constants.SystemConstant;
 import com.core.data.model.DataModel;
 import com.core.enums.StatusEnum;
 import com.core.exception.ValidationException;
-import com.core.message.service.MessageManager;
+import com.core.message.service.AbstractMessageManager;
 import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ import java.util.*;
  * @author spring.yuan
  * @version 1.0
  */
-public abstract class BaseController {
+public abstract class AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -118,7 +118,7 @@ public abstract class BaseController {
         //message: 信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, "");
         //info: 前端提示信息
-        List messageList = MessageManager.getInstance().getAllMessage();
+        List messageList = AbstractMessageManager.getInstance().getAllMessage();
         if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         }
@@ -145,7 +145,7 @@ public abstract class BaseController {
         //message: 错误信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, ve.getMessage());
         //info: 前端提示信息
-        List messageList = MessageManager.getInstance().getAllMessage();
+        List messageList = AbstractMessageManager.getInstance().getAllMessage();
         if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         }
@@ -172,7 +172,7 @@ public abstract class BaseController {
         //message: 错误信息
         resultMap.setFieldValue(SystemConstant.RESULT_MESSAGE, e.getMessage());
         //info: 前端提示信息
-        List messageList = MessageManager.getInstance().getAllMessage();
+        List messageList = AbstractMessageManager.getInstance().getAllMessage();
         if (messageList.size() > 0) {
             resultMap.setFieldValue(SystemConstant.RESULT_INFO, messageList);
         }

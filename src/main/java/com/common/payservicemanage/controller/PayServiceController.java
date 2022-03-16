@@ -1,7 +1,7 @@
 package com.common.payservicemanage.controller;
 
 import com.common.payservicemanage.service.PayRouteService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/pay")
-public class PayServiceController extends BaseController {
+public class PayServiceController extends AbstractBaseController {
 
     @Autowired
     private PayRouteService payRouteService;

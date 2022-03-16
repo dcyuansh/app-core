@@ -2,7 +2,7 @@ package com.common.picturemanage.controller;
 
 import com.common.filetransfermanage.service.FileTransferService;
 import com.common.picturemanage.service.PictureService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.utils.StringUtils;
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ import java.io.IOException;
  */
 @RestController
 @RequestMapping("/api/picture")
-public class PictureController extends BaseController {
+public class PictureController extends AbstractBaseController {
 
     private Logger LOG = LoggerFactory.getLogger(PictureController.class);
 

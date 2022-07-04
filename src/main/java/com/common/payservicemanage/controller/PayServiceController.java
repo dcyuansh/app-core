@@ -29,7 +29,7 @@ public class PayServiceController extends AbstractBaseController {
         try {
             DataModel payModel = this.getInputData(requestMap);
             DataModel payResult = payRouteService.pay(payModel);
-            this.handleSuccess(payResult, resultModel);
+            this.handleSuccess(resultModel, payResult);
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

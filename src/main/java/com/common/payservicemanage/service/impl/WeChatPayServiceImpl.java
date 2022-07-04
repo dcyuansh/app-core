@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
  * @author spring.yuan
  * @version 1.0
  */
-@Service("wechatPayServiceImpl")
-public class WechatPayServiceImpl implements PayService {
+@Service("weChatPayServiceImpl")
+public class WeChatPayServiceImpl implements PayService {
 
     @Override
     public DataModel pay(DataModel payModel) {
@@ -20,6 +20,6 @@ public class WechatPayServiceImpl implements PayService {
 
     @Override
     public String channelId() {
-        return "WechatPay";
+        return "WeChatPay";
     }
 }

@@ -14,9 +14,9 @@ import java.util.Set;
 @Service
 public class PayRouteService {
 
-    Set<PayService> payServiceSet;
+    public Set<PayService> payServiceSet;
 
-    private Map<String, PayService> payServiceMap = new HashMap<>();
+    public Map<String, PayService> payServiceMap = new HashMap<>();
 
 
     public PayRouteService(Set<PayService> payServiceSet) {

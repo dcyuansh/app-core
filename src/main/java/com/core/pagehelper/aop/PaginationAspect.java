@@ -45,8 +45,8 @@ public class PaginationAspect {
             if (arg instanceof PaginationInfo) {
                 paginationInfo = (PaginationInfo) arg;
                 if (paginationInfo != null) {
-                    pageNum = StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? pageNum : paginationInfo.getPageNum();
-                    pageSize = StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? pageSize : paginationInfo.getPageSize();
+                    pageNum = paginationInfo.getPageNum() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? pageNum : paginationInfo.getPageNum();
+                    pageSize = paginationInfo.getPageSize() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? pageSize : paginationInfo.getPageSize();
                 }
             }
         }

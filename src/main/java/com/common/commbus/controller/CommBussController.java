@@ -2,8 +2,8 @@ package com.common.commbus.controller;
 
 
 import com.common.commbus.dto.CommBussDTO;
-import com.common.commbus.entity.CommBuss;
 import com.common.commbus.service.CommBussService;
+import com.common.commbus.vo.CommBussVO;
 import com.core.controller.AbstractBaseController;
 import com.core.data.model.DataModel;
 import com.core.exception.ValidationException;
@@ -34,7 +34,7 @@ public class CommBussController extends AbstractBaseController {
     public Map<String, Object> queryByPage(@RequestBody CommBussDTO commBussDTO) {
         DataModel resultModel = new DataModel();
         try {
-            PaginationInfo<CommBuss> commBussResult = commBussService.queryByPage(commBussDTO);
+            PaginationInfo<CommBussVO> commBussResult = commBussService.queryByPage(commBussDTO);
             this.handleSuccess(resultModel, commBussResult);
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);

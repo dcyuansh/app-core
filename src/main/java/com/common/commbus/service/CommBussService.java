@@ -2,7 +2,7 @@ package com.common.commbus.service;
 
 
 import com.common.commbus.dto.CommBussDTO;
-import com.common.commbus.entity.CommBuss;
+import com.common.commbus.vo.CommBussVO;
 import com.core.pagehelper.pojo.PaginationInfo;
 
 /**
@@ -13,8 +13,6 @@ import com.core.pagehelper.pojo.PaginationInfo;
  */
 public interface CommBussService {
 
-
-
-    PaginationInfo<CommBuss> queryByPage(CommBussDTO commBussDTO);
+    PaginationInfo<CommBussVO> queryByPage(CommBussDTO commBussDTO);
 
 }

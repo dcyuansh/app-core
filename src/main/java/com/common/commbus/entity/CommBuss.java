@@ -13,11 +13,11 @@ import java.io.Serializable;
 @Data
 public class CommBuss implements Serializable {
     private static final long serialVersionUID = -81963887741652440L;
-    
+
     private String busName;
-    
+
     private String busDesc;
-    
+
     private String busType;
 
 }

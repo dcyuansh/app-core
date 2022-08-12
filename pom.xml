@@ -208,6 +208,13 @@
             <version>${jjwt.version}</version>
         </dependency>
 
+        <!-- cglib bean copy -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        
         <!--javax.xml.bind-->
         <dependency>
             <groupId>javax.xml.bind</groupId>

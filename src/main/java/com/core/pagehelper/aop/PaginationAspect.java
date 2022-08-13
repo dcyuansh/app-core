@@ -45,10 +45,8 @@ public class PaginationAspect {
         for (Object arg : args) {
             if (arg instanceof PaginationInfo) {
                 paginationInfo = (PaginationInfo) arg;
-                if (paginationInfo != null) {
-                    pageNum = paginationInfo.getPageNum() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? SystemConstant.pageNum : paginationInfo.getPageNum();
-                    pageSize = paginationInfo.getPageSize() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? SystemConstant.pageSize : paginationInfo.getPageSize();
-                }
+                pageNum = paginationInfo.getPageNum() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? SystemConstant.pageNum : paginationInfo.getPageNum();
+                pageSize = paginationInfo.getPageSize() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? SystemConstant.pageSize : paginationInfo.getPageSize();
             }
         }
         try {
@@ -58,8 +56,8 @@ public class PaginationAspect {
             result = pjp.proceed(args);
             //获取分页后的参数
             paginationInfo.setPageNum(page.getPageNum());
-            paginationInfo.setPages(page.getPages());
             paginationInfo.setPageSize(page.getPageSize());
+            paginationInfo.setPages(page.getPages());
             paginationInfo.setTotal(page.getTotal());
         } catch (Exception e) {
             logger.error("PageHelper分页查询数据库异常：{}", e);

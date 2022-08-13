@@ -450,3 +450,4 @@ target/classes/sql/exec.sql
 target/classes/sql/read.txt
 target/app-core-21.10.11.jar
 target/app-core-21.10.11-exec.jar
+app-core.iml

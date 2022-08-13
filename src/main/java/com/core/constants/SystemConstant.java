@@ -27,4 +27,8 @@ public final class SystemConstant {
     public static final String DATE_TIME_LONG_FORMAT = "yyyyMMddHHmmss";
     public static final String LOCAL_TIME_LONG_FORMAT = "yyyyMMddHHmmssSSS";
 
+    //page helper pagination设置默认当前页
+    public static final int pageNum = 1;
+    //page helper pagination设置默认每页记录数量
+    public static final int pageSize = 10;
 }

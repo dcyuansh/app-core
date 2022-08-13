@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class BeanUtils {

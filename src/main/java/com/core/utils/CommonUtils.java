@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class CommonUtils {

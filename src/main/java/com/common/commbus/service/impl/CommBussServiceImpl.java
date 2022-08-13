@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * (CommBuss)表服务实现类
  *
- * @author spring.yuan
+ * @author dc.yuan
  * @since 2022-08-11 12:47:22
  */
 @Service("commBussService")

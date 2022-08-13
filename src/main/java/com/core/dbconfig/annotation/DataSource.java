@@ -5,7 +5,7 @@ import com.core.dbconfig.multipledatasource.DataSourceType;
 import java.lang.annotation.*;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Inherited

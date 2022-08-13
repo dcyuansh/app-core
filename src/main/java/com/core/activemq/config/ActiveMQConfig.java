@@ -19,7 +19,7 @@ import javax.jms.Topic;
 
 */
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  *//*
 

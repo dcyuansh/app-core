@@ -7,7 +7,7 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class ZipUtils {

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * (CommBuss)表数据库访问层
  *
- * @author spring.yuan
+ * @author dc.yuan
  * @since 2022-08-11 12:47:19
  */
 @Repository

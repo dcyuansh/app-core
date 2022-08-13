@@ -6,7 +6,7 @@ import com.core.enums.EncodeTypeEnum;
 import java.io.*;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class FileUtils {

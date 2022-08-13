@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import java.net.UnknownHostException;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  * @desc 采用雪花算法生成主键id
  */

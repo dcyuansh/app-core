@@ -3,29 +3,27 @@ package com.core.utils;
 import java.util.UUID;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class UUidUtils {
 
     /***
      * get uuid
-     * @return
+     * @return 返回uuid字符串
      */
     public static String getUUID() {
-        String uuid = UUID.randomUUID().toString();
-        return uuid;
+        return UUID.randomUUID().toString();
     }
 
 
     /***
      * get uuid code
-     * @return
+     * @return 返回uuid,去掉了中划线-
      */
     public static String getUUIDCode() {
         String uuid = UUID.randomUUID().toString();
-        String code = uuid.replace("-", "");
-        return code;
+        return uuid.replace("-", "");
     }
 
 }

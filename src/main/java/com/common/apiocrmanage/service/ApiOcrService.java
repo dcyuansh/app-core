@@ -5,7 +5,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public interface ApiOcrService {

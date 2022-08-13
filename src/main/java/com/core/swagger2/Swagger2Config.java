@@ -11,7 +11,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  */
 @Configuration
 @EnableSwagger2
@@ -33,7 +33,7 @@ public class Swagger2Config {
                 .title("系统Restful API")
                 .description("所有api统一json格式")
                 .termsOfServiceUrl("https://localhost:8443/")
-                .contact("spring.yuan")
+                .contact("dc.yuan")
                 .version("1.0")
                 .build();
     }

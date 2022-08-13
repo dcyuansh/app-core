@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Repository

@@ -4,14 +4,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class MatcherUtils {
 
 
     /**
-     * @param certNo
+     * @param certNo 证据号码
      * @return
      * @desc 验证是不是有效的身份证号
      */

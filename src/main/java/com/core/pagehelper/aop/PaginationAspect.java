@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Configuration

@@ -3,7 +3,7 @@ package com.common.commbus.vo;
 import lombok.Data;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Data

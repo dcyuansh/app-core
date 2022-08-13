@@ -9,7 +9,7 @@ import java.util.Base64.Encoder;
 
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class EncryptUtils {

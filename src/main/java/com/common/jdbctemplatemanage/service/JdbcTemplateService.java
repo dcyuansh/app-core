@@ -6,7 +6,7 @@ import com.core.excel.pojo.ExcelData;
 import java.util.List;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public interface JdbcTemplateService {

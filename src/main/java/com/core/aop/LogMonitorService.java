@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  * 通用AOP处理Web请求日志
  */

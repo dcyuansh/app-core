@@ -26,7 +26,7 @@
 
 ### 4、Swagger UI页面
 
-地址：https://localhost:8443/swagger-ui.html
+地址：https://localhost:8443/swagger-ui/index.html
 
 
 

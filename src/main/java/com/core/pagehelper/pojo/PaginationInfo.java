@@ -1,36 +1,45 @@
 package com.core.pagehelper.pojo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.List;
 
 /**
  * @author dc.yuan
  * @version 1.0
  */
+@ApiModel
 public class PaginationInfo<T> {
 
     /**
      * 当前页数
      */
+    @ApiModelProperty(value = "分页信息,当前页数", required = true, example = "1")
     private int pageNum;
 
     /**
      * 每页条数
      */
+    @ApiModelProperty(value = "分页信息,每页记录数", required = true, example = "10")
     private int pageSize;
 
     /**
      * 总记录数
      */
+    @ApiModelProperty(hidden = true)
     private long total;
 
     /**
      * 总页数
      */
+    @ApiModelProperty(hidden = true)
     private int pages;
 
     /**
      * 数据库查询结果集
      */
+    @ApiModelProperty(hidden = true)
     private List<T> data;
 
     /**

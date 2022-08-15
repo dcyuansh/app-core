@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Configuration
@@ -25,7 +25,7 @@ public class PaginationAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
-     * @desc 指定切点
+     * 指定切点
      */
     @Pointcut("@annotation(com.core.pagehelper.annotation.Pagination)")
     public void execute() {

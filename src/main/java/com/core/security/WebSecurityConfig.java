@@ -60,9 +60,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 放行druid
                 .antMatchers("/druid/**").permitAll()
                 // 放行swagger
-                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/doc.html").permitAll()
+                .antMatchers("/swagger-ui/index.html").permitAll()
                 .antMatchers("/webjars/**").permitAll()
-                .antMatchers("/v2/**").permitAll()
+                .antMatchers("/v3/**").permitAll()
                 .antMatchers("/swagger-resources/**").permitAll()
                 // 放行系统api
                 .antMatchers("/api/**").permitAll()

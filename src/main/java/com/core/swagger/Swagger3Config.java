@@ -1,5 +1,6 @@
 package com.core.swagger;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -35,8 +36,10 @@ public class Swagger3Config {
                 .enable(swaggerEnabled)
                 .select()
                 // 过滤条件，扫描指定路径下的文件
-                //.apis(RequestHandlerSelectors.basePackage("com"))
-                //扫描指定路径下使用@api的controller
+                .apis(RequestHandlerSelectors.basePackage("com"))
+                //为有@Api注解的Controller生成API文档
+                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+                //为有@ApiOperation注解的方法生成API文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 // 指定路径处理，PathSelectors.any()代表不过滤任何路径
                 //.paths(PathSelectors.any())

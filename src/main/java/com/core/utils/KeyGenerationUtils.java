@@ -8,7 +8,7 @@ public class KeyGenerationUtils {
 
     private static final String LOCAL_TIME_VAULE_FORMAT = "yyyyMMddHHmmssSSS";
 
-    private static KeyGenerationUtils keyGenerationUtils = null;
+    private static volatile KeyGenerationUtils keyGenerationUtils = null;
 
     private KeyGenerationUtils() {
     }

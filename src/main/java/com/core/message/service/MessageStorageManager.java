@@ -1,21 +1,27 @@
 package com.core.message.service;
 
+import com.core.utils.KeyGenerationUtils;
+
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
 public class MessageStorageManager {
 
-
-    private static MessageStorageManager c_instance;
+    private volatile static MessageStorageManager c_instance;
 
     private static final String SETUP_FOR_REQUEST_INDICATOR = "setup.for.request";
 
     private final Map storagePerThreadMap = new Hashtable();
 
-    public synchronized static MessageStorageManager getInstance() {
+
+    public static MessageStorageManager getInstance() {
         if (c_instance == null) {
-            c_instance = new MessageStorageManager();
+            synchronized (KeyGenerationUtils.class) {
+                if (c_instance == null) {
+                    c_instance = new MessageStorageManager();
+                }
+            }
         }
         return c_instance;
     }

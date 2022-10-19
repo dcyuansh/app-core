@@ -1,16 +1,22 @@
 package com.core.message.service;
 
 import com.core.message.service.impl.MessageManagerImpl;
+import com.core.utils.KeyGenerationUtils;
 
 import java.util.List;
 
 public abstract class AbstractMessageManager {
 
-    private static AbstractMessageManager message_instance;
+    private volatile static AbstractMessageManager message_instance;
+
 
     public static AbstractMessageManager getInstance() {
         if (message_instance == null) {
-            message_instance = new MessageManagerImpl();
+            synchronized (KeyGenerationUtils.class) {
+                if (message_instance == null) {
+                    message_instance = new MessageManagerImpl();
+                }
+            }
         }
         return message_instance;
     }

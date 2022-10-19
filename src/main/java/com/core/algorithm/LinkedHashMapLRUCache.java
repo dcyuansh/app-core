@@ -7,14 +7,14 @@ import java.util.Map;
  * @author dc.yuan
  * @version 1.0
  * @date 2022-10-18 19:28
- * @desc 基于LinkHashMap实现LRU算法
+ * 基于LinkHashMap实现LRU算法
  */
-public class LinkedHashMapLRU extends LinkedHashMap<String, String> {
+public class LinkedHashMapLRUCache extends LinkedHashMap<String, String> {
 
-    private int initialCapacity;
+    private final  int initialCapacity;
 
 
-    public LinkedHashMapLRU(int initialCapacity, float loadFactor, boolean accessOrder) {
+    public LinkedHashMapLRUCache(int initialCapacity, float loadFactor, boolean accessOrder) {
         super(initialCapacity, loadFactor, accessOrder);
         this.initialCapacity = initialCapacity;
     }
@@ -22,6 +22,6 @@ public class LinkedHashMapLRU extends LinkedHashMap<String, String> {
 
     @Override
     protected boolean removeEldestEntry(Map.Entry<String, String> eldest) {
-        return this.size() >= initialCapacity;
+        return this.size() >= this.initialCapacity;
     }
 }

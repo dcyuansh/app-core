@@ -1,4 +1,4 @@
-package com.core.algorithm;
+package com.study.lru;
 
 
 import java.util.HashMap;

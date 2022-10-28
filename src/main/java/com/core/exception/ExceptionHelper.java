@@ -11,7 +11,7 @@ public class ExceptionHelper {
 
     private Logger logger = LoggerFactory.getLogger(ExceptionHelper.class);
 
-    private static ExceptionHelper c_instance;
+    private volatile static ExceptionHelper c_instance;
 
 
     public static ExceptionHelper getInstance() {

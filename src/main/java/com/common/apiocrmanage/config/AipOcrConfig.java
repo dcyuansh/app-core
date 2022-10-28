@@ -16,7 +16,7 @@ public class AipOcrConfig extends AipOcr {
     public static final int SOCKET_TIME_OUT = 20000;
 
 
-    private static AipOcrConfig aipOcr_instance;
+    private volatile static AipOcrConfig aipOcr_instance;
 
 
     public static AipOcrConfig getInstance() {

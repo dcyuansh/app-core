@@ -1,4 +1,4 @@
-package com.study.lru;
+package com.study.algorithm;
 
 /**
  * @author dc.yuan

@@ -1,13 +1,10 @@
-package com.study.lru;
+package com.study.algorithm;
 
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author dc.yuan
- * @version 1.0
- * @date 2022-10-18 19:28
  * LRU(Least recently used，最近最少使用算法)
  */
 public class LRUCache {

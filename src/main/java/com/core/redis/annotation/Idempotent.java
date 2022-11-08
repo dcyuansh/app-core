@@ -20,5 +20,5 @@ public @interface Idempotent {
     /**
      * 持续时间秒
      */
-    long time() default 1;
+    long timeOut() default 1;
 }

@@ -50,7 +50,7 @@ public class IdempotentAspect {
         Idempotent idempotent = method.getAnnotation(Idempotent.class);
         //使用redis控制，相同的时间内，只能有一次执行成功，如果数据参数太长，使用MD5加密
         String key = EncryptUtils.encodeByMd5(Arrays.toString(joinPoint.getArgs()));
-        if (Boolean.FALSE.equals(redisTemplate.opsForValue().setIfAbsent(idempotent.key() + key, key, idempotent.time(), TimeUnit.SECONDS))) {
+        if (Boolean.FALSE.equals(redisTemplate.opsForValue().setIfAbsent(idempotent.key() + key, key, idempotent.timeOut(), TimeUnit.SECONDS))) {
             logger.error("一定时间内,多次调用接口");
             throw new RuntimeException("一定时间内,多次调用接口");
         }

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0
  */
 @Component
-public class RedisUtils {
+public class RedisService {
 
 
     @Autowired
@@ -216,6 +216,5 @@ public class RedisUtils {
     public Object leftPop(String key) {
         return redisTemplate.opsForList().leftPop(key);
     }
-
 }
 

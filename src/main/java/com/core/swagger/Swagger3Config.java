@@ -14,7 +14,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  * @date 2022-08-15 10:59
  */
@@ -50,7 +50,7 @@ public class Swagger3Config {
         return new ApiInfoBuilder()
                 .title("项目接口文档")
                 .description("项目中所有接口介绍")
-                .contact(new Contact("dc.yuan", "https://localhost:8443/", "yuandechunsh@163.com"))
+                .contact(new Contact("DC Yuan", "https://localhost:8443/", "dcyuansh@163.com"))
                 .version("1.0")
                 .build();
     }

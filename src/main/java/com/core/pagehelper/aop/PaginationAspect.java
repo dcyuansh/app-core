@@ -22,6 +22,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Aspect
 @EnableAspectJAutoProxy
 public class PaginationAspect {
+
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
@@ -45,8 +46,8 @@ public class PaginationAspect {
         for (Object arg : args) {
             if (arg instanceof PaginationInfo) {
                 paginationInfo = (PaginationInfo) arg;
-                pageNum = paginationInfo.getPageNum() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? SystemConstant.pageNum : paginationInfo.getPageNum();
-                pageSize = paginationInfo.getPageSize() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? SystemConstant.pageSize : paginationInfo.getPageSize();
+                pageNum = paginationInfo.getPageNum() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageNum())) ? SystemConstant.PAGE_NUM : paginationInfo.getPageNum();
+                pageSize = paginationInfo.getPageSize() == 0 || StringUtils.isBlank(String.valueOf(paginationInfo.getPageSize())) ? SystemConstant.PAGE_SIZE : paginationInfo.getPageSize();
             }
         }
         try {

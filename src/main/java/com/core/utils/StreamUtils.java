@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class StreamUtils {

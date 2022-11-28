@@ -5,7 +5,7 @@ import com.core.data.model.DataModel;
 import java.util.List;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public interface WorkFlowService {

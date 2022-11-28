@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @RestController
@@ -101,7 +101,7 @@ public class FileTransferController extends AbstractBaseController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET, value = "/download/{fileName}")
-    public ResponseEntity<Resource> downloadFile(HttpServletRequest request, @PathVariable String fileName) {
+    public ResponseEntity<Resource> downloadFile(HttpServletRequest request, @PathVariable(value = "fileName") String fileName) {
         Resource resource = fileTransferService.loadFileAsResource(fileName);
         String contentType = null;
         try {

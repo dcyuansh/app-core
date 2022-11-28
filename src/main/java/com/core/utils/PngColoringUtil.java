@@ -10,7 +10,7 @@ import java.util.Base64;
 
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class PngColoringUtil {

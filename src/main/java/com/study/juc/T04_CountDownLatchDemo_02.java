@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  * @date 2022-10-24 16:54
  * <p>

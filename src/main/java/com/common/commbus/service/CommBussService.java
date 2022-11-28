@@ -8,7 +8,7 @@ import com.core.pagehelper.pojo.PaginationInfo;
 /**
  * (CommBuss)表服务接口
  *
- * @author dc.yuan
+ * @author DC Yuan
  * @since 2022-08-11 12:47:22
  */
 public interface CommBussService {

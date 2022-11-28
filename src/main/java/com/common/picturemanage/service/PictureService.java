@@ -3,7 +3,7 @@ package com.common.picturemanage.service;
 import java.awt.*;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public interface PictureService {

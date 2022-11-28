@@ -3,7 +3,7 @@ package com.core.enums;
 import com.core.utils.EnumUtil;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public enum ContentTypeMessageEnum implements CodeEnum {

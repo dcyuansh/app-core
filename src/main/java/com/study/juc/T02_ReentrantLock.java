@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  * @date 2022-10-24 11:05
  * <p>

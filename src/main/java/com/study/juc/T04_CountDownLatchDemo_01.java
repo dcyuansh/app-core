@@ -3,7 +3,7 @@ package com.study.juc;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  * @date 2022-10-24 16:54
  * <p>

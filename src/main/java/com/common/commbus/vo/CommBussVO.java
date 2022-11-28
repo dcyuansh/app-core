@@ -3,7 +3,7 @@ package com.common.commbus.vo;
 import lombok.Data;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @Data

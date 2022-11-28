@@ -3,7 +3,7 @@ package com.common.apiocrmanage.config;
 import com.baidu.aip.bodyanalysis.AipBodyAnalysis;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class AipBodyAnalysisConfig extends AipBodyAnalysis {

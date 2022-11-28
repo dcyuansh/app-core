@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 */
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  *//*
 

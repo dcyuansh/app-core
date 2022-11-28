@@ -1,7 +1,7 @@
 package com.common.workflowmanager.enums;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public enum ProcStateEnum {

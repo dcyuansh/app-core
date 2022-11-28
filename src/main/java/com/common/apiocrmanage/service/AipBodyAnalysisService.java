@@ -3,7 +3,7 @@ package com.common.apiocrmanage.service;
 import org.json.JSONObject;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public interface AipBodyAnalysisService {

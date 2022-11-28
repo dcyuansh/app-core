@@ -1,7 +1,7 @@
 package com.study.algorithm;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  * @date 2022-10-18 19:39
  */

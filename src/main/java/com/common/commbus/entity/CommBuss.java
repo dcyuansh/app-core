@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * (CommBuss)实体类
  *
- * @author dc.yuan
+ * @author DC Yuan
  * @since 2022-08-11 12:47:20
  */
 @Data

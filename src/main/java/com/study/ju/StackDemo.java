@@ -7,7 +7,7 @@ import java.util.Stack;
  * @version 1.0
  * @date 2022-11-01 15:33
  */
-public class StackDemo {
+public class  StackDemo {
 
     public static void main(String[] args) {
         Stack<String> stack = new Stack<>();

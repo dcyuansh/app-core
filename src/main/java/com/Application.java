@@ -11,9 +11,9 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableCaching
 @EnableRedisHttpSession
 @SpringBootApplication
-public class App {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

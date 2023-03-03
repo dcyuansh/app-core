@@ -9,7 +9,7 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com</groupId>
+    <groupId>com.app.core</groupId>
     <artifactId>app-core</artifactId>
     <version>22.11.30</version>
     <packaging>jar</packaging>

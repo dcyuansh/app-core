@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.common.commaddress.dao.CommAddressDao">
+
+    <resultMap type="com.common.commaddress.entity.CommAddress" id="CommAddressMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="addressId" column="address_id" jdbcType="VARCHAR"/>
+        <result property="addressSeqNo" column="address_seq_no" jdbcType="INTEGER"/>
+        <result property="provinceCode" column="province_code" jdbcType="VARCHAR"/>
+        <result property="provinceName" column="province_name" jdbcType="VARCHAR"/>
+        <result property="cityCode" column="city_code" jdbcType="VARCHAR"/>
+        <result property="cityName" column="city_name" jdbcType="VARCHAR"/>
+        <result property="districtCode" column="district_code" jdbcType="VARCHAR"/>
+        <result property="districtName" column="district_name" jdbcType="VARCHAR"/>
+        <result property="postCode" column="post_code" jdbcType="VARCHAR"/>
+        <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>
+        <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+        <result property="insertTime" column="insert_time" jdbcType="TIMESTAMP"/>
+        <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CommAddressMap">
+        select
+          id, address_id, address_seq_no, province_code, province_name, city_code, city_name, district_code, district_name, post_code, detail_address, remarks, insert_time, timestamp
+        from comm_address
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CommAddressMap">
+        select
+          id, address_id, address_seq_no, province_code, province_name, city_code, city_name, district_code, district_name, post_code, detail_address, remarks, insert_time, timestamp
+        from comm_address
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="addressId != null and addressId != ''">
+                and address_id = #{addressId}
+            </if>
+            <if test="addressSeqNo != null">
+                and address_seq_no = #{addressSeqNo}
+            </if>
+            <if test="provinceCode != null and provinceCode != ''">
+                and province_code = #{provinceCode}
+            </if>
+            <if test="provinceName != null and provinceName != ''">
+                and province_name = #{provinceName}
+            </if>
+            <if test="cityCode != null and cityCode != ''">
+                and city_code = #{cityCode}
+            </if>
+            <if test="cityName != null and cityName != ''">
+                and city_name = #{cityName}
+            </if>
+            <if test="districtCode != null and districtCode != ''">
+                and district_code = #{districtCode}
+            </if>
+            <if test="districtName != null and districtName != ''">
+                and district_name = #{districtName}
+            </if>
+            <if test="postCode != null and postCode != ''">
+                and post_code = #{postCode}
+            </if>
+            <if test="detailAddress != null and detailAddress != ''">
+                and detail_address = #{detailAddress}
+            </if>
+            <if test="remarks != null and remarks != ''">
+                and remarks = #{remarks}
+            </if>
+            <if test="insertTime != null">
+                and insert_time = #{insertTime}
+            </if>
+            <if test="timestamp != null">
+                and timestamp = #{timestamp}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from comm_address
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="addressId != null and addressId != ''">
+                and address_id = #{addressId}
+            </if>
+            <if test="addressSeqNo != null">
+                and address_seq_no = #{addressSeqNo}
+            </if>
+            <if test="provinceCode != null and provinceCode != ''">
+                and province_code = #{provinceCode}
+            </if>
+            <if test="provinceName != null and provinceName != ''">
+                and province_name = #{provinceName}
+            </if>
+            <if test="cityCode != null and cityCode != ''">
+                and city_code = #{cityCode}
+            </if>
+            <if test="cityName != null and cityName != ''">
+                and city_name = #{cityName}
+            </if>
+            <if test="districtCode != null and districtCode != ''">
+                and district_code = #{districtCode}
+            </if>
+            <if test="districtName != null and districtName != ''">
+                and district_name = #{districtName}
+            </if>
+            <if test="postCode != null and postCode != ''">
+                and post_code = #{postCode}
+            </if>
+            <if test="detailAddress != null and detailAddress != ''">
+                and detail_address = #{detailAddress}
+            </if>
+            <if test="remarks != null and remarks != ''">
+                and remarks = #{remarks}
+            </if>
+            <if test="insertTime != null">
+                and insert_time = #{insertTime}
+            </if>
+            <if test="timestamp != null">
+                and timestamp = #{timestamp}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into comm_address(address_id, address_seq_no, province_code, province_name, city_code, city_name, district_code, district_name, post_code, detail_address, remarks, insert_time, timestamp)
+        values (#{addressId}, #{addressSeqNo}, #{provinceCode}, #{provinceName}, #{cityCode}, #{cityName}, #{districtCode}, #{districtName}, #{postCode}, #{detailAddress}, #{remarks}, #{insertTime}, #{timestamp})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into comm_address(address_id, address_seq_no, province_code, province_name, city_code, city_name, district_code, district_name, post_code, detail_address, remarks, insert_time, timestamp)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.addressId}, #{entity.addressSeqNo}, #{entity.provinceCode}, #{entity.provinceName}, #{entity.cityCode}, #{entity.cityName}, #{entity.districtCode}, #{entity.districtName}, #{entity.postCode}, #{entity.detailAddress}, #{entity.remarks}, #{entity.insertTime}, #{entity.timestamp})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into comm_address(address_id, address_seq_no, province_code, province_name, city_code, city_name, district_code, district_name, post_code, detail_address, remarks, insert_time, timestamp)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.addressId}, #{entity.addressSeqNo}, #{entity.provinceCode}, #{entity.provinceName}, #{entity.cityCode}, #{entity.cityName}, #{entity.districtCode}, #{entity.districtName}, #{entity.postCode}, #{entity.detailAddress}, #{entity.remarks}, #{entity.insertTime}, #{entity.timestamp})
+        </foreach>
+        on duplicate key update
+        address_id = values(address_id),
+        address_seq_no = values(address_seq_no),
+        province_code = values(province_code),
+        province_name = values(province_name),
+        city_code = values(city_code),
+        city_name = values(city_name),
+        district_code = values(district_code),
+        district_name = values(district_name),
+        post_code = values(post_code),
+        detail_address = values(detail_address),
+        remarks = values(remarks),
+        insert_time = values(insert_time),
+        timestamp = values(timestamp)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update comm_address
+        <set>
+            <if test="addressId != null and addressId != ''">
+                address_id = #{addressId},
+            </if>
+            <if test="addressSeqNo != null">
+                address_seq_no = #{addressSeqNo},
+            </if>
+            <if test="provinceCode != null and provinceCode != ''">
+                province_code = #{provinceCode},
+            </if>
+            <if test="provinceName != null and provinceName != ''">
+                province_name = #{provinceName},
+            </if>
+            <if test="cityCode != null and cityCode != ''">
+                city_code = #{cityCode},
+            </if>
+            <if test="cityName != null and cityName != ''">
+                city_name = #{cityName},
+            </if>
+            <if test="districtCode != null and districtCode != ''">
+                district_code = #{districtCode},
+            </if>
+            <if test="districtName != null and districtName != ''">
+                district_name = #{districtName},
+            </if>
+            <if test="postCode != null and postCode != ''">
+                post_code = #{postCode},
+            </if>
+            <if test="detailAddress != null and detailAddress != ''">
+                detail_address = #{detailAddress},
+            </if>
+            <if test="remarks != null and remarks != ''">
+                remarks = #{remarks},
+            </if>
+            <if test="insertTime != null">
+                insert_time = #{insertTime},
+            </if>
+            <if test="timestamp != null">
+                timestamp = #{timestamp},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from comm_address where id = #{id}
+    </delete>
+
+</mapper>
+

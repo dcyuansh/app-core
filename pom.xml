@@ -275,6 +275,7 @@
 
     <build>
         <plugins>
+            <!--
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -287,6 +288,8 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.1.0</version>
             </plugin>
+            -->
+
             <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -296,7 +299,18 @@
                 </configuration>
             </plugin>
             -->
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 打包为可以被别的项目调用的jar，不是打包为可执行的jar-->
+                    <classifier>exec</classifier>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
+
 
 </project>

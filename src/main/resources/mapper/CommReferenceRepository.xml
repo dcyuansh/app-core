@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.common.commreferencemanager.repository.CommReferenceRepository">
+
+    <insert id="saveCommReference" parameterType="Map">
+        insert into comm_reftab(
+            element_type,
+            element_code,
+            element_desc,
+            language_id,
+            reference_code,
+            reference_desc,
+            remarks,
+            insert_time,
+            timestamp
+        )
+        values (
+            #{elementType},
+            #{elementCode},
+            #{elementDesc},
+            #{languageId},
+            #{referenceCode},
+            #{referenceDesc},
+            #{remarks},
+            #{insertTime},
+            #{timestamp}
+        )
+    </insert>
+
+    <select id="queryCommReference" parameterType="Map" resultType="DataModel">
+        select * from comm_reftab
+        where element_type = #{elementType}
+        and element_code = #{elementCode}
+        and language_id = #{languageId}
+    </select>
+
+    <select id="queryCommReferenceList" parameterType="Map" resultType="DataModel">
+        select * from comm_reftab
+        where element_cd = #{elementCd}
+        <if test="elementType != null and elementType != ''">
+            and element_type = #{elementType}
+        </if>
+        <if test="elementName != null and elementName != ''">
+            and element_name = #{elementName}
+        </if>
+        <if test="languageId != null and languageId != ''">
+            and language_id = #{languageId}
+        </if>
+    </select>
+</mapper>

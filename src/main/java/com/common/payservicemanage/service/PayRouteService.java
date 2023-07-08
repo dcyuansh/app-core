@@ -1,6 +1,6 @@
 package com.common.payservicemanage.service;
 
-import com.model.data.DataModel;
+import com.core.data.model.DataModel;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

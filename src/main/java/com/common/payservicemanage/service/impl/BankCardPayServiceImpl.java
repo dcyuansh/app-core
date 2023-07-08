@@ -1,7 +1,7 @@
 package com.common.payservicemanage.service.impl;
 
 import com.common.payservicemanage.service.PayService;
-import com.model.data.DataModel;
+import com.core.data.model.DataModel;
 import org.springframework.stereotype.Service;
 
 /**

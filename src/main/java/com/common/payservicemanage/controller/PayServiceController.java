@@ -1,9 +1,9 @@
 package com.common.payservicemanage.controller;
 
 import com.common.payservicemanage.service.PayRouteService;
-import com.controller.AbstractBaseController;
-import com.model.data.DataModel;
-import com.model.exception.ValidationException;
+import com.core.controller.AbstractBaseController;
+import com.core.data.model.DataModel;
+import com.core.exception.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

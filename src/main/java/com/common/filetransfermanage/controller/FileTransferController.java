@@ -1,11 +1,13 @@
 package com.common.filetransfermanage.controller;
 
 import com.common.filetransfermanage.service.FileTransferService;
-import com.controller.AbstractBaseController;
-import com.model.data.DataModel;
-import com.model.exception.ValidationException;
-import com.utils.StringUtils;
-import lombok.extern.slf4j.Slf4j;
+import com.core.controller.AbstractBaseController;
+import com.core.data.model.DataModel;
+import com.core.exception.ValidationException;
+import com.core.utils.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -23,16 +25,15 @@ import java.util.Map;
  * @author DC Yuan
  * @version 1.0
  */
-@Slf4j
 @RestController
 @RequestMapping("/api/file")
 public class FileTransferController extends AbstractBaseController {
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
     private FileTransferService fileTransferService;
 
-    public FileTransferController(FileTransferService fileTransferService) {
-        this.fileTransferService = fileTransferService;
-    }
 
     /**
      * 上传单个文件file
@@ -106,7 +107,7 @@ public class FileTransferController extends AbstractBaseController {
         try {
             contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
         } catch (IOException ex) {
-            log.info("Could not determine file type");
+            logger.info("Could not determine file type");
         }
         if (StringUtils.isBlank(contentType)) {
             contentType = "application/octet-stream";

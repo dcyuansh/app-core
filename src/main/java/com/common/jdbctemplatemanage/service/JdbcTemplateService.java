@@ -1,7 +1,7 @@
 package com.common.jdbctemplatemanage.service;
 
-import com.model.data.DataModel;
-import com.utils.excel.pojo.ExcelData;
+import com.core.data.model.DataModel;
+import com.core.excel.pojo.ExcelData;
 
 import java.util.List;
 

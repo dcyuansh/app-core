@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.common.idcardmanage.repository.IdCardRepository">
+
+    <insert id="saveIdCard" parameterType="Map">
+        insert into comm_id_card
+        (
+            id_card,
+            name,
+            gender,
+            birthday,
+            nation,
+            address,
+            effective_date,
+            expired_date,
+            sign_office
+        )values (
+            #{idCard},
+            #{name},
+            #{gender},
+            #{birthday},
+            #{nation},
+            #{address},
+            #{effectiveDate},
+            #{expiredDate},
+            #{signOffice}
+        )
+    </insert>
+
+    <select id="queryIdCard" parameterType="Map" resultType="DataModel">
+        select * from comm_id_card where id_card = #{idCard}
+    </select>
+
+    <select id="queryIdCardList" parameterType="Map" resultType="DataModel">
+        select * from comm_id_card where 1=1
+        <if test="idCard != null and idCard != ''">
+            and id_card = #{idCard}
+        </if>
+        <if test="name != null and name != ''">
+            and name = #{name}
+        </if>
+        <if test="gender != null and gender != ''">
+            and gender = #{gender}
+        </if>
+        <if test="birthday !=null">
+            and birthday = #{birthday}
+        </if>
+        <if test="nation != null and nation != ''">
+            and nation = #{nation}
+        </if>
+        <if test="address != null and address != ''">
+            and address = #{address}
+        </if>
+        <if test="effectiveDate !=null">
+            and effective_date = #{effectiveDate}
+        </if>
+        <if test="expiredDate !=null">
+            and expired_date = #{expiredDate}
+        </if>
+        <if test="signOffice != null and signOffice != ''">
+            and sign_office = #{signOffice}
+        </if>
+    </select>
+
+    <update id="updateIdCard" parameterType="Map">
+        update comm_id_card
+        set timestamp = #{timestamp}
+        <if test="idCard != null and idCard != ''">
+            , id_card = #{idCard}
+        </if>
+        <if test="name != null and name != ''">
+            , name = #{name}
+        </if>
+        <if test="gender != null and gender != ''">
+            , gender = #{gender}
+        </if>
+        <if test="birthday !=null">
+            , birthday = #{birthday}
+        </if>
+        <if test="nation != null and nation != ''">
+            , nation = #{nation}
+        </if>
+        <if test="address != null and address != ''">
+            , address = #{address}
+        </if>
+        <if test="effectiveDate !=null">
+            , effective_date = #{effectiveDate}
+        </if>
+        <if test="expiredDate !=null">
+            , expired_date = #{expiredDate}
+        </if>
+        <if test="signOffice != null and signOffice != ''">
+            , sign_office = #{signOffice}
+        </if>
+        where id_card = #{idCard}
+    </update>
+
+    <delete id="deleteIdCard" parameterType="Map">
+        delete from comm_id_card where id_card = #{idCard}
+    </delete>
+</mapper>

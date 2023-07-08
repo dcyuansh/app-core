@@ -1,6 +1,6 @@
 package com.common.payservicemanage.service;
 
-import com.core.data.model.DataModel;
+import com.model.data.DataModel;
 
 /**
  * @author DC Yuan

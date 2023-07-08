@@ -1,9 +1,7 @@
 package com.common.mailservicemanage.service.impl;
 
 import com.common.mailservicemanage.service.EmailService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
@@ -11,6 +9,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
@@ -19,41 +18,43 @@ import java.io.File;
  * @author DC Yuan
  * @version 1.0
  */
+@Slf4j
 @Component
 public class EmailServiceImp implements EmailService {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-    @Autowired
-    private JavaMailSender mailSender;// spring 提供的邮件发送类
+    @Resource
+    private JavaMailSender mailSender;
 
     @Value("${mail.fromMail.addr}")
     private String from;
 
     @Override
     public void sendSimpleEmail(String[] to, String subject, String content) {
-        SimpleMailMessage message = new SimpleMailMessage();// 创建简单邮件消息
-        message.setFrom(from);// 设置发送人
-        message.setTo(to);// 设置收件人
+        // 创建简单邮件消息
+        SimpleMailMessage message = new SimpleMailMessage();
+        // 设置发送人
+        message.setFrom(from);
+        // 设置收件人
+        message.setTo(to);
 
-        /*
-         * String[] adds = {"xxx@qq.com","yyy@qq.com"}; //同时发送给多人 message.setTo(adds);
-         */
-
-        message.setSubject(subject);// 设置主题
-        message.setText(content);// 设置内容
+        // 设置主题
+        message.setSubject(subject);
+        // 设置内容
+        message.setText(content);
         try {
-            mailSender.send(message);// 执行发送邮件
-            logger.info("简单邮件已经发送。");
+            // 执行发送邮件
+            mailSender.send(message);
+            log.info("简单邮件已经发送。");
         } catch (Exception e) {
-            logger.error("发送简单邮件时发生异常:{}", e);
+            log.error("发送简单邮件时发生异常:{}", e);
         }
     }
 
 
     @Override
     public void sendHtmlEmail(String[] to, String subject, String content) {
-        MimeMessage message = mailSender.createMimeMessage();// 创建一个MINE消息
+        // 创建一个MINE消息
+        MimeMessage message = mailSender.createMimeMessage();
         try {
             // true表示需要创建一个multipart message
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
@@ -62,9 +63,9 @@ public class EmailServiceImp implements EmailService {
             helper.setSubject(subject);
             helper.setText(content, true);
             mailSender.send(message);
-            logger.info("html邮件发送成功");
+            log.info("html邮件发送成功");
         } catch (MessagingException e) {
-            logger.error("发送html邮件时发生异常:{}", e);
+            log.error("发送html邮件时发生异常:{}", e);
         }
     }
 
@@ -89,9 +90,9 @@ public class EmailServiceImp implements EmailService {
             helper.addAttachment(fileName, file);
 
             mailSender.send(message);
-            logger.info("带附件的邮件已经发送。");
+            log.info("带附件的邮件已经发送。");
         } catch (MessagingException e) {
-            logger.error("发送带附件的邮件时发生异常:{}", e);
+            log.error("发送带附件的邮件时发生异常:{}", e);
         }
     }
 
@@ -112,9 +113,9 @@ public class EmailServiceImp implements EmailService {
             // 添加多个图片可以使用多条 <img src='cid:" + rscId + "' > 和 helper.addInline(rscId, res)来实现
             helper.addInline(rscId, res);
             mailSender.send(message);
-            logger.info("嵌入静态资源的邮件已经发送。");
+            log.info("嵌入静态资源的邮件已经发送。");
         } catch (MessagingException e) {
-            logger.error("发送嵌入静态资源的邮件时发生异常:{}", e);
+            log.error("发送嵌入静态资源的邮件时发生异常:{}", e);
         }
     }
 }

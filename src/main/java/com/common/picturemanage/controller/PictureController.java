@@ -2,9 +2,9 @@ package com.common.picturemanage.controller;
 
 import com.common.filetransfermanage.service.FileTransferService;
 import com.common.picturemanage.service.PictureService;
-import com.core.controller.AbstractBaseController;
-import com.core.data.model.DataModel;
-import com.core.utils.StringUtils;
+import com.controller.AbstractBaseController;
+import com.model.data.DataModel;
+import com.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

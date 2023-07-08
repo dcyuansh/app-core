@@ -2,7 +2,7 @@ package com.common.filetransfermanage.service.impl;
 
 import com.common.filetransfermanage.bean.FileStorageProperties;
 import com.common.filetransfermanage.service.FileTransferService;
-import com.core.exception.ExceptionHelper;
+import com.model.exception.ExceptionHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

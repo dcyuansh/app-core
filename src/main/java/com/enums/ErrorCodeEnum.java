@@ -22,12 +22,13 @@ public enum ErrorCodeEnum {
     SYS_ERROR(201, "系统异常"),
     DB_ERROR(301, "数据库操作异常"),
 
+
     ;
 
     /**
      * 代码
      */
-    private final int code;
+    private final Integer code;
 
     /**
      * 描述
